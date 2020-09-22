@@ -1,5 +1,5 @@
-// Importing all requirements
-require('./initializers/requirements.js');
+// Importing Loader system to load all requirements
+require('./loader');
 
 // Creating app with express
 const app = express();
@@ -19,7 +19,6 @@ app.use('/', main);
 
 // Listening on HTTP server
 app.listen(config.app_port, ()=>{
-    log(`------------ SERVER STARTED --------------\n`);
-    log(`     Address : ${app_url}\n`);
     log(`------------------------------------------`);
+    log(`Server created successfully (Address : ${app_url})\n`);
 });

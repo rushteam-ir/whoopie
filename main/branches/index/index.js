@@ -1,10 +1,12 @@
+// Initiating Rout
 const router = express.Router();
 
 router.get('/', async(req, res, next)=>{
 
     try{
 
-        res.render('index/index')
+        log()
+        res.render('index/index');
 
     }
     catch (error) {

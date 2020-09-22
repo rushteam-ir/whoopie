@@ -1,0 +1,10 @@
+{
+  "app_address" : "localhost",
+  "app_port" : 3001,
+  "db_name" : "whoopie",
+  "db_port" : 27017,
+  "main_template" : "whoopieV1",
+  "session_name" : "whoopie",
+  "session_secret" : "rushteamwhoopie",
+  "cookie_age" : 31536000
+}

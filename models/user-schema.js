@@ -15,6 +15,12 @@ let user_schema = new mongoose.Schema({
 // Defining model statics
 user_schema.statics = {
 
+    register : async (data)=>{
+
+        data.password = 
+
+    }
+
 };
 
 // Exporting model schema

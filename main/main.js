@@ -5,8 +5,10 @@ require('./main-init');
 
 
 // Main rout branches
+const api = require('./api/api');
 const index = require('./branches/index/index');
 
+main.use('/api', api);
 main.use('/', index);
 
 // Handle main rout 404 error

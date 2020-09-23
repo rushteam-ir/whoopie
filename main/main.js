@@ -2,7 +2,9 @@
 require('./main-init');
 
 // Main rout middlewares
+const check_login = require('./middlewares/check-login');
 
+main.use(check_login);
 
 // Main rout branches
 const api = require('./api/api');

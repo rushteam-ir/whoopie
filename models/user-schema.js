@@ -17,7 +17,55 @@ user_schema.statics = {
 
     register : async (data)=>{
 
-        data.password = 
+        let find_user = await user_model.findOne({username : data.username});
+
+        if(!find_user){
+
+            await bcrypt.hash(data.password, 10, (err, hash)=>{
+
+                data.password = hash;
+
+            })
+
+            let new_doc = new user_model(data);
+            return await new_doc.save();
+
+        }
+        else{
+
+            return null;
+
+        }
+
+    },
+
+    login : async (data)=>{
+
+        let find_user = await user_model.findOne({username : data.username});
+
+        if(find_user){
+
+            await bcrypt.compare(data.password, find_user.password, (err, result)=>{
+
+                if(result){
+
+                    return find_user;
+
+                }
+                else{
+
+                    return null;
+
+                }
+
+            });
+
+        }
+        else{
+
+            return null;
+
+        }
 
     }
 

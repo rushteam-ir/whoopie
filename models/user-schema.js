@@ -7,6 +7,9 @@ let user_schema = new mongoose.Schema({
     password : String,
     first_name : String,
     last_name : String,
+    avatar : String,
+    city : String,
+    birth_date : Date,
 });
 
 // Defining model virtuals
@@ -59,6 +62,91 @@ user_schema.statics = {
                 }
 
             });
+
+        }
+        else{
+
+            return null;
+
+        }
+
+    },
+
+    changePassword : async (user_data, data)=>{
+
+        let find_user = await user_model.findOne({username : user_data.username});
+
+        if(find_user){
+
+            await bcrypt.compare(user_data.password, find_user.password, async(err, result)=>{
+
+                if(result){
+
+                    await bcrypt.hash(data.password, 10, (err, hash)=>{
+
+                        data.password = hash;
+
+                    })
+
+                    return await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true});
+
+                }
+                else{
+
+                    return null;
+
+                }
+
+            });
+
+        }
+        else{
+
+            return null;
+
+        }
+
+    },
+
+    editProfile : async (user_data, data)=>{
+
+        let find_user = await user_model.findOne({username : user_data.username});
+
+        if(find_user){
+
+            await bcrypt.compare(user_data.password, find_user.password, async(err, result)=>{
+
+                if(result){
+
+                    return await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true});
+
+                }
+                else{
+
+                    return null;
+
+                }
+
+            });
+
+        }
+        else{
+
+            return null;
+
+        }
+
+    },
+
+    getById : async (data)=>{
+
+        let find_user = await user_model.findById(data._id);
+
+        if(find_user){
+
+            find_user.birth_date = find_user.birth_date;
+
+            return find_user;
 
         }
         else{

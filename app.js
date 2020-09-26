@@ -8,6 +8,7 @@ const app = express();
 app.use(session(session_options));
 app.use(body_parser.urlencoded({extended : false}));
 app.use(body_parser.json());
+app.use(fileUpload());
 
 // Set the view engine
 app.set('view engine', 'ejs');

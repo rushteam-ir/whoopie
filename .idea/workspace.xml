@@ -19,7 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="557f7203-6bad-48e0-8a74-ddb3dacdfa84" name="Default Changelist" comment="" />
+    <list default="true" id="557f7203-6bad-48e0-8a74-ddb3dacdfa84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" beforeDir="false" afterPath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/tst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/initializers/01_requirements.js" beforeDir="false" afterPath="$PROJECT_DIR$/initializers/01_requirements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initializers/02_library.js" beforeDir="false" afterPath="$PROJECT_DIR$/initializers/02_library.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initializers/03_init.js" beforeDir="false" afterPath="$PROJECT_DIR$/initializers/03_init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initializers/04_validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/initializers/04_validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/main-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/middlewares/check-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/middlewares/check-login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/500.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/500.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user-schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user-schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,10 +55,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.11.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.11.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Quince" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/branches/profile" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\profile" />
+      <recent name="F:\Programming\Node Js Projects\Whoopie\main\templates\whoopieV1\views" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,6 +77,7 @@
       <workItem from="1600773009050" duration="8055000" />
       <workItem from="1600782433340" duration="2225000" />
       <workItem from="1600840898987" duration="9287000" />
+      <workItem from="1601105169154" duration="13390000" />
     </task>
     <servers />
   </component>
@@ -77,10 +101,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600778114014" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1600778818284">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1601107432178">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600778818284" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601107432178" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1600841649751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

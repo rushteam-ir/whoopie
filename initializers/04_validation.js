@@ -111,6 +111,34 @@ module.exports = Validation = class {
 
                 }
 
+                case 'date':
+                {
+
+                    let date = input.value.split('/');
+                    let day = parseInt(date[2]);
+                    let month = parseInt(date[1]);
+                    let year = parseInt(date[0]);
+
+                    if(isNaN(day) || isNaN(month) || isNaN(year)){
+
+                        return 'تاریخ وارد شده معتبر نمی باشد.'
+
+                    }
+
+                    if(day < 0 || day > 31){
+                        return 'تاریخ وارد شده معتبر نمی باشد.'
+                    }
+                    else if(month < 0 || month > 12){
+                        return 'تاریخ وارد شده معتبر نمی باشد.'
+                    }
+                    else if(year < 1300){
+                        return 'تاریخ وارد شده معتبر نمی باشد.'
+                    }
+
+                    break;
+
+                }
+
             }
 
         }

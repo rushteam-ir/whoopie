@@ -9,9 +9,11 @@ main.use(check_login);
 // Main rout branches
 const api = require('./api/api');
 const index = require('./branches/index/index');
+const profile = require('./branches/profile/profile');
 
 main.use('/api', api);
 main.use('/', index);
+main.use('/profile', profile);
 
 // Handle main rout 404 error
 main.use(async (req, res, next)=>{

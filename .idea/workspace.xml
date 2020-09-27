@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="557f7203-6bad-48e0-8a74-ddb3dacdfa84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" beforeDir="false" afterPath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/api/v1/auth/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/api/v1/auth/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/api/v1/v1.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/api/v1/v1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/branches/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/branches/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/category-schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/category-schema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <workItem from="1600782433340" duration="2225000" />
       <workItem from="1600840898987" duration="9287000" />
       <workItem from="1601105169154" duration="15422000" />
-      <workItem from="1601181557698" duration="13986000" />
+      <workItem from="1601181557698" duration="15559000" />
     </task>
     <servers />
   </component>

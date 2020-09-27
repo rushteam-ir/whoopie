@@ -14,6 +14,12 @@ let category_schema = new mongoose.Schema({
 // Defining model statics
 category_schema.statics = {
 
+    getAll : async ()=>{
+
+        return await category_model.find();
+
+    }
+
 };
 
 // Exporting model schema

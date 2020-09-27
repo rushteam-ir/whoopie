@@ -39,7 +39,11 @@ router.get('/', async(req, res, next)=>{
         else{
 
             // Default page
-            res.render('index/index');
+            let data = {
+                category_list : await category_model.getAll()
+            }
+
+            res.render('index/index', data);
 
         }
 

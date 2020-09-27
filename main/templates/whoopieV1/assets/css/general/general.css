@@ -1,0 +1,51 @@
+.dir_rtl {
+    direction: rtl;
+}
+
+.dir_ltr {
+    direction: ltr;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e2d00;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(197, 197, 197);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 94, 129);
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #FAB162;
+    box-shadow: 0 0 0 0.2rem #fab1624d;
+}
+

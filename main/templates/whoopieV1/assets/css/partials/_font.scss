@@ -1,10 +1,6 @@
 
 $AF : accent_font;
 $TF : Thin_font;
-$LF : Light_font;
-$MF : Medium_font;
-$BF : Bold_font;
-
 
 body{
     font-family: $TF;
@@ -12,26 +8,10 @@ body{
 
 @font-face {
     font-family: $AF;
-    src: url("../../fonts/A.Rezvan.ttf");
+    src: url("../../fonts/Vazir.ttf");
 }
 
 @font-face {
-    font-family: Medium_font;
-    src: url("../../fonts/Shabnam-Medium.ttf");
+    font-family: $TF;
+    src: url("../../fonts/Vazir-Thin.ttf");
 }
-
-@font-face {
-    font-family: Thin_font;
-    src: url("../../fonts/Shabnam-Thin.ttf");
-}
-
-@font-face {
-    font-family: Bold_font;
-    src: url("../../fonts/Shabnam-Bold.ttf");
-}
-
-@font-face {
-    font-family: Light_font;
-    src: url("../../fonts/Shabnam-Light.ttf");
-}
-

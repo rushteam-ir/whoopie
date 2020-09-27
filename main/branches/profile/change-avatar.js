@@ -48,7 +48,7 @@ router.post('/', async(req, res, next)=>{
         }
         else{
 
-            return res.json(`حداکثر حجم مجاز برای آپلود فایل ${image_limited_size} مگابایت می باشد.`);
+            return res.json(`حداکثر حجم مجاز برای آپلود تصویر ${image_limited_size} مگابایت می باشد.`);
 
         }
 

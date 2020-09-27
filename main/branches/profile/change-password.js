@@ -31,12 +31,12 @@ router.post('/', async(req, res, next)=>{
         if(result){
 
             req.session.user_info = result;
-            res.json({'success' : 'success'});
+            return res.json({'success' : 'success'});
 
         }
         else{
 
-            res.json({'fail' : 'fail'});
+            return res.json({'fail' : 'fail'});
 
         }
 

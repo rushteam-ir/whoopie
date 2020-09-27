@@ -5,7 +5,7 @@
   "db_port" : 27017,
   "main_template" : "whoopieV1",
   "session_name" : "whoopie",
-  "session_secret" : "rushteamwhoopie",
+  "session_secret" : "RushTeamWhoopie24",
   "cookie_age" : 31536000,
   "image_limited_size" : 5
 }

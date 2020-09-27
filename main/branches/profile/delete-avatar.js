@@ -8,7 +8,7 @@ router.post('/', async(req, res, next)=>{
 
             if (err) {
 
-                res.end();
+                return res.end();
 
             }
             else{

@@ -4,6 +4,10 @@ let user_schema = new mongoose.Schema({
         type : String,
         unique : true,
     },
+    created_date : {
+        type : Date,
+        default : new Date()
+    },
     password : String,
     first_name : String,
     last_name : String,

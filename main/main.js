@@ -2,18 +2,24 @@
 require('./main-init');
 
 // Main rout middlewares
-const check_login = require('./middlewares/check-login');
+const Check_Login = require('./middlewares/check-login');
+const Global_Info = require('./middlewares/global-info');
 
-main.use(check_login);
+main.use(Check_Login);
+main.use(Global_Info);
 
 // Main rout branches
-const api = require('./api/api');
-const index = require('./branches/index/index');
-const profile = require('./branches/profile/profile');
+const Api = require('./api/api');
+const Index = require('./branches/index/index');
+const Profile = require('./branches/profile/profile');
+const New = require('./branches/new/new');
+const Edit = require('./branches/edit/edit');
 
-main.use('/api', api);
-main.use('/', index);
-main.use('/profile', profile);
+main.use('/api', Api);
+main.use('/', Index);
+main.use('/profile', Profile);
+main.use('/new', New);
+main.use('/edit', Edit);
 
 // Handle main rout 404 error
 main.use(async (req, res, next)=>{

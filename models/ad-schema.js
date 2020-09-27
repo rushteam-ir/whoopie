@@ -33,10 +33,9 @@ ad_schema.statics = {
 
     },
 
-
     getById : async (data)=>{
 
-        let find_ad = await ad_model.findOne({unique_id : data});
+        let find_ad = await ad_model.findOne(data);
 
         if(find_ad){
 

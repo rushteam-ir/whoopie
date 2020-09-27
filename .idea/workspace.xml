@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="557f7203-6bad-48e0-8a74-ddb3dacdfa84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" beforeDir="false" afterPath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/api/v1/auth/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/api/v1/auth/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/api/v1/v1.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/api/v1/v1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.11.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.11.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/api/v1/auth" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -51,11 +55,11 @@
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\ad" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programming\Node Js Projects\Whoopie\main\api\v1\auth" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\models" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\index" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\templates\whoopieV1\views\index" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\templates\whoopieV1\views" />
-      <recent name="F:\Programming\Node Js Projects\Whoopie\main\middlewares" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,7 +74,7 @@
       <workItem from="1600782433340" duration="2225000" />
       <workItem from="1600840898987" duration="9287000" />
       <workItem from="1601105169154" duration="15422000" />
-      <workItem from="1601181557698" duration="12186000" />
+      <workItem from="1601181557698" duration="13986000" />
     </task>
     <servers />
   </component>
@@ -90,6 +94,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="536" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601196019018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="536" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1601196019018" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601189891519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

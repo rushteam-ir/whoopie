@@ -17,14 +17,14 @@ app.use(fileUpload());
 app.set('view engine', 'ejs');
 
 // Defining Routes
-const main = require('./main/main');
+const Main = require('./main/main');
 
-app.use('/', main);
+app.use('/', Main);
 
 // Listening on HTTP server
 app.listen(config.app_port, ()=>{
     log(`------------------------------------------------------------------`);
-    log(`Server created successfully (Address : ${app_url})`);
+    log(`Server created successfully (Address: ${app_url})`);
     console.timeEnd('Execute Time');
     log(`------------------------------------------------------------------`);
 });

@@ -1,3 +1,6 @@
+// Start execute timer
+console.time('Execute Time');
+
 // Importing Loader system to load all requirements
 require('./loader');
 
@@ -20,6 +23,8 @@ app.use('/', main);
 
 // Listening on HTTP server
 app.listen(config.app_port, ()=>{
-    log(`------------------------------------------`);
-    log(`Server created successfully (Address : ${app_url})\n`);
+    log(`------------------------------------------------------------------`);
+    log(`Server created successfully (Address : ${app_url})`);
+    console.timeEnd('Execute Time');
+    log(`------------------------------------------------------------------`);
 });

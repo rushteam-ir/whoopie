@@ -14,7 +14,8 @@ app.use(body_parser.json());
 app.use(fileUpload());
 
 // Set the view engine
-app.set('view engine', 'ejs');
+app.engine('dust', adaro.dust(dust_helpers))
+app.set('view engine', 'dust');
 
 // Defining Routes
 const Main = require('./main/main');

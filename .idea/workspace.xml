@@ -21,9 +21,128 @@
   <component name="ChangeListManager">
     <list default="true" id="557f7203-6bad-48e0-8a74-ddb3dacdfa84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/layouts/footer.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/layouts/header.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initializers/01_requirements.js" beforeDir="false" afterPath="$PROJECT_DIR$/initializers/01_requirements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/main-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/edit/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/edit/edit.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/404.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/404.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/500.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/500.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/index.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/search.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/search.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/watch.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/index/watch.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/layouts/css.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/layouts/js.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/list/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/list/list.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/new/new.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/new/new.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/profile/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/profile/profile.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ejs.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ejs.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jake.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jake.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/lib/async.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/async/support/sync-package-managers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/index.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/templates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/types/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/conversions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/bin/cli.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/ejs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/jakefile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/lib/ejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ejs/usage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/escape-string-regexp/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/escape-string-regexp/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/escape-string-regexp/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filelist/Jakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filelist/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filelist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/filelist/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/bin/bash_completion.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/bin/cli.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/jakefile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/jake.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/namespace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/package_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/parseargs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/program.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/publish_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/rule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/task/directory_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/task/file_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/task/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/task/task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/test_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/utils/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/lib/utils/logger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/concurrent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/file_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/jakefile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/jakelib/concurrent.jake.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/jakelib/publish.jake.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/jakelib/required_module.jake.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/jakelib/rule.jake.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/publish_task.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/rule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/selfdep.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/integration/task_base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/unit/jakefile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/unit/namespace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/test/unit/parseargs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jake/usage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +162,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.11.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.11.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/api/v1/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/initializers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches" />
-      <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\ad" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programming\Node Js Projects\Whoopie\initializers" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\api\v1\auth" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\models" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\index" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\templates\whoopieV1\views\index" />
-      <recent name="F:\Programming\Node Js Projects\Whoopie\main\templates\whoopieV1\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches" />
+      <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\ad" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -75,6 +194,7 @@
       <workItem from="1601105169154" duration="15422000" />
       <workItem from="1601181557698" duration="15559000" />
       <workItem from="1601203589608" duration="5255000" />
+      <workItem from="1601298978076" duration="2350000" />
     </task>
     <servers />
   </component>

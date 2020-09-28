@@ -1,5 +1,6 @@
 // Importing npm or system modules
 express = require('express');
+adaro = require('adaro');
 mongoose = require('mongoose');
 session = require('express-session');
 body_parser = require('body-parser');

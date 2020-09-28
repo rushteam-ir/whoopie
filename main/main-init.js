@@ -5,4 +5,4 @@ main.set('views', `${app_dir}main/templates/${config.main_template}/views`);
 
 main_not_allowd_urls = [];
 
-main.locals.main_url = app_url;
+main.locals.app_url = app_url;

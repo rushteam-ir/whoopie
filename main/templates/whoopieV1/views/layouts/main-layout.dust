@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {+meta/}
+        <base href="{app_url}">
+        <script>app_url = '{app_url}'</script>
+        {!<link rel="stylesheet" href="SOME CSS HERE">!}
+        {+css/}
+        <title>Whoopie</title>
+    </head>
+    <body>
+        {+body/}
+
+        {!<script src="SOME JS HERE"></script>!}
+        {+js/}
+    </body>
+</html>

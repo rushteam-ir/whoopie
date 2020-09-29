@@ -30,18 +30,29 @@
         .pill_field {
             width: max-content;
             border-radius: 50px;
-            border: 1px solid #afafaf;
+            border: 1px solid #d2d2d2;
             background-color: $white;
             padding-left: 10px;
             display: inline-block;
             margin-right: 10px;
             margin-top: 10px;
             color: $black;
+            @include transition(0.2s, linear, 0s);
+
+            &:hover {
+                background-color: #555555;
+                color: $white;
+
+                div {
+                    background-color: $white;
+                    color: #555555;
+                }
+            }
 
             div {
                 display: inline-block;
                 background-color: #555555;
-                color: #fff;
+                color: $white;
                 width: 40px;
                 padding: 10px;
                 border-radius: 50px;
@@ -50,6 +61,7 @@
                 font-size: 1.5rem;
                 line-height: 16px;
                 font-weight: bold;
+                @include transition(0.2s, linear, 0s);
 
                 span {
                     display: block;
@@ -67,9 +79,11 @@
             }
         }
     }
-    .start_btn{
+
+    .start_btn {
         width: 100%;
-        .start_btn_field{
+
+        .start_btn_field {
             padding: 10px;
             background-color: #444444;
             color: white;
@@ -79,13 +93,15 @@
             font-weight: bold;
             margin-top: 200px;
             position: relative;
-            .rocket_img{
+
+            .rocket_img {
                 position: absolute;
                 top: -50px;
                 right: -60px;
                 width: 150px;
             }
-            .dashed_curved_img{
+
+            .dashed_curved_img {
                 position: absolute;
                 top: -70px;
                 width: 400px;
@@ -94,14 +110,22 @@
             }
         }
     }
-    .have_accont{
+
+    .have_accont {
         width: 100%;
-        p{
+
+        p {
             margin-top: 85px;
             font-size: 1.3rem;
-            a{
+
+            a {
                 font-weight: bold;
             }
         }
     }
+}
+
+.footer_info{
+    position: absolute;
+    bottom: 15px;
 }

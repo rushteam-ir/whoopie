@@ -5,21 +5,21 @@
 $inpBorderRad: 15px;
 
 body {
-    background-image: url(../../img/AA00bg.png);
+    background-image: url(../../img/AB00.png);
 }
 
 nav {
     width: 100%;
     height: 80px;
-    background-color: white;
+    background-color: $white;
     padding-top: 20px;
 
     .main_field_of_navbar {
+        position: relative;
         width: 100%;
 
         .midle_field {
             margin: 0 auto;
-            height: 10px;
             direction: rtl;
             text-align: right;
             width: 583px;
@@ -59,14 +59,71 @@ nav {
 
                 span {
                     border-radius: 0px $inpBorderRad $inpBorderRad 0px;
-                    background-color: white;
+                    background-color: $white;
                     border-left: 0;
+                }
+            }
+        }
+
+        .right_field {
+            position: absolute;
+            right: 20px;
+            top: -10px;
+            direction: rtl;
+            text-align: right;
+
+            .profile_field{
+                #show_AP03{
+                    cursor: pointer;
+                }
+                img {
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50px;
+                }
+    
+                p {
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                    font-weight: bold;
+                }
+    
+                i {
+                    display: inline-block;
+                    margin-right: 5px;
+                    position: relative;
+                    top: 5px;
+                }
+            }
+            .profile_dropown{
+                display: none;
+                direction: rtl;
+                text-align: right;
+                width: 200px;
+                background-color: white;
+                border-radius: 15px;
+                position: relative;
+                top: 20px;
+                overflow: hidden;
+                a{
+                    display: block;
+                    color: $black;
+                    padding: 10px 22px 10px 22px;
+                    margin: 0;
+                    &:hover{
+                        background-color: #f5f5f5;
+                    }
+                    i{
+                        margin-left: 10px;
+                        color: #73c5f9;
+                    }
                 }
             }
         }
     }
 }
-
 
 .footer_info {
     width: 100%;

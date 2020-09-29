@@ -57,7 +57,37 @@
                     </div>
                 </form>
             </div>
-            <div class="right_field"></div>
+            <div class="right_field">
+                <div class="profile_field">
+                    <img src="img/AP03.jpg" alt="">
+                    <span id="show_AP03">
+                        <p>کسری حبیب بیگی</p>
+                        <i class="fas fa-angle-down"></i>
+                    </span>
+                </div>
+                <div class="profile_dropown">
+                    <a href="">
+                        <i class="fas fa-plus"></i>
+                        ثبت آگهی جدید
+                    </a>
+                    <a href="">
+                        <i class="fas fa-list"></i>
+                        لیست آگهی ها
+                    </a>
+                    <a href="">
+                        <i class="fas fa-user-crown"></i>
+                        اطلاعات کاربری
+                    </a>
+                    <a href="">
+                        <i class="fas fa-bug"></i>
+                        گزارش باگ
+                    </a>
+                    <a href="">
+                        <i class="fas fa-sign-out-alt"></i>
+                        خروج
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -65,13 +95,14 @@
 
     <footer>
         <div class="footer_info">
-            <p>&copy; تمامی حقوق این وب سایت برای ووپای محفوظ است  | طراحی توسعه توسط تیم راش تیم</p>
+            <p>&copy; تمامی حقوق این وب سایت برای ووپای محفوظ است | طراحی توسعه توسط تیم راش تیم</p>
         </div>
     </footer>
     <script src="js/general/jquery.js"></script>
     <script src="js/general/popper.js"></script>
     <script src="js/general/bootstrap.js"></script>
     <script src="js/general/wow.js"></script>
+    <script src="js/index/index.js"></script>
     {!<script src="SOME JS HERE"></script>!}
     {+js/}
 </body>

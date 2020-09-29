@@ -9,20 +9,21 @@ router.use(async(req, res, next)=>{
         if(!parsed_url.endsWith('/')){
 
             parsed_url += '/';
+            parsed_url = parsed_url.split('/')[1];
 
         }
 
         if(isUndefined(req.session.user_info)){
 
             // User is not logged in
-            if(!main_not_allowd_urls.includes(parsed_url)){
+            if(main_not_allowd_urls.includes(parsed_url)){
 
-                next();
+                return res.status(403).render('errors/403');
 
             }
             else{
 
-                return res.redirect(app_url);
+                next();
 
             }
 
@@ -30,7 +31,7 @@ router.use(async(req, res, next)=>{
         else{
 
             // User is logged in
-            next();
+
 
         }
 

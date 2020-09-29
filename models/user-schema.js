@@ -30,16 +30,18 @@ user_schema.statics = {
 
         if(!find_user1 && !find_user2){
 
-            await bcrypt.hash(data.password, 10, (err, hash)=>{
+            let hash_result = await bcrypt.hash(data.password, 10);
 
-                data.password = hash;
+            if(hash_result){
+                data.password = hash_result;
+                data.created_date = new Date();
 
-            })
-
-            data.created_date = new Date();
-
-            let new_doc = new user_model(data);
-            return await new_doc.save();
+                let new_doc = new user_model(data);
+                return await new_doc.save();
+            }
+            else{
+                return null;
+            }
 
         }
         else{
@@ -57,39 +59,12 @@ user_schema.statics = {
 
         if(find_user1){
 
-            await bcrypt.compare(data.password, find_user1.password, (err, result)=>{
-
-                if(result){
-
-                    return find_user;
-
-                }
-                else{
-
-                    return null;
-
-                }
-
-            });
+            return await bcrypt.compare(data.password, find_user1.password) ? find_user1 : null;
 
         }
         else if(find_user2){
 
-            await bcrypt.compare(data.password, find_user2.password, (err, result)=>{
-
-                if(result){
-
-                    return find_user;
-
-                }
-                else{
-
-                    return null;
-
-                }
-
-            });
-
+            return await bcrypt.compare(data.password, find_user2.password) ? find_user2 : null;
         }
         else{
 

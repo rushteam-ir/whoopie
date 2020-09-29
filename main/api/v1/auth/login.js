@@ -23,6 +23,8 @@ router.post('/', async(req, res, next)=>{
 
         let result = await user_model.login(login_data);
 
+        log(result)
+
         if(result){
 
             req.session.user_info = result;

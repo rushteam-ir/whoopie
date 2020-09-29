@@ -18,50 +18,12 @@
                     <h2>مهارتی که دنبالشی رو انتخاب کن ، ما کمکت میکنیم بهترین فرد رو پیدا کنی . </h2>
                 </div>
                 <div class="category_pill">
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>برنامه نویسی</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>ریاضی</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>تولید محتوی</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>حمزه خوری</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>شسی شسی</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>سلام کردن</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>گربه شدن</p>
-                    </a>    
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>حمزه خوری</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>شسی شسی</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>سلام کردن</p>
-                    </a>           
-                    <a href="#" class="pill_field">
-                        <div><span>#</span></div>
-                        <p>گربه شدن</p>
-                    </a>        
+                    {#category_list}
+                        <a href="{app_url}?s=&c={_id}" class="pill_field">
+                            <div><span>#</span></div>
+                            <p>{title}</p>
+                        </a>
+                    {/category_list}
                 </div>
                 {@eq key="{g_user_info}" value="{null}"}
                     <div class="start_btn">

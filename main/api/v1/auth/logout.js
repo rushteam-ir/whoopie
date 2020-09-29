@@ -8,12 +8,11 @@ router.get('/', async(req, res, next)=>{
 
             if(err){
 
-                next(err)
+                next(err);
 
             }
             else{
 
-                // BUG HERE
                 return res.redirect(app_url);
 
             }

@@ -28,30 +28,30 @@ router.post('/', async(req, res, next)=>{
             author : req.session.user_info._id
         }
 
-        if (req.files || Object.keys(req.files).length !== 0) {
-
-            // let avatar = req.files.avatar_inp;
-            // let file_name = `${randomSha1String()}.${avatar_inp.name.split(".").pop()}`;
-            //
-            // if(avatar.size/1024 <= image_limited_size) {
-            //
-            //     await avatar.mv(`${app_dir}media/avatars/${file_name}`, async (err) => {
-            //
-            //         if (err) {
-            //
-            //             next(err);
-            //
-            //         }
-            //         else {
-            //
-            //
-            //         }
-            //
-            //     });
-            //
-            // }
-
-        }
+        // if (req.files || Object.keys(req.files).length !== 0) {
+        //
+        //     // let avatar = req.files.avatar_inp;
+        //     // let file_name = `${randomSha1String()}.${avatar_inp.name.split(".").pop()}`;
+        //     //
+        //     // if(avatar.size/1024 <= image_limited_size) {
+        //     //
+        //     //     await avatar.mv(`${app_dir}media/avatars/${file_name}`, async (err) => {
+        //     //
+        //     //         if (err) {
+        //     //
+        //     //             next(err);
+        //     //
+        //     //         }
+        //     //         else {
+        //     //
+        //     //
+        //     //         }
+        //     //
+        //     //     });
+        //     //
+        //     // }
+        //
+        // }
 
         let result = await ad_model.add(ad_data);
 

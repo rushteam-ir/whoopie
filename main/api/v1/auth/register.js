@@ -4,41 +4,50 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {username_inp, email_inp, password_inp, confirm_password_inp} = req.body;
-        let validation_result = new Validation([
-            {value : username_inp, type : 'username'},
-            {value : email_inp, type : 'email'},
-            {value : password_inp, type : 'password'},
-            {value : confirm_password_inp, type : 'password'},
-        ]).check();
+        if(isUndefined(req.session.user_info)) {
 
-        if(validation_result){
+            let {username_inp, email_inp, password_inp, confirm_password_inp} = req.body;
+            let validation_result = new Validation([
+                {value : username_inp, type : 'username'},
+                {value : email_inp, type : 'email'},
+                {value : password_inp, type : 'password'},
+                {value : confirm_password_inp, type : 'password'},
+            ]).check();
 
-            return res.json(validation_result);
+            if(validation_result){
 
-        }
-        else if(password_inp !== confirm_password_inp){
+                return res.json(validation_result);
 
-            return res.json('رمز عبور و تکرار آن مشابه نیستند.');
+            }
+            else if(password_inp !== confirm_password_inp){
 
-        }
+                return res.json('رمز عبور و تکرار آن مشابه نیستند.');
 
-        let register_data = {
-            username : username_inp,
-            email : email_inp,
-            password : password_inp
-        }
+            }
 
-        let result = await user_model.register(register_data);
+            let register_data = {
+                username : username_inp,
+                email : email_inp,
+                password : password_inp
+            }
 
-        if(result){
+            let result = await user_model.register(register_data);
 
-            return res.json({success : 'success'});
+            if(result){
+
+                return res.json({success : 'success'});
+
+            }
+            else{
+
+                return res.json({fail : 'fail'});
+
+            }
 
         }
         else{
 
-            return res.json({fail : 'fail'});
+            return res.end();
 
         }
 

@@ -72,7 +72,7 @@ ad_schema.statics = {
 
             if(data.city){
 
-                if(doc.search.includes(search_inp) && doc.author.city == data.city){
+                if(doc.search.toLowerCase().includes(search_inp.toLowerCase()) && doc.author.city == data.city){
 
                     search_list.push(doc);
 
@@ -81,7 +81,7 @@ ad_schema.statics = {
             }
             else{
 
-                if(doc.search.includes(search_inp)){
+                if(doc.search.toLowerCase().includes(search_inp.toLowerCase())){
 
                     search_list.push(doc);
 

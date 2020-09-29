@@ -63,16 +63,21 @@
                         <p>گربه شدن</p>
                     </a>        
                 </div>
-                <div class="start_btn">
-                    <button class="btn start_btn_field">
-                        شروع کار با ووپـــــای ! 
-                        <img class="rocket_img" src="img/AR01.png" alt="">
-                        <img class="dashed_curved_img" src="img/AC02.png" alt="">
-                    </button>
-                </div>
-                <div Class="have_accont">
-                    <p>از قبل حساب کاربری داری ؟ از <a href="">اینجا</a> وارد شوید !</p>
-                </div>
+                {@eq key="{g_user_info}" value="{null}"}
+                    <div class="start_btn">
+                        <button class="btn start_btn_field">
+                            شروع کار با ووپـــــای !
+                            <img class="rocket_img" src="img/AR01.png" alt="">
+                            <img class="dashed_curved_img" src="img/AC02.png" alt="">
+                        </button>
+                    </div>
+                    <div Class="have_accont">
+                        <p>از قبل حساب کاربری داری ؟ از <a href="">اینجا</a> وارد شوید !</p>
+                    </div>
+                {:else}
+
+                {/eq}
+
             </div>
         </div>
     </section>

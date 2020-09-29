@@ -4,9 +4,10 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {username_inp, password_inp, confirm_password_inp} = req.body;
+        let {username_inp, email_inp, password_inp, confirm_password_inp} = req.body;
         let validation_result = new Validation([
             {value : username_inp, type : 'username'},
+            {value : email_inp, type : 'email'},
             {value : password_inp, type : 'password'},
             {value : confirm_password_inp, type : 'password'},
         ]).check();
@@ -24,6 +25,7 @@ router.post('/', async(req, res, next)=>{
 
         let register_data = {
             username : username_inp,
+            email : email_inp,
             password : password_inp
         }
 

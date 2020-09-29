@@ -4,10 +4,11 @@ let user_schema = new mongoose.Schema({
         type : String,
         unique : true,
     },
-    created_date : {
-        type : Date,
-        default : new Date()
+    email : {
+        type : String,
+        unique : true,
     },
+    created_date : Date,
     password : String,
     first_name : String,
     last_name : String,
@@ -24,15 +25,18 @@ user_schema.statics = {
 
     register : async (data)=>{
 
-        let find_user = await user_model.findOne({username : data.username});
+        let find_user1 = await user_model.findOne({username : data.username});
+        let find_user2 = await user_model.findOne({email : data.email});
 
-        if(!find_user){
+        if(!find_user1 && !find_user2){
 
             await bcrypt.hash(data.password, 10, (err, hash)=>{
 
                 data.password = hash;
 
             })
+
+            data.created_date = new Date();
 
             let new_doc = new user_model(data);
             return await new_doc.save();

@@ -31,7 +31,7 @@ router.use(async(req, res, next)=>{
         else{
 
             // User is logged in
-
+            next();
 
         }
 

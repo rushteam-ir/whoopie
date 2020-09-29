@@ -21,11 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="557f7203-6bad-48e0-8a74-ddb3dacdfa84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" beforeDir="false" afterPath="$PROJECT_DIR$/documents/UI/whoopie_1.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/main-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initializers/02_library.js" beforeDir="false" afterPath="$PROJECT_DIR$/initializers/02_library.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/api/v1/auth/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/api/v1/auth/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/api/v1/new-report.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/api/v1/send-report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/api/v1/v1.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/api/v1/v1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/middlewares/check-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/middlewares/check-login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/404.dust" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/404.dust" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/500.dust" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/whoopieV1/views/errors/500.dust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ad-schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ad-schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/category-schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/category-schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/report-schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/report-schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user-schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user-schema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.11.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.11.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/templates/whoopieV1/views/errors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/middlewares" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -56,11 +61,11 @@
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\ad" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programming\Node Js Projects\Whoopie\main\middlewares" />
+      <recent name="F:\Programming\Node Js Projects\Whoopie\models" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\templates\whoopieV1\views\errors" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\initializers" />
       <recent name="F:\Programming\Node Js Projects\Whoopie\main\api\v1\auth" />
-      <recent name="F:\Programming\Node Js Projects\Whoopie\models" />
-      <recent name="F:\Programming\Node Js Projects\Whoopie\main\branches\index" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -78,7 +83,7 @@
       <workItem from="1601181557698" duration="15559000" />
       <workItem from="1601203589608" duration="5255000" />
       <workItem from="1601298978076" duration="2386000" />
-      <workItem from="1601351613931" duration="3536000" />
+      <workItem from="1601351613931" duration="8089000" />
     </task>
     <servers />
   </component>

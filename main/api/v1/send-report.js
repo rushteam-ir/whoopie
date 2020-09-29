@@ -20,6 +20,7 @@ router.post('/', async(req, res, next)=>{
             text : text_inp,
             url : req._parsedOriginalUrl.path,
             who : req.session.user_info,
+            user_agent : req.headers['user-agent'],
             remote_address : req.connection.remoteAddress,
         }
 

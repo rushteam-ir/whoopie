@@ -4,9 +4,11 @@ require('./main-init');
 // Main rout middlewares
 const Check_Login = require('./middlewares/check-login');
 const Global_Info = require('./middlewares/global-info');
+const Cache_Handler = require('./middlewares/cache-handler');
 
 main.use(Check_Login);
 main.use(Global_Info);
+main.use(Cache_Handler);
 
 // Main rout branches
 const Api = require('./api/api');
@@ -38,6 +40,7 @@ main.use(async (error, req, res, next)=>{
         text : error,
         url : req._parsedOriginalUrl.path,
         who : req.session.user_info,
+        user_agent : req.headers['user-agent'],
         remote_address : req.connection.remoteAddress,
     }
 

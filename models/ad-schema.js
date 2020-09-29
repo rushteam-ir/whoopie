@@ -1,13 +1,7 @@
 // Defining schema model
 let ad_schema = new mongoose.Schema({
-    unique_id : {
-        type : String,
-        default : randomBase32String()
-    },
-    created_date : {
-        type : Date,
-        default: new Date()
-    },
+    unique_id : String,
+    created_date : Date,
     title : String,
     describe : String,
     category : {
@@ -27,6 +21,9 @@ let ad_schema = new mongoose.Schema({
 ad_schema.statics = {
 
     add : async (data)=>{
+
+        data.created_date = new Date();
+        data.unique_id = randomBase32String();
 
         let new_doc = new ad_model(data);
         return await new_doc.save();

@@ -2,19 +2,10 @@
 let report_schema = new mongoose.Schema({
     type : String,
     text : String,
-    unique_id : {
-        type : String,
-        default : randomBase32String()
-    },
-    created_date : {
-        type : Date,
-        default : new Date()
-    },
+    created_date : Date,
     url : String,
-    who : {
-        type : 'ObjectId',
-        ref : 'user'
-    },
+    who : Object,
+    user_agent : String,
     remote_address : String,
 });
 
@@ -22,6 +13,8 @@ let report_schema = new mongoose.Schema({
 report_schema.statics = {
 
     add : async (data)=>{
+
+        data.created_date = new Date();
 
         let new_doc = new report_model(data);
         return await new_doc.save();

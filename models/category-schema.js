@@ -1,10 +1,7 @@
 // Defining schema model
 let category_schema = new mongoose.Schema({
     title : String,
-    created_date : {
-        type : Date,
-        default: new Date()
-    },
+    created_date : Date,
     author : {
         type : 'objectId',
         ref : 'user'

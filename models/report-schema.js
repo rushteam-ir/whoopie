@@ -19,7 +19,7 @@ report_schema.statics = {
         let new_doc = new report_model(data);
         return await new_doc.save();
 
-    },
+    }
 
 };
 

@@ -9,14 +9,11 @@
     <script>
         app_url = '{app_url}'
     </script>
-    {!
-    <link rel="stylesheet" href="SOME CSS HERE">!}
     <link rel="stylesheet" href="css/general/bootstrap.css">
     <link rel="stylesheet" href="css/general/fontAwsome.css">
     <link rel="stylesheet" href="css/general/animate.css">
     <link rel="stylesheet" href="css/general/general.css">
     <link rel="stylesheet" href="css/layout/layout.css">
-
     {+css/}
     <title>Whoopie</title>
 </head>
@@ -66,23 +63,23 @@
                     </span>
                 </div>
                 <div class="profile_dropown">
-                    <a href="">
+                    <a href="{app_url}new">
                         <i class="fas fa-plus"></i>
                         ثبت آگهی جدید
                     </a>
-                    <a href="">
+                    <a href="{app_url}list">
                         <i class="fas fa-list"></i>
                         لیست آگهی ها
                     </a>
-                    <a href="">
+                    <a href="{app_url}profile">
                         <i class="fas fa-user-crown"></i>
                         اطلاعات کاربری
                     </a>
-                    <a href="">
+                    <a href="#">
                         <i class="fas fa-bug"></i>
                         گزارش باگ
                     </a>
-                    <a href="">
+                    <a href="{app_url}api/v1/auth/logout">
                         <i class="fas fa-sign-out-alt"></i>
                         خروج
                     </a>
@@ -103,7 +100,6 @@
     <script src="js/general/bootstrap.js"></script>
     <script src="js/general/wow.js"></script>
     <script src="js/index/index.js"></script>
-    {!<script src="SOME JS HERE"></script>!}
     {+js/}
 </body>
 

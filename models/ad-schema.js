@@ -15,13 +15,15 @@ let ad_schema = new mongoose.Schema({
         type : 'objectId',
         ref : 'user'
     }
+},{
+    toObject: { virtuals: true},
+    toJSON: { virtuals: true }
 });
 
 // Defining model virtuals
 ad_schema.virtual('search').get(()=>{
 
-    let result = `${this.title},${this.describe},${this.tags.toString()},${this.author.title}`
-    return result;
+    return `${this.title},${this.describe},${this.tags.toString()},${this.author.full_name}`;
 
 });
 
@@ -61,9 +63,35 @@ ad_schema.statics = {
 
     },
 
-    search : async(data)=>{
+    getBySearch : async(search_inp, data)=>{
 
-        await ad_model.find()
+        let docs = await ad_model.find(data.category ? {category : data.category} : {}).populate('category').populate('author');
+        let search_list = [];
+
+        for(let doc of docs){
+
+            if(data.city){
+
+                if(doc.search.includes(search_inp) && doc.author.city == data.city){
+
+                    search_list.push(doc);
+
+                }
+
+            }
+            else{
+
+                if(doc.search.includes(search_inp)){
+
+                    search_list.push(doc);
+
+                }
+
+            }
+
+        }
+
+        return getRandomArray(search_list, 3);
 
     }
 

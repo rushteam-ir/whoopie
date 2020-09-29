@@ -9,10 +9,17 @@ router.get('/', async(req, res, next)=>{
         if(!isUndefined(s)){
 
             // Search
+            let search_inp = s;
             let search_query = {
-
+                category : isUndefined(c) ? null : c,
+                city : isUndefined(l) ? null : l,
             }
-            res.render('index/search');
+            let data = {
+                ad_list : await ad_model.getBySearch(search_inp, search_query),
+                search_value : search_inp
+            }
+
+            res.render('index/search', data);
 
         }
         else if(!isUndefined(w)){
@@ -46,7 +53,7 @@ router.get('/', async(req, res, next)=>{
                 category_list : await category_model.getAll()
             }
 
-            res.render('index/index', data);
+            res.render('index/main', data);
 
         }
 

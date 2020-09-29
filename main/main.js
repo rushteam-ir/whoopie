@@ -12,7 +12,7 @@ main.use(Cache_Handler);
 
 // Main rout branches
 const Api = require('./api/api');
-const Index = require('./branches/index/index');
+const Index = require('./branches/index/main');
 const Profile = require('./branches/profile/profile');
 const New = require('./branches/new/new');
 const Edit = require('./branches/edit/edit');

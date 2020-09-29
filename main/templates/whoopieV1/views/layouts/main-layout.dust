@@ -1,19 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {+meta/}
-        <base href="{app_url}">
-        <script>app_url = '{app_url}'</script>
-        {!<link rel="stylesheet" href="SOME CSS HERE">!}
-        {+css/}
-        <title>Whoopie</title>
-    </head>
-    <body>
-        {+body/}
 
-        {!<script src="SOME JS HERE"></script>!}
-        {+js/}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {+meta/}
+    <base href="{app_url}">
+    <script>
+        app_url = '{app_url}'
+    </script>
+    {!
+    <link rel="stylesheet" href="SOME CSS HERE">!}
+    <link rel="stylesheet" href="css/general/bootstrap.css">
+    <link rel="stylesheet" href="css/general/fontAwsome.css">
+    <link rel="stylesheet" href="css/general/animate.css">
+    <link rel="stylesheet" href="css/general/general.css">
+    <link rel="stylesheet" href="css/layout/layout.css">
+
+    {+css/}
+    <title>Whoopie</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="main_field_of_navbar">
+            <div class="midle_field">
+                <form>
+                    <div class="search_nav">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="search_AA00">
+                                    <button class="btn">
+                                        <i class="fal fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="جستجو کنید !" aria-label="Username" aria-describedby="search_AA00">
+                        </div>
+                    </div>
+                    <div class="category_nav">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>همه</option>
+                                <option>برنامه نویسی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="city_nav">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>همه</option>
+                                <option>تهران</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="right_field"></div>
+        </div>
+    </nav>
+
+    {+body/}
+
+    <footer>
+        <div class="footer_info">
+            <p>&copy; تمامی حقوق این وب سایت برای ووپای محفوظ است  | طراحی توسعه توسط تیم راش تیم</p>
+        </div>
+    </footer>
+    <script src="js/general/jquery.js"></script>
+    <script src="js/general/popper.js"></script>
+    <script src="js/general/bootstrap.js"></script>
+    <script src="js/general/wow.js"></script>
+    {!<script src="SOME JS HERE"></script>!}
+    {+js/}
+</body>
+
 </html>

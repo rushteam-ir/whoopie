@@ -2,3 +2,79 @@
 @import '../partials/font';
 @import '../partials/mixin';
 
+$inpBorderRad: 15px;
+
+body {
+    background-image: url(../../img/AA00bg.png);
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    padding-top: 20px;
+
+    .main_field_of_navbar {
+        width: 100%;
+
+        .midle_field {
+            margin: 0 auto;
+            height: 10px;
+            direction: rtl;
+            text-align: right;
+            width: 583px;
+
+            .category_nav {
+                display: inline-block;
+                margin-right: 10px;
+
+                select {
+                    border-radius: $inpBorderRad;
+                }
+            }
+
+            .city_nav {
+                display: inline-block;
+                margin-right: 10px;
+
+                select {
+                    border-radius: $inpBorderRad;
+                }
+            }
+
+            .search_nav {
+                display: inline-block;
+                margin-right: 10px;
+
+                input {
+                    border-radius: $inpBorderRad 0px 0px $inpBorderRad;
+                    border-right: 0;
+                    width: 300px;
+                }
+
+                button {
+                    padding: 0;
+                    height: 24px;
+                }
+
+                span {
+                    border-radius: 0px $inpBorderRad $inpBorderRad 0px;
+                    background-color: white;
+                    border-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.footer_info {
+    width: 100%;
+    text-align: center;
+    direction: rtl;
+
+    p {
+        color: #989898;
+        margin: 0;
+    }
+}

@@ -1,7 +1,8 @@
 {>"layouts/main-layout"/}
 
 {<css}
-
+    <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="css/index/index-mediaquery.css">
 {/css}
 
 {<js}
@@ -9,5 +10,70 @@
 {/js}
 
 {<body}
-
+    <section class="main_sec">
+        <div class="container-md">
+            <div class="row">
+                <div class="header_AA00">
+                    <h1>فرد مورد نظرت رو پیدا کن !</h1>
+                    <h2>مهارتی که دنبالشی رو انتخاب کن ، ما کمکت میکنیم بهترین فرد رو پیدا کنی . </h2>
+                </div>
+                <div class="category_pill">
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>برنامه نویسی</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>ریاضی</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>تولید محتوی</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>حمزه خوری</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>شسی شسی</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>سلام کردن</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>گربه شدن</p>
+                    </a>    
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>حمزه خوری</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>شسی شسی</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>سلام کردن</p>
+                    </a>           
+                    <a href="#" class="pill_field">
+                        <div><span>#</span></div>
+                        <p>گربه شدن</p>
+                    </a>        
+                </div>
+                <div class="start_btn">
+                    <button class="btn start_btn_field">
+                        شروع کار با ووپـــــای ! 
+                        <img class="rocket_img" src="img/AA01.png" alt="">
+                        <img class="dashed_curved_img" src="img/AA02.png" alt="">
+                    </button>
+                </div>
+                <div Class="have_accont">
+                    <p>از قبل حساب کاربری داری ؟ از <a href="">اینجا</a> وارد شوید !</p>
+                </div>
+            </div>
+        </div>
+    </section>
 {/body}

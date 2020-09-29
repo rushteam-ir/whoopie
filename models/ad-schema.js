@@ -17,6 +17,14 @@ let ad_schema = new mongoose.Schema({
     }
 });
 
+// Defining model virtuals
+ad_schema.virtual('search').get(()=>{
+
+    let result = `${this.title},${this.describe},${this.tags.toString()},${this.author.title}`
+    return result;
+
+});
+
 // Defining model statics
 ad_schema.statics = {
 
@@ -52,6 +60,12 @@ ad_schema.statics = {
         return await ad_model.find({author : data._id});
 
     },
+
+    search : async(data)=>{
+
+        await ad_model.find()
+
+    }
 
 };
 

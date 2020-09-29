@@ -18,7 +18,7 @@ let user_schema = new mongoose.Schema({
 });
 
 // Defining model virtuals
-// user_schema.virtuals('full_name').get(()=>{return `${this.first_name} ${this.last_name}`});
+user_schema.virtual('full_name').get(()=>{return `${this.first_name} ${this.last_name}`});
 
 // Defining model statics
 user_schema.statics = {
@@ -52,11 +52,30 @@ user_schema.statics = {
 
     login : async (data)=>{
 
-        let find_user = await user_model.findOne({username : data.username});
+        let find_user1 = await user_model.findOne({username : data.username});
+        let find_user2 = await user_model.findOne({email : data.email});
 
-        if(find_user){
+        if(find_user1){
 
-            await bcrypt.compare(data.password, find_user.password, (err, result)=>{
+            await bcrypt.compare(data.password, find_user1.password, (err, result)=>{
+
+                if(result){
+
+                    return find_user;
+
+                }
+                else{
+
+                    return null;
+
+                }
+
+            });
+
+        }
+        else if(find_user2){
+
+            await bcrypt.compare(data.password, find_user2.password, (err, result)=>{
 
                 if(result){
 

@@ -4,11 +4,14 @@ router.get('/', async(req, res, next)=>{
 
     try{
 
-        let {s, c, p, w} = req.query;
+        let {s, c, l, p, w} = req.query;
 
         if(!isUndefined(s)){
 
             // Search
+            let search_query = {
+
+            }
             res.render('index/search');
 
         }

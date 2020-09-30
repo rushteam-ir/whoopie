@@ -40,7 +40,11 @@
 
                     <div class="username_and_image_field">
                         <div class="user_image">
-                            <img src="img/AP03.jpg" alt="">
+                            {@eq key="{g_user_info.avatar}" value="{null}"}
+                                <img src="img/AP03.png" alt="">
+                            {:else}
+                                <img src="media/avatars/{g_user_info.avatar}" alt="">
+                            {/eq}
                         </div>
                         <div class="username_field">
                             <span></span>   

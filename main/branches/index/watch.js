@@ -1,37 +1,23 @@
-const router = express.Router();
+module.exports = async(req, res, next)=>{
 
-router.get('/', async(req, res, next)=>{
+    let watch_data = {
+        unique_id : req.query.w,
+    }
+    let ad_info = await ad_model.getById(watch_data);
 
-    try{
+    if(ad_info){
 
-        let {w} = req.query;
-        let watch_data = {
-            unique_id : w,
+        let data = {
+            ad_info : ad_info
         }
-        let ad_info = await ad_model.getById(watch_data);
 
-        if(ad_info){
-
-            let data = {
-                ad_info : ad_info
-            }
-
-            return res.render('index/watch', data);
-
-        }
-        else{
-
-            return res.status(404).render('errors/404');
-
-        }
+        return res.render('index/watch', data);
 
     }
-    catch (error) {
+    else{
 
-        next(error);
+        return res.status(404).render('errors/404');
 
     }
 
-});
-
-module.exports = router;
+}

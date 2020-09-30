@@ -4,48 +4,18 @@ router.get('/', async(req, res, next)=>{
 
     try{
 
-        let {s, c, l, w} = req.query;
+        let {s, w} = req.query;
 
         if(!isUndefined(s)){
 
             // Search
-            let search_inp = s;
-            let search_query = {
-                category : isUndefined(c) ? null : c,
-                city : isUndefined(l) ? null : l,
-            }
-            let data = {
-                ad_list : await ad_model.getBySearch(search_inp, search_query),
-                search_value : search_inp
-            }
-
-            log(data)
-
-            res.render('index/search', data);
+            await require('./search')(req, res, next);
 
         }
         else if(!isUndefined(w)){
 
             // Watch an Ad
-            let watch_data = {
-                unique_id : w,
-            }
-            let ad_info = await ad_model.getById(watch_data);
-
-            if(ad_info){
-
-                let data = {
-                    ad_info : ad_info
-                }
-
-                return res.render('index/watch', data);
-
-            }
-            else{
-
-                return res.status(404).render('errors/404');
-
-            }
+            await require('./watch')(req, res, next);
 
         }
         else{
@@ -55,7 +25,7 @@ router.get('/', async(req, res, next)=>{
                 category_list : await category_model.getAll()
             }
 
-            res.render('index/main', data);
+            return res.render('index/main', data);
 
         }
 

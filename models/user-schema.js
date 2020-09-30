@@ -15,6 +15,9 @@ let user_schema = new mongoose.Schema({
     avatar : String,
     city : String,
     birth_date : Date,
+    military_service : Number,
+    marital_status : Number,
+    sex : Number,
 });
 
 // Defining model virtuals

@@ -14,7 +14,8 @@ let ad_schema = new mongoose.Schema({
     author : {
         type : 'objectId',
         ref : 'user'
-    }
+    },
+    type : Number,
 },{
     toObject: { virtuals: true},
     toJSON: { virtuals: true }

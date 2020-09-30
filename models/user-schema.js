@@ -1,5 +1,5 @@
 // Defining schema model
-user_schema = new mongoose.Schema({
+let user_schema = new mongoose.Schema({
     username : {
         type : String,
         unique : true,
@@ -165,5 +165,4 @@ user_schema.statics = {
 };
 
 // Exporting model schema
-exports.user_schema = user_schema;
-exports.user_model = mongoose.model('user', user_schema);
+module.exports = user_model = mongoose.model('user', user_schema);

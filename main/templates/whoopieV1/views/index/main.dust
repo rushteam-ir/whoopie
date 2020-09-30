@@ -51,23 +51,23 @@
                 <div class="col-4 offset-4">
                     <div class='main_field_of_RM'>
                         <p class="header_of_reg">ثبت نام در <span>ووپــــــــای</span></p>
-                        <p class="small_of_reg_header">در کم تر از 1 دقیقه ثبت نام کن و حزه را دوست داشته باش تا اون نیز به تو بگوید ارههه بابا </p>
-                        <form>
+                        <p class="small_of_reg_header">در کم تر از 1 دقیقه ثبت نام کن ! </p>
+                        <form action="{app_url}api/v1/auth/register" method="post" autocomplete="off">
                             <div class="form-group">
                               <label for="reg_username">نام کاربری</label>
-                              <input type="text" class="form-control" id="reg_username">
+                              <input type="text" class="form-control" id="reg_username" name="username_inp">
                             </div>
                             <div class="form-group">
                               <label for="reg_email">پست الکترونیکی</label>
-                              <input type="text" class="form-control" id="reg_email">
+                              <input type="text" class="form-control" id="reg_email" name="email_inp">
                             </div>
                             <div class="form-group">
                               <label for="reg_pass">رمز عبور</label>
-                              <input type="password" class="form-control" id="reg_pass">
+                              <input type="password" class="form-control" id="reg_pass" name="password_inp">
                             </div>
                             <div class="form-group">
                               <label for="reg_repass">تکرار رمز عبور</label>
-                              <input type="password" class="form-control" id="reg_repass">
+                              <input type="password" class="form-control" id="reg_repass" name="confirm_password_inp">
                             </div>
                             <button type="submit" class="btn rm_sub">ثبت نام</button>
                             <button type="submit" class="btn rm_sub google_login">ثبت نام با گوگل <i class="fab fa-google"></i></button>
@@ -88,15 +88,14 @@
                 <div class="col-4 offset-4">
                     <div class="main_field_of_LM">
                         <p class="header_of_log">وررود به  <span>ووپــــــــای</span></p>
-                        <p class="small_of_log_header">در کم تر از 1 دقیقه ثبت نام کن و حزه را دوست داشته باش تا اون نیز به تو بگوید ارههه بابا </p>
-                        <form>
+                        <form action="{app_url}api/v1/auth/login" method="post" autocomplete="off">
                             <div class="form-group">
                               <label for="reg_username">نام کاربری یا پست الکترونیکی</label>
-                              <input type="text" class="form-control" id="reg_username">
+                              <input type="text" class="form-control" id="reg_username" name="username_inp">
                             </div>
                             <div class="form-group">
                               <label for="log_password">رمز عبور</label>
-                              <input type="password" class="form-control" id="log_password">
+                              <input type="password" class="form-control" id="log_password" name="password_inp">
                             </div>
                             <button type="submit" class="btn LM_sub">وررود</button>
                             <button type="submit" class="btn LM_sub google_login"> وررود با گوگل <i class="fab fa-google"></i></button>

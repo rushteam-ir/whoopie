@@ -52,7 +52,7 @@
                     </div>
                 </form>
             </div>
-            {@eq key="{g_user_info}" value="{null}"}
+            {@ne key="{g_user_info}" value="{null}"}
                 <div class="right_field">
                     <div class="profile_field">
                         <img src="img/AP03.jpg" alt="">
@@ -84,7 +84,7 @@
                         </a>
                     </div>
                 </div>
-            {/eq}
+            {/ne}
         </div>
     </nav>
 

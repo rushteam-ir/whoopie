@@ -8,7 +8,7 @@ router.use(async(req, res, next)=>{
 
         if(!isUndefined(req.session.user_info)){
 
-            res.locals.g_user_info = await user_model.getById(req.session.user_info._id);
+            res.locals.g_user_info = req.session.user_info;
 
         }
 

@@ -35,6 +35,7 @@ router.post('/', async(req, res, next)=>{
 
             if(result){
 
+                req.session.user_info = result;
                 return res.json({success : 'success'});
 
             }

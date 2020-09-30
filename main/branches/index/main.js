@@ -19,6 +19,8 @@ router.get('/', async(req, res, next)=>{
                 search_value : search_inp
             }
 
+            log(data)
+
             res.render('index/search', data);
 
         }

@@ -160,6 +160,25 @@ user_schema.statics = {
 
         }
 
+    },
+
+    getByUserName : async (data)=>{
+
+        let find_user = await user_model.findOne({username : data});
+
+        if(find_user){
+
+            find_user.birth_date = find_user.birth_date;
+
+            return find_user;
+
+        }
+        else{
+
+            return null;
+
+        }
+
     }
 
 };

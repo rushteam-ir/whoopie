@@ -55,9 +55,13 @@
             {@ne key="{g_user_info}" value="{null}"}
                 <div class="right_field">
                     <div class="profile_field">
-                        <img src="img/AP03.jpg" alt="">
+                        {@eq key="{g_user_info.avatar}" value="{null}"}
+                            <img src="img/AP03.png" alt="">
+                        {:else}
+                            <img src="media/avatars/{g_user_info.avatar}" alt="">
+                        {/eq}
                         <span id="show_AP03">
-                        <p>کسری حبیب بیگی</p>
+                        <p>{g_user_info.username}</p>
                         <i class="fas fa-angle-down"></i>
                     </span>
                     </div>

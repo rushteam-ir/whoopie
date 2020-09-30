@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
     "express-session": "^1.17.1",
+    "googleapis": "^60.0.1",
     "jalali-date": "^1.1.1",
     "mongoose": "^5.10.6",
     "sha1": "^1.1.1"

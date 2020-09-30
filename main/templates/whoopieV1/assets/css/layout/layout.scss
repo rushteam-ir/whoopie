@@ -6,6 +6,9 @@ $inpBorderRad: 15px;
 
 body {
     background-image: url(../../img/AB00.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;;
 }
 
 nav {
@@ -102,7 +105,7 @@ nav {
                 direction: rtl;
                 text-align: right;
                 width: 200px;
-                background-color: white;
+                background-color: $white;
                 border-radius: 15px;
                 position: relative;
                 top: 20px;
@@ -117,7 +120,7 @@ nav {
                     }
                     i{
                         margin-left: 10px;
-                        color: #73c5f9;
+                        color: $main_color;
                     }
                 }
             }

@@ -23,7 +23,7 @@ let ad_schema = new mongoose.Schema({
 // Defining model virtuals
 ad_schema.virtual('search').get(()=>{
 
-    return `${this.title},${this.describe},${this.tags.toString()},${this.author.full_name}`;
+    return `${this.title},${this.describe},${this.tags ? this.tags.toString() : ''},${this.author.first_name},${this.author.last_name}`;
 
 });
 

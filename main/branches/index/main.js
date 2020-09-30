@@ -4,7 +4,7 @@ router.get('/', async(req, res, next)=>{
 
     try{
 
-        let {s, c, l, p, w} = req.query;
+        let {s, c, l, w} = req.query;
 
         if(!isUndefined(s)){
 

@@ -1,17 +1,15 @@
 module.exports = async(req, res, next)=>{
 
-    let watch_data = {
-        unique_id : req.query.w,
-    }
-    let ad_info = await ad_model.getById(watch_data);
+    let username = req.params.username;
+    let user_info = await user_model.getByUserName(username);
 
-    if(ad_info){
+    if(user_info){
 
         let data = {
-            ad_info : ad_info
+            user_info : user_info
         }
 
-        return res.render('index/watch', data);
+        return res.render('index/profile', data);
 
     }
     else{

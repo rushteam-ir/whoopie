@@ -41,12 +41,16 @@
                     <div class="username_and_image_field">
                         <div class="user_image">
                             <span></span>
-                            <img src="img/AP03.jpg" alt="">
+                            {@eq key="{g_user_info.avatar}" value="{null}"}
+                                <img src="img/AP03.png" alt="">
+                            {:else}
+                                <img src="media/avatars/{g_user_info.avatar}" alt="">
+                            {/eq}
                             <span></span>
                         </div>
                         <div class="username_field">
                             <span></span>   
-                            <p>کسری حبیب بیگی <i class="welcom_text">، خوش آمدید !</i></p>
+                            <p>{g_user_info.username} <i class="welcom_text">، خوش آمدید !</i></p>
                             <span></span>   
                         </div>
                     </div>

@@ -6,7 +6,7 @@
 {/css}
 
 {<js}
-
+    <script src="js/index/index.js"></script>
 {/js}
 
 {<body}
@@ -27,19 +27,85 @@
                 </div>
                 {@eq key="{g_user_info}" value="{null}"}
                     <div class="start_btn">
-                        <button class="btn start_btn_field">
+                        <button id="openRM"  class="btn start_btn_field">
                             شروع کار با ووپـــــای !
                             <img class="rocket_img" src="img/AR01.png" alt="">
                             <img class="dashed_curved_img" src="img/AC02.png" alt="">
                         </button>
                     </div>
                     <div Class="have_accont">
-                        <p>از قبل حساب کاربری داری ؟ از <a href="">اینجا</a> وارد شوید !</p>
+                        <p>از قبل حساب کاربری داری ؟ از <button class="btn" href="" id="openLM">اینجا</button> وارد شوید !</p>
                     </div>
                 {:else}
 
                 {/eq}
 
+            </div>
+        </div>
+    </section>
+
+    <!-- register -->
+    <section id="register_modal">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-4 offset-4">
+                    <div class='main_field_of_RM'>
+                        <p class="header_of_reg">ثبت نام در <span>ووپــــــــای</span></p>
+                        <p class="small_of_reg_header">در کم تر از 1 دقیقه ثبت نام کن و حزه را دوست داشته باش تا اون نیز به تو بگوید ارههه بابا </p>
+                        <form>
+                            <div class="form-group">
+                              <label for="reg_username">نام کاربری</label>
+                              <input type="text" class="form-control" id="reg_username">
+                            </div>
+                            <div class="form-group">
+                              <label for="reg_email">پست الکترونیکی</label>
+                              <input type="text" class="form-control" id="reg_email">
+                            </div>
+                            <div class="form-group">
+                              <label for="reg_pass">رمز عبور</label>
+                              <input type="password" class="form-control" id="reg_pass">
+                            </div>
+                            <div class="form-group">
+                              <label for="reg_repass">تکرار رمز عبور</label>
+                              <input type="password" class="form-control" id="reg_repass">
+                            </div>
+                            <button type="submit" class="btn rm_sub">ثبت نام</button>
+                            <button type="submit" class="btn rm_sub google_login">ثبت نام با گوگل <i class="fab fa-google"></i></button>
+                        </form>
+                        <button class="btn" id="close_rm">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- login -->
+    <section id="login_modal">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-4 offset-4">
+                    <div class="main_field_of_LM">
+                        <p class="header_of_log">وررود به  <span>ووپــــــــای</span></p>
+                        <p class="small_of_log_header">در کم تر از 1 دقیقه ثبت نام کن و حزه را دوست داشته باش تا اون نیز به تو بگوید ارههه بابا </p>
+                        <form>
+                            <div class="form-group">
+                              <label for="reg_username">نام کاربری یا پست الکترونیکی</label>
+                              <input type="text" class="form-control" id="reg_username">
+                            </div>
+                            <div class="form-group">
+                              <label for="log_password">رمز عبور</label>
+                              <input type="password" class="form-control" id="log_password">
+                            </div>
+                            <button type="submit" class="btn LM_sub">وررود</button>
+                            <button type="submit" class="btn LM_sub google_login"> وررود با گوگل <i class="fab fa-google"></i></button>
+                        </form>
+                        <button class="btn" id="close_Lm">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -99,7 +99,7 @@
     <script src="js/general/popper.js"></script>
     <script src="js/general/bootstrap.js"></script>
     <script src="js/general/wow.js"></script>
-    <script src="js/index/index.js"></script>
+    <script src="js/layout/layout.js"></script>
     {+js/}
 </body>
 

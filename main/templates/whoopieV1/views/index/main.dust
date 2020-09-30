@@ -40,7 +40,9 @@
 
                     <div class="username_and_image_field">
                         <div class="user_image">
+                            <span></span>
                             <img src="img/AP03.jpg" alt="">
+                            <span></span>
                         </div>
                         <div class="username_field">
                             <span></span>   

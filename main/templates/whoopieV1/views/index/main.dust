@@ -38,6 +38,32 @@
                     </div>
                 {:else}
 
+                    <div class="username_and_image_field">
+                        <div class="user_image">
+                            <img src="img/AP03.jpg" alt="">
+                        </div>
+                        <div class="username_field">
+                            <span></span>   
+                            <p>کسری حبیب بیگی <i class="welcom_text">، خوش آمدید !</i></p>
+                            <span></span>   
+                        </div>
+                    </div>
+
+                    <div class="login_option">
+                        <a href="">
+                            ثبت آگهی جدید 
+                            <i class="fas fa-plus"></i>
+                        </a>
+                        <a href="">
+                            لیست آگهی های من
+                            <i class="fas fa-list"></i>
+                        </a>
+                        <a href="">
+                            اطلاعات کاربری من
+                            <i class="fas fa-user-crown"></i>
+                        </a>
+                    </div>
+
                 {/eq}
 
             </div>

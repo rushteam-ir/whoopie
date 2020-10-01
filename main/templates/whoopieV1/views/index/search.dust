@@ -13,7 +13,7 @@
     <section>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6 offset-3">
+                <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
                     <div class="search_header mt-3">
                         <p> نتایج جستجو برای <span> طراحی سایت </span> در دسته بندی <span> برنامه نویسی </span>، شهر <span>تهران</span> </p>
                     </div>
@@ -28,7 +28,38 @@
                                 </button>
                             </div>
                             <div class="ads_profile_info">
-                                <img src="img/AP03.jpg" alt="">
+                                <img src="img/AP03.png" alt="">
+                                <div>
+                                    <p>کسری حبیب بیگی</p>
+                                    <p>تهران | kasrahabibbeygi@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="ads_card_info">
+                                <p>
+                                    node.js
+                                    <span># برنامه نویسی</span>
+                                </p>
+                                <p>برنامه نویس هوشمند و اسکل و علاقه مند به حرف زدن های حمزه من طالبیه شیرینم تستم کن !</p>
+                            </div>
+                        </div>
+                        <div class="left_card_box">
+                            <p><span> جنسیت :  </span> دو جنسه</p>
+                            <p><span> نوع همکاری : </span>دورکاری</p>
+                            <button class="btn">مشاهده</button>
+                        </div>
+                    </div>
+                    <div class="ads_card_field mb-4">
+                        <div class="right_card_box">
+                            <div class="RS_field">
+                                <button class="btn">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                            <div class="ads_profile_info">
+                                <img src="img/AP03.png" alt="">
                                 <div>
                                     <p>کسری حبیب بیگی</p>
                                     <p>تهران | kasrahabibbeygi@gmail.com</p>
@@ -60,39 +91,7 @@
                                 </button>
                             </div>
                             <div class="ads_profile_info">
-                                <img src="img/AP03.jpg" alt="">
-                                <div>
-                                    <p>کسری حبیب بیگی</p>
-                                    <p>تهران | kasrahabibbeygi@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="ads_card_info">
-                                <p>
-                                    node.js
-                                    <span># برنامه نویسی</span>
-                                </p>
-                                <p>برنامه نویس هوشمند و اسکل و علاقه مند به حرف زدن های حمزه من طالبیه شیرینم تستم کن !</p>
-                            </div>
-                        </div>
-                        <div class="left_card_box">
-                            <p><span> جنسیت :  </span> دو جنسه</p>
-                            <p><span> نوع همکاری : </span>دورکاری</p>
-                            <p><span> تاریخ تولد : </span> 10 دی 1377</p>
-                            <button class="btn">مشاهده</button>
-                        </div>
-                    </div>
-                    <div class="ads_card_field mb-4">
-                        <div class="right_card_box">
-                            <div class="RS_field">
-                                <button class="btn">
-                                    <i class="fas fa-exclamation-circle"></i>
-                                </button>
-                                <button class="btn">
-                                    <i class="fas fa-share-alt"></i>
-                                </button>
-                            </div>
-                            <div class="ads_profile_info">
-                                <img src="img/AP03.jpg" alt="">
+                                <img src="img/AP03.png" alt="">
                                 <div>
                                     <p>کسری حبیب بیگی</p>
                                     <p>تهران | kasrahabibbeygi@gmail.com</p>

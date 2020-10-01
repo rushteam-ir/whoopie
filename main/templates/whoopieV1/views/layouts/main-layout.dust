@@ -37,8 +37,10 @@
                     <div class="category_nav">
                         <div class="form-group">
                             <select class="form-control">
-                                <option>همه</option>
-                                <option>برنامه نویسی</option>
+                                <option value="">همه</option>
+                                {#g_category_list}
+                                    <option value="{_id}">{title}</option>
+                                {/g_category_list}
                             </select>
                         </div>
                     </div>

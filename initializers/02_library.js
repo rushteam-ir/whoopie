@@ -64,3 +64,6 @@ getRandomArray = function (arr, n) {
     return result;
 }
 
+// let test = 'rouzbehSbz_1';
+// let regex = /^[\w.-]{5,20}$/;
+// log(regex.test(test))

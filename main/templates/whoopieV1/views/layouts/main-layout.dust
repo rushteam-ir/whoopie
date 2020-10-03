@@ -35,36 +35,26 @@
                 </div>
                 <div class="WC_dropdown">
                     <div class="WCD_title" id="category_select">دسته بندی<i class="fas fa-angle-down"></i></div>
-                    <div class="WCD_optopn">
-                        <span value="">برنامه نویسی</span>
-                        <span value="">حمزه خوری</span>
-                        <span value="">حمزه بری</span>
-                        <span value="">شاشیدن تو همه چی</span>
-                        <span value="">برنامه نویسی</span>
-                        <span value="">حمزه خوری</span>
-                        <span value="">حمزه بری</span>
-                        <span value="">شاشیدن تو همه چی</span>
-                        <span value="">برنامه نویسی</span>
-                        <span value="">حمزه خوری</span>
-                        <span value="">حمزه بری</span>
-                        <span value="">شاشیدن تو همه چی</span>
-                        <span value="">برنامه نویسی</span>
-                        <span value="">حمزه خوری</span>
-                        <span value="">حمزه بری</span>
-                        <span value="">شاشیدن تو همه چی</span>
-                        <span value="">برنامه نویسی</span>
-                        <span value="">حمزه خوری</span>
-                        <span value="">حمزه بری</span>
-                        <span value="">شاشیدن تو همه چی</span>
+                    <div class="category_input WCD_optopn">
+                        {#g_category_list}
+                            {@eq key="{category_value}" value="{title}"}
+                                <span selected="selected" value="{_id}">{title}</span>
+                            {:else}
+                                <span value="{_id}">{title}</span>
+                            {/eq}
+                        {/g_category_list}
                     </div>
                 </div>
                 <div class="WC_dropdown">
                     <div class="WCD_title" id="city_select">شهر شما<i class="fas fa-angle-down"></i></div>
-                    <div class="WCD_optopn">
-                        <span value="">سیستان و بلوچستان</span>
-                        <span value="">حمزه خوری</span>
-                        <span value="">حمزه بری</span>
-                        <span value="">شاشیدن تو همه چی</span>
+                    <div class="location_input WCD_optopn">
+                        {#g_city_list}
+                            {@eq key="{city_value}" value="{.}"}
+                                <span selected="selected" value="{.}">{.}</span>
+                            {:else}
+                                <span value="{.}">{.}</span>
+                            {/eq}
+                        {/g_city_list}
                     </div>
                 </div>
             </div>

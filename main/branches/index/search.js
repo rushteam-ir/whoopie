@@ -7,7 +7,9 @@ module.exports = async(req, res, next)=>{
     }
     let data = {
         ad_list : await ad_model.getBySearch(search_inp, filters),
-        search_value : search_inp
+        search_value : search_inp,
+        category_value : filters.category,
+        city_value : filters.city,
     }
 
     log(data);

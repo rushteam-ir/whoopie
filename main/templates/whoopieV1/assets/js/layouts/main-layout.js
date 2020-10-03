@@ -8,8 +8,8 @@ $('.fa-search').click(function(){
 
     let redirect_url = `${app_url}`;
     let search_input = $('.search_input').val();
-    let category_input = $('.category_input option').attr('value');
-    let location_input = $('.location_input option').attr('value');
+    let category_input = $('.category_input option:selected').attr('value');
+    let location_input = $('.location_input option:selected').attr('value');
 
     redirect_url += `?s=${search_input}`;
     if(category_input != ""){
@@ -19,6 +19,10 @@ $('.fa-search').click(function(){
         redirect_url += `&l=${location_input}`;
     }
 
-    window.location.href = redirect_url;
+    redirect(redirect_url);
 
 });
+
+function redirect(url) {
+    location.href = url
+}

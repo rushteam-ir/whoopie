@@ -44,7 +44,7 @@ main.use(async (error, req, res, next)=>{
         remote_address : req.connection.remoteAddress,
     }
 
-    await report_model.add(report_data);
+    await report_model.addGeneral(report_data);
 
     res.status(500).render('errors/500', {error});
 

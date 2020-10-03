@@ -21,7 +21,6 @@
     <nav>
         <div class="main_field_of_navbar">
             <div class="midle_field">
-                <form>
                     <div class="search_nav">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -52,7 +51,6 @@
                             </select>
                         </div>
                     </div>
-                </form>
             </div>
             {@ne key="{g_user_info}" value="{null}"}
                 <div class="right_field">

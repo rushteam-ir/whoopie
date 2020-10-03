@@ -1,13 +1,20 @@
-$('#show_AP03').click(function(){
-    
-    let profileClicked = $(this);
+$('#show_AP03').click(function () {
 
-    profileClicked.next().fadeToggle(100);
-
+    $('#show_AP03').parent().next().fadeToggle(100);
 
 });
 
-$('.fa-search').click(function(){
+$(window).click(function (e) {
+
+    if ($('#show_AP03').attr('id') !== $(e.target).attr('id')) {
+
+        $('#show_AP03').parent().next().fadeOut(100);
+
+    }
+
+});
+
+$('.fa-search').click(function () {
 
     let redirect_url = `${app_url}`;
     let search_input = $('.search_input').val();
@@ -15,11 +22,15 @@ $('.fa-search').click(function(){
     let location_input = $('.location_input option:selected').attr('value');
 
     redirect_url += `?s=${search_input}`;
-    if(category_input != ""){
+    if (category_input != "") {
+
         redirect_url += `&c=${category_input}`;
+
     }
-    if(location_input != ""){
+    if (location_input != "") {
+
         redirect_url += `&l=${location_input}`;
+
     }
 
     redirect(redirect_url);
@@ -27,5 +38,7 @@ $('.fa-search').click(function(){
 });
 
 function redirect(url) {
+
     location.href = url
+
 }

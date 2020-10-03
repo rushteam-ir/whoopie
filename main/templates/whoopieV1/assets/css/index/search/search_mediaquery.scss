@@ -120,16 +120,19 @@
 
     .ads_card_field .left_card_box p {
         width: max-content;
-        &:first-child{
+
+        &:first-child {
             margin-left: 15px;
         }
     }
+
     .ads_card_field .left_card_box button {
         font-size: 1.1rem;
         width: 50%;
         margin-right: 20%;
         margin-top: 10px;
     }
+
     .ads_card_field .right_card_box .RS_field {
         left: 5px;
     }

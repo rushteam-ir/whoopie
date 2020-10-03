@@ -21,59 +21,63 @@
     <nav>
         <div class="main_field_of_navbar">
             <div class="midle_field">
-                    <div class="search_nav">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="search_AA00">
-                                    <button class="btn">
-                                        <i class="fal fa-search"></i>
-                                    </button>
-                                </span>
-                            </div>
-                            <input type="text" class="search_input form-control" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
+                <div class="search_nav">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="search_AA00">
+                                <button class="btn">
+                                    <i class="fal fa-search"></i>
+                                </button>
+                            </span>
                         </div>
+                        <input type="text" class="search_input form-control" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
                     </div>
-                    <div class="category_nav">
-                        <div class="form-group">
-                            <select class="category_input form-control">
-                                <option value="">همه</option>
-                                {#g_category_list}
-                                    {@eq key="{category_value}" value="{_id}"}
-                                        <option selected value="{_id}">{title}</option>
-                                    {:else}
-                                        <option value="{_id}">{title}</option>
-                                    {/eq}
-                                {/g_category_list}
-                            </select>
-                        </div>
+                </div>
+                <div class="WC_dropdown">
+                    <div class="WCD_title" id="category_select">دسته بندی<i class="fas fa-angle-down"></i></div>
+                    <div class="WCD_optopn">
+                        <span value="">برنامه نویسی</span>
+                        <span value="">حمزه خوری</span>
+                        <span value="">حمزه بری</span>
+                        <span value="">شاشیدن تو همه چی</span>
+                        <span value="">برنامه نویسی</span>
+                        <span value="">حمزه خوری</span>
+                        <span value="">حمزه بری</span>
+                        <span value="">شاشیدن تو همه چی</span>
+                        <span value="">برنامه نویسی</span>
+                        <span value="">حمزه خوری</span>
+                        <span value="">حمزه بری</span>
+                        <span value="">شاشیدن تو همه چی</span>
+                        <span value="">برنامه نویسی</span>
+                        <span value="">حمزه خوری</span>
+                        <span value="">حمزه بری</span>
+                        <span value="">شاشیدن تو همه چی</span>
+                        <span value="">برنامه نویسی</span>
+                        <span value="">حمزه خوری</span>
+                        <span value="">حمزه بری</span>
+                        <span value="">شاشیدن تو همه چی</span>
                     </div>
-                    <div class="city_nav">
-                        <div class="form-group">
-                            <select class="location_input form-control">
-                                <option value="">همه</option>
-                                {#g_city_list}
-                                    {@eq key="{city_value}" value="{.}"}
-                                        <option selected value="{.}">{.}</option>
-                                    {:else}
-                                        <option value="{.}">{.}</option>
-                                    {/eq}
-                                {/g_city_list}
-                            </select>
-                        </div>
+                </div>
+                <div class="WC_dropdown">
+                    <div class="WCD_title" id="city_select">دسته بندی<i class="fas fa-angle-down"></i></div>
+                    <div class="WCD_optopn">
+                        <span value="">سیستان و بلوچستان</span>
+                        <span value="">حمزه خوری</span>
+                        <span value="">حمزه بری</span>
+                        <span value="">شاشیدن تو همه چی</span>
                     </div>
+                </div>
             </div>
             {@ne key="{g_user_info}" value="{null}"}
                 <div class="right_field">
-                    <div class="profile_field">
+                    <div class="profile_field" id="show_AP03">
                         {@eq key="{g_user_info.avatar}" value="{null}"}
                             <img src="img/AP03.png" alt="">
                         {:else}
                             <img src="media/avatars/{g_user_info.avatar}" alt="">
                         {/eq}
-                        <span id="show_AP03">
                         <p>{g_user_info.username}</p>
                         <i class="fas fa-angle-down"></i>
-                    </span>
                     </div>
                     <div class="profile_dropown">
                         <a href="{app_url}new">
@@ -114,6 +118,7 @@
     <script src="js/general/bootstrap.js"></script>
     <script src="js/general/wow.js"></script>
     <script src="js/layouts/main-layout.js"></script>
+    <script src="js/custom/select.js"></script>
     {+js/}
 </body>
 

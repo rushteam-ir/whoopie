@@ -1,6 +1,9 @@
 $('#show_AP03').click(function(){
+    
+    let profileClicked = $(this);
 
-    $('#show_AP03').parent().next().fadeToggle();
+    profileClicked.next().fadeToggle(100);
+
 
 });
 

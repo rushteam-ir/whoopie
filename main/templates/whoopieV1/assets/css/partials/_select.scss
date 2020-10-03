@@ -1,0 +1,53 @@
+$WC : 180px;
+
+.WC_dropdown {
+    direction: rtl;
+    text-align: center;
+    display: inline-block;
+    font-family: $AF;
+    width: $WC;
+    margin-right: 8px;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 100;
+
+    .WCD_title {
+        height: 38px;
+        width: $WC;
+        border: 1px solid #CED4DA;
+        color: #aaaaaa;
+        border-radius: 15px;
+        line-height: 38px;
+        cursor: pointer;
+        i{
+            position: relative;
+            top: 2px;
+            right: 27px;
+        }
+    }
+
+    .WCD_optopn {
+        display: none;
+        width: 180px;
+        background-color: $white;
+        border-radius: 15px;
+        color: #aaaaaa;
+        margin-top: 5px;
+        overflow: hidden;
+        position: absolute;
+        top: 40px;
+        border: 1px solid #CED4DA;
+        max-height: 400px;
+        overflow: auto;
+        direction: ltr;
+
+        span {
+            display: block;
+            padding: 8px 0px;
+            cursor: pointer;
+            &:hover{
+                background-color:  #F5F5F5;
+            }
+        }
+    }
+}

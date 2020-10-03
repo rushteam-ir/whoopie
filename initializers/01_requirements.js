@@ -9,3 +9,4 @@ bcrypt = require('bcrypt');
 fileUpload = require('express-fileupload');
 sha1 = require('sha1');
 jalali_date = require('jalali-date');
+rsuid = require('rsuid');

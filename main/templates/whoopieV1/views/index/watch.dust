@@ -1,3 +1,13 @@
-<html>
-    WATCH
-</html>
+{>"layouts/main-layout"/}
+
+{<css}
+
+{/css}
+
+{<js}
+
+{/js}
+
+{<body}
+        {ad_info}
+{/body}

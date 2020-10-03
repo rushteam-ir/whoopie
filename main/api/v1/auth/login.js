@@ -6,9 +6,9 @@ router.post('/', async(req, res, next)=>{
 
         if(isUndefined(req.session.user_info)){
 
-            let {username_inp, password_inp} = req.body;
+            let {username_or_email_inp, password_inp} = req.body;
             let validation_result = new Validation([
-                {value : username_inp, type : 'username'},
+                {value : username_or_email_inp},
                 {value : password_inp, type : 'password'},
             ]).check();
 
@@ -19,13 +19,11 @@ router.post('/', async(req, res, next)=>{
             }
 
             let login_data = {
-                username : username_inp,
+                username_or_email : username_or_email_inp,
                 password : password_inp
             }
 
             let result = await user_model.login(login_data);
-
-            log(result)
 
             if(result){
 

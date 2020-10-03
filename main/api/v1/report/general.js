@@ -16,7 +16,7 @@ router.post('/', async(req, res, next)=>{
         }
 
         let report_data = {
-            type : 'BUG',
+            type : 'General',
             text : text_inp,
             url : req._parsedOriginalUrl.path,
             who : req.session.user_info,
@@ -24,7 +24,7 @@ router.post('/', async(req, res, next)=>{
             remote_address : req.connection.remoteAddress,
         }
 
-        let result = await report_model.add(report_data);
+        let result = await report_model.addGeneral(report_data);
 
         if(result){
 

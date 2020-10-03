@@ -57,8 +57,8 @@ user_schema.statics = {
 
     login : async (data)=>{
 
-        let find_user1 = await user_model.findOne({username : data.username});
-        let find_user2 = await user_model.findOne({email : data.email});
+        let find_user1 = await user_model.findOne({username : data.username_or_email});
+        let find_user2 = await user_model.findOne({email : data.username_or_email});
 
         if(find_user1){
 

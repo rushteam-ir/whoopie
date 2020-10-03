@@ -12,12 +12,31 @@ let report_schema = new mongoose.Schema({
 // Defining model statics
 report_schema.statics = {
 
-    add : async (data)=>{
+    addGeneral : async (data)=>{
 
         data.created_date = new Date();
 
         let new_doc = new report_model(data);
         return await new_doc.save();
+
+    },
+
+    addAd : async (ad_inp, data)=>{
+
+        data.created_date = new Date();
+
+        let new_doc = new report_model(data);
+        let report_saved = await new_doc.save();
+        if(report_saved){
+
+            return await report_model.findOneAndUpdate({_id: ad_inp}, {$push: {reports: report_saved._id}});
+
+        }
+        else{
+
+            return null;
+
+        }
 
     }
 

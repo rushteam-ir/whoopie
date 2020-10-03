@@ -19,6 +19,10 @@ let ad_schema = new mongoose.Schema({
         ref: 'user'
     },
     type : Number,
+    reports : [{
+        type : 'ObjectId',
+        ref : 'report'
+    }]
 });
 
 // Defining model statics

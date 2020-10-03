@@ -47,9 +47,10 @@ module.exports = Validation = class {
                 case 'username':
                 {
 
-                    if(input.value.length < 4) {
+                    let regex = /^[\w.-]{4,25}$/;
+                    if(!regex.test(input.value)){
 
-                        return 'نام کاربری باید بیشتر از 4 حرف باشد.';
+                        return "نام کابری وارد شده معتبر نمی باشد."
 
                     }
 

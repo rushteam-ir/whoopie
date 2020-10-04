@@ -4,21 +4,7 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        await fs.unlink(`${app_dir}media/avatars/${req.session.avatar}`, (err) => {
-
-            if (err) {
-
-                return res.end();
-
-            }
-            else{
-
-                return res.json('تصویر پروفایل با موفقیت حذف شد.');
-
-            }
-
-        });
-
+        let result = await FileManager.remove(`${app_dir}media/avatars/${req.session.avatar}`);
     }
     catch (error) {
 

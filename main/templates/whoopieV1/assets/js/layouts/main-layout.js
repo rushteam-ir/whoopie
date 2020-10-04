@@ -18,7 +18,7 @@ $('.fa-search').click(function () {
 
     let redirect_url = `${app_url}`;
     let search_input = $('.search_input').val();
-    let category_input = $(".category_input span[selected='selected']").attr('value')
+    let category_input = $(".category_input span[selected='selected']").attr('value');
     let location_input = $(".location_input span[selected='selected']").attr('value');
 
     redirect_url += `?s=${search_input}`;

@@ -18,6 +18,10 @@ let user_schema = new mongoose.Schema({
     military_service : Number,
     marital_status : Number,
     sex : Number,
+    contacts : [{
+        type : String,
+        link : String,
+    }],
 });
 
 // Defining model virtuals

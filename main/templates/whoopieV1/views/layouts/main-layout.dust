@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="WC_dropdown">
-                    <div class="WCD_title" id="city_select">دسته بندی<i class="fas fa-angle-down"></i></div>
+                    <div class="WCD_title" id="city_select">شهر شما<i class="fas fa-angle-down"></i></div>
                     <div class="WCD_optopn">
                         <span value="">سیستان و بلوچستان</span>
                         <span value="">حمزه خوری</span>
@@ -70,7 +70,8 @@
             </div>
             {@ne key="{g_user_info}" value="{null}"}
                 <div class="right_field">
-                    <div class="profile_field" id="show_AP03">
+                    <div class="profile_field">
+                        <div id="show_AP03"></div>
                         {@eq key="{g_user_info.avatar}" value="{null}"}
                             <img src="img/AP03.png" alt="">
                         {:else}

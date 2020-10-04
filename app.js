@@ -8,6 +8,7 @@ require('./loader');
 const app = express();
 
 // Express configuration
+app.use(compression());
 app.use(session(session_options));
 app.use(body_parser.urlencoded({extended : false}));
 app.use(body_parser.json());

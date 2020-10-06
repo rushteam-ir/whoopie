@@ -31,7 +31,7 @@ ad_schema.statics = {
     add : async (data)=>{
 
         data.created_date = new Date();
-        data.unique_id = randomBase32String();
+        data.unique_id = randomUUID();
 
         let new_doc = new ad_model(data);
         return await new_doc.save((err, res)=>{

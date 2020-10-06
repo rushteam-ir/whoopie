@@ -2,7 +2,7 @@
 @import '../partials/font';
 @import '../partials/mixin';
 @import '../partials/select';
-a@import '../partials/checkbox-design';
+@import '../partials/checkbox-design';
 @import '../partials/Puploader';
 
 .field_of_img_template{
@@ -77,6 +77,10 @@ a@import '../partials/checkbox-design';
                 .WCD_optopn {
                     width: 98%;
                     top: 70px;
+                    overflow: hidden;
+                    div{
+                        overflow: auto;
+                    }
                 }
             }
 

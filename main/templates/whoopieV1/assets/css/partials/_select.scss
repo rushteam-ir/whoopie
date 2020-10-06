@@ -18,11 +18,14 @@ $WC : 180px;
         color: #aaaaaa;
         border-radius: 15px;
         line-height: 38px;
+        position: relative;
         cursor: pointer;
-        i{
-            position: relative;
-            top: 2px;
-            right: 27px;
+
+        i {
+            width: 15px;
+            position: absolute;
+            top: 11px;
+            left: 27px;
         }
     }
 
@@ -37,15 +40,22 @@ $WC : 180px;
         top: 40px;
         border: 1px solid #CED4DA;
         max-height: 400px;
-        overflow: auto;
+        overflow: hidden;
         direction: ltr;
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.144);
+
+        div {
+            overflow: auto;
+            max-height: 400px;
+        }
 
         span {
             display: block;
             padding: 8px 0px;
             cursor: pointer;
-            &:hover{
-                background-color:  #F5F5F5;
+
+            &:hover {
+                background-color: #F5F5F5;
             }
         }
     }

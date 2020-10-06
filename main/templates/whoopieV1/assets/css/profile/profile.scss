@@ -2,26 +2,140 @@
 @import '../partials/font';
 @import '../partials/mixin';
 @import '../partials/select';
+a@import '../partials/checkbox-design';
+@import '../partials/Puploader';
+
+.field_of_img_template{
+    width: 200px;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.btn-tertiary2{
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #CED4DA;
+    border-radius: 15px;
+    font-size: 1rem;
+    line-height: 195px;
+    background-color: #f7f7f7;
+    color: rgb(138, 138, 138);
+}
+
+.uploading_img_from_brows{
+    border-radius: 15px;
+}
+
+.box_of_img_template {
+    background: none;
+}
 
 .profile_inp_field {
-    form {
-        direction: rtl;
-        text-align: right;
+    .main_field_of_profile {
+        width: 100%;
+        padding: 50px 50px;
+        background-color: $white;
+        margin: 30px 0px;
+        border-radius: 15px;
+        width: 80%;
+        margin-left: 10%;
 
-        .profile_select {
-            border-radius: 15px;
-            margin-right: 0px;
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            direction: rtl;
+            margin-bottom: 30px;
+        }
 
-            label{
-                text-align: right;
-                direction: rtl;
-                width: 100%;
-                font-family: $TF;
-                font-size: 1rem;
+        form {
+            direction: rtl;
+            text-align: right;
+
+            .profile_select,
+            .maried_select,
+            .sex_select,
+            .militeries_select {
+                border-radius: 15px;
+                margin-right: 0px;
+                width: 49.99%;
+                margin-bottom: 15px;
+
+                label {
+                    text-align: right;
+                    direction: rtl;
+                    width: 100%;
+                    font-family: $TF;
+                    font-size: 1rem;
+                }
+
+                .WCD_title {
+                    background-color: $white;
+                    width: 98%;
+                }
+
+                .WCD_optopn {
+                    width: 98%;
+                    top: 70px;
+                }
             }
-            .WCD_title{
-                background-color: $white;
+
+            .sex_select,
+            .militeries_select {
+                z-index: 500;
+            }
+
+            .militeries_select {
+                display: none;
+            }
+
+            .born_day {
+                label {
+                    width: 100%;
+                }
+
+                input {
+                    width: 80px;
+                    display: inline-block;
+                }
+
+                span {
+                    padding: 0px 5px;
+                }
+            }
+
+            .profile_sub {
+                background-color: $accent_color;
+                width: 100%;
+                margin-top: 20px;
+                color: $white;
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding: 10px 30px;
+                border-radius: 50px;
+                @include transition(0.2s, linear, 0s);
+
+                &:hover {
+                    background-color: $hover_ac;
+                }
+            }
+
+            .telegram_checked {
+                display: none;
+            }
+
+            .lable_of_social_media {
+                width: 100%;
+            }
+
+            .T_id,
+            .I_id {
+                display: none;
             }
         }
     }
+}
+
+.show {
+    display: inline-block !important;
 }

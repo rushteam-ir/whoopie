@@ -11,14 +11,14 @@ main.use(Global_Info);
 // Main rout branches
 const Api = require('./api/api');
 const Index = require('./branches/index/main');
-const Profile = require('./branches/profile/profile');
+const User = require('./branches/user/user');
 const New = require('./branches/new/new');
 const Edit = require('./branches/edit/edit');
 const List = require('./branches/list/list');
 
 main.use('/api', Api);
 main.use('/', Index);
-main.use('/profile', Profile);
+main.use('/user', User);
 main.use('/new', New);
 main.use('/edit', Edit);
 main.use('/list', List);

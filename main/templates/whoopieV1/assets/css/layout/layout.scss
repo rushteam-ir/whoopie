@@ -51,7 +51,7 @@ nav {
                 margin-right: 10px;
 
                 input {
-                    border-radius: $inpBorderRad 0px 0px $inpBorderRad;
+                    border-radius: $inpBorderRad 0px 0px $inpBorderRad !important;
                     border-right: 0;
                     width: 300px;
                 }

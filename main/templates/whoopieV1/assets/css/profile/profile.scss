@@ -1,0 +1,27 @@
+@import '../partials/color';
+@import '../partials/font';
+@import '../partials/mixin';
+@import '../partials/select';
+
+.profile_inp_field {
+    form {
+        direction: rtl;
+        text-align: right;
+
+        .profile_select {
+            border-radius: 15px;
+            margin-right: 0px;
+
+            label{
+                text-align: right;
+                direction: rtl;
+                width: 100%;
+                font-family: $TF;
+                font-size: 1rem;
+            }
+            .WCD_title{
+                background-color: $white;
+            }
+        }
+    }
+}

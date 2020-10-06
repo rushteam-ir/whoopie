@@ -22,10 +22,6 @@ session_options = {
     name : config.session_name,
     resave: false,
     saveUninitialized: true,
-    cookie: {
-        secure : true,
-        httpOnly : true,
-        maxAge: config.cookie_age
-    }
+    maxAge: config.cookie_age
 };
 

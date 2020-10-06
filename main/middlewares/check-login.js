@@ -3,7 +3,7 @@ const router = express.Router();
 router.use(async(req, res, next)=>{
 
     try{
-
+        
         let parsed_url = req._parsedUrl.pathname;
 
         if(!parsed_url.endsWith('/')){

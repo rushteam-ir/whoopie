@@ -93,7 +93,7 @@
                             <i class="fas fa-lock"></i>
                             تعویض رمز عبور
                         </a>
-                        <a href="#">
+                        <a id="report_bug">
                             <i class="fas fa-bug"></i>
                             گزارش باگ
                         </a>
@@ -106,6 +106,25 @@
             {/ne}
         </div>
     </nav>
+
+    <section id="bug_modal">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-4 offset-4">
+                    <div class="main_field_of_debug_modal">
+                        <i class="fas fa-times" id="close_BM"></i>
+                        <h3>باگی رو که پیدا کردی به تیم <span>ووپــــــــــای</span> گزارش بده تا به روند بهبود سایت کمک کرده باشی !</h3>
+                        <form>
+                            <div class="form-group">
+                              <textarea type="password" class="form-control" id="bug_description" rows="10"></textarea>
+                            </div>
+                            <button type="submit" class="btn bug_sub">گزارش باگ</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {+body/}
 

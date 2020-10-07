@@ -80,7 +80,7 @@ nav {
                 cursor: pointer;
                 position: relative;
 
-                #show_AP03{
+                #show_AP03 {
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -151,5 +151,71 @@ nav {
     p {
         color: #989898;
         margin: 0;
+    }
+}
+
+#report_bug {
+    cursor: pointer;
+}
+
+#bug_modal {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.603);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100000000000000;
+
+    .row {
+        height: 100vh;
+    }
+
+    .main_field_of_debug_modal {
+        width: 100%;
+        padding: 50px;
+        background-color: $white;
+        border-radius: 15px;
+        direction: rtl;
+        text-align: right;
+        position: relative;
+
+        i {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 1.6rem;
+            color: #878787;
+            cursor: pointer;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            line-height: 45px;
+
+            span {
+                color: $main_color;
+                font-size: 2rem;
+            }
+        }
+
+        .bug_sub {
+            background-color: #FF7A7A;
+            width: 100%;
+            margin-top: 20px;
+            color: $white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 30px;
+            border-radius: 50px;
+            @include transition(0.2s, linear, 0s);
+
+            &:hover {
+                background-color: #C02F2F;
+            }
+        }
     }
 }

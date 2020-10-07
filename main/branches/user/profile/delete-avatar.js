@@ -1,19 +1,41 @@
 const router = express.Router();
 
-router.post('/', async(req, res, next)=>{
+router.get('/', async(req, res, next)=>{
 
     try{
 
-        await fs.unlink(`${app_dir}media/avatars/${req.session.avatar}`, (err) => {
+        await fs.unlink(`${app_dir}main/templates/whoopieV1/assets/media/avatars/${req.session.user_info.avatar}`, async(err) => {
 
             if (err) {
 
-                return res.end();
+                let avatar_info = {
+                    avatar : ''
+                }
+
+                let result = await user_model.editProfile(req.session.user_info, avatar_info);
+                req.session.user_info = result;
+
+                return res.redirect(`${app_url}user/profile`)
 
             }
             else{
 
-                return res.json('تصویر پروفایل با موفقیت حذف شد.');
+                let avatar_info = {
+                    avatar : ''
+                }
+                let result = await user_model.editProfile(req.session.user_info, avatar_info);
+
+                if(result){
+
+                    req.session.user_info = result;
+                    return res.json('تصویر پروفایل با موفقیت حذف شد.');
+
+                }
+                else{
+
+                    return res.json('حذف تصویر با خطا مواجه شد.')
+
+                }
 
             }
 

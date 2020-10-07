@@ -10,6 +10,7 @@ let user_schema = new mongoose.Schema({
     },
     created_date : Date,
     password : String,
+    avatar : String,
     first_name : String,
     last_name : String,
     phone_number : {
@@ -97,17 +98,16 @@ user_schema.statics = {
 
         if(find_user){
 
-            await bcrypt.compare(user_data.password, find_user.password, async(err, result)=>{
+            let current_password_hashed = await bcrypt.hash(user_data.current_password, 10);
+            let auth_result = current_password_hashed == find_user.password ? true : false;
 
-                if(result){
+            if(auth_result){
 
-                    await bcrypt.hash(data.password, 10, (err, hash)=>{
+                let hash_result = await bcrypt.hash(data.new_password, 10);
 
-                        data.password = hash;
+                if(hash_result){
 
-                    })
-
-                    return await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true});
+                    return await user_model.findByIdAndUpdate(find_user._id, {$set : {password : hash_result}}, {new : true});
 
                 }
                 else{
@@ -116,7 +116,12 @@ user_schema.statics = {
 
                 }
 
-            });
+            }
+            else{
+
+                return null;
+
+            }
 
         }
         else{
@@ -130,7 +135,7 @@ user_schema.statics = {
     editProfile : async (user_data, data)=>{
 
         let find_user = await user_model.findOne({username : user_data.username});
-        log(find_user)
+
         if(find_user){
 
             let auth_result = user_data.password == find_user.password ? true : false;

@@ -12,7 +12,7 @@ const app = express();
 app.use(session(session_options));
 app.use(body_parser.urlencoded({extended : false}));
 app.use(body_parser.json());
-app.use(fileUpload());
+app.use(file_upload());
 
 // Set the view engine
 app.engine('dust', adaro.dust(dust_helpers))

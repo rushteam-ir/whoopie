@@ -125,7 +125,7 @@ module.exports = Validation = class {
                     if(input.value == ''){
                         return 'لطفا شماره تلفن خود را وارد کنید'
                     }
-                    if(input.value.length != 11 && input.value.startsWith('09')){
+                    if(input.value.length != 11 || !input.value.startsWith('09')){
 
                         return 'شماره تلفن معتبر نمی باشد.';
 

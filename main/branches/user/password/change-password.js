@@ -23,7 +23,8 @@ router.post('/', async(req, res, next)=>{
         }
 
         let password_data = {
-            password : new_password_inp
+            current_password : current_password_inp,
+            new_password : new_password_inp
         }
 
         let result = await user_model.changePassword(req.session.user_info, password_data);

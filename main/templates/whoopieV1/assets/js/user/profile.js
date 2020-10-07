@@ -112,3 +112,9 @@ $(document).on('click', '.remove', function (e) {
     $(this).parent('.remove_parent').remove();
 
 });
+
+$('.avatar_del').click(function (){
+
+    redirect(`${app_url}user/profile/delete-avatar`);
+
+})

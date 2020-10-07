@@ -11,11 +11,11 @@ router.post('/', async(req, res, next)=>{
         }
 
         let avatar = req.files.avatar_inp;
-        let file_name = `${randomSha1String()}.${avatar_inp.name.split(".").pop()}`;
+        let file_name = `${randomSha1String()}.${avatar.name.split(".").pop()}`;
 
-        if(avatar.size/1024 <= image_limited_size){
+        if(avatar.size/(1024*1024) <= image_limited_size){
 
-            await avatar.mv(`${app_dir}media/avatars/${file_name}`, async(err)=>{
+            await avatar.mv(`${app_dir}main/templates/whoopieV1/assets/media/avatars/${file_name}`, async(err)=>{
 
                 if(err){
 

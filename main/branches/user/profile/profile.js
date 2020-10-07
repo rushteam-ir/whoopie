@@ -5,7 +5,7 @@ router.get('/', async(req, res, next)=>{
     try{
 
         let data = {
-            user_info : await user_model.getById(req.session.user_info)
+            user_info : req.session.user_info
         }
 
         res.render('user/profile', data);

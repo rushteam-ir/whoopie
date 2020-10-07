@@ -4,21 +4,25 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        log(req.body);
-        return res.end();
         let {first_name_inp, last_name_inp, username_inp, email_inp, phone_number_inp, sex_inp, military_service_inp,
-            marital_status_inp, city_inp, biography_inp, day_inp, month_inp, year_inp} = req.body;
-        let contacts_type_inp = req.body['contacts_type_inp[]'];
-        let contacts_link_inp = req.body['contacts_link_inp[]'];
+            marital_status_inp, city_inp, biography_inp, day_inp, month_inp, year_inp, c_contact_phone_number_inp,
+            c_contact_email_inp, c_contact_whatsapp_inp, c_contact_instagram_inp, c_contact_telegram_inp,
+            c_telegram_type_inp, contact_telegram_inp, contact_instagram_inp} = req.body;
         let date = `${year_inp}/${month_inp}/${day_inp}`
         let validation_result = new Validation([
+            {value : first_name_inp, type : 'name'},
+            {value : last_name_inp, type : 'name'},
             {value : username_inp, type : 'username'},
             {value : email_inp, type : 'email'},
-            {value : first_name_inp},
-            {value : last_name_inp},
-            {value : city_inp},
+            {value : phone_number_inp, type : 'phone'},
+            {value : sex_inp, type : 'number'},
+            {value : marital_status_inp, type : 'number'},
+            {value : city_inp, type : 'number'},
+            {value : biography_inp, type : 'biography'},
+            {value : day_inp, type : 'number'},
+            {value : month_inp, type : 'number'},
+            {value : year_inp, type : 'number'},
             {value : date, type : 'date'},
-            {value : biography_inp},
         ]).check();
 
         if(validation_result){
@@ -27,31 +31,70 @@ router.post('/', async(req, res, next)=>{
 
         }
 
-        let profile_data = {
-            username : username_inp,
-            email : email_inp,
-            first_name : first_name_inp,
-            last_name : last_name_inp,
-            city : city_inp,
-            birth_date : jalali_date.toGregorian(parseInt(year_inp), parseInt(month_inp), parseInt(day_inp)),
-            biography : biography_inp,
-            military_service : parseInt(military_service_inp),
-            marital_status : parseInt(marital_status_inp),
-            sex : parseInt(sex_inp),
-            contacts : []
-        }
+        if(sex_inp == '0'){
 
-        for(let i = 0; i < contacts_type_inp.length; i++){
+            let military_validation_result = new Validation([
+                {value : military_service_inp, type : 'number'},
+            ]).check();
 
-            let contact_list = {
+            if(military_validation_result){
 
-                type : contacts_type_inp[i],
-                link : contacts_link_inp[i],
+                return res.json(military_validation_result);
 
             }
 
-            profile_data.contacts.push(contact_list);
+        }
 
+        if(c_contact_telegram_inp == 'on' && c_telegram_type_inp == '1'){
+
+            let telegram_validation_result = new Validation([
+                {value : contact_telegram_inp, type : 'telegram'},
+            ]).check();
+
+            if(telegram_validation_result){
+
+                return res.json(telegram_validation_result);
+
+            }
+
+        }
+
+        if(c_contact_instagram_inp == 'on'){
+
+            let instagram_validation_result = new Validation([
+                {value : contact_instagram_inp, type : 'instagram'},
+            ]).check();
+
+            if(instagram_validation_result){
+
+                return res.json(instagram_validation_result);
+
+            }
+
+        }
+
+        let profile_data = {
+            first_name : first_name_inp,
+            last_name : last_name_inp,
+            username : username_inp,
+            email : email_inp,
+            phone_number : phone_number_inp,
+            sex : sex_inp,
+            military_status : military_service_inp,
+            marital_status : marital_status_inp,
+            city : city_inp,
+            biography : biography_inp,
+            birth_day : day_inp,
+            birth_month : month_inp,
+            birth_year : year_inp,
+            contact_phone : c_contact_phone_number_inp == 'on' ? true : false,
+            contact_email : c_contact_email_inp == 'on' ? true : false,
+            contact_whatsapp : c_contact_whatsapp_inp == 'on' ? true : false,
+            contact_instagram : c_contact_instagram_inp == 'on' ? true : false,
+            contact_telegram : c_contact_telegram_inp == 'on' ? true : false,
+            contact_telegram_type : c_telegram_type_inp,
+            contact_telegram_id : contact_telegram_inp,
+            contact_instagram_id : contact_instagram_inp,
         }
 
         let result = await user_model.editProfile(req.session.user_info, profile_data);

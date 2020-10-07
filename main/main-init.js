@@ -37,6 +37,24 @@ main_city_list = [
     'هرمزگان',
     'همدان',
     'یزد',
-]
+];
+
+main_military_list = [
+    'معافیت تحصیلی',
+    'معافیت دائم',
+    'پایان خدمت',
+    'در حال خدمت',
+    'مشمول',
+];
+
+main_marital_list = [
+    'مجرد',
+    'متاهل'
+];
+
+main_sex_list = [
+    'مرد',
+    'زن',
+];
 
 main.locals.app_url = app_url;

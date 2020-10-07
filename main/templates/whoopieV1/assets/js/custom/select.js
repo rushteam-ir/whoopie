@@ -1,6 +1,5 @@
 // get elements
-let title = $('.WCD_title');
-let option = $('.WCD_optopn span');
+let title = $('.select_click');
 let option_parent = $('.WCD_optopn');
 
 // when click on title of select open it
@@ -9,10 +8,9 @@ let option_parent = $('.WCD_optopn');
 for (let j = 0; j < title.length; j++) {
 
     title.eq(j).click(function () {
-
-        let thisTitle = $(this);
+        
         let ThisOptionParent = $(this).next();
-        let thisOption = $(this).next().children();
+        let thisOption = $(this).next().children().children();
 
         ThisOptionParent.fadeToggle(100);
 
@@ -28,10 +26,10 @@ for (let j = 0; j < title.length; j++) {
 
             thisOption.eq(i).click(function () {
 
-                thisOption.attr('selected' , false)
+                thisOption.attr('selected' , false);
                 $(this).attr('selected' , true);
 
-                thisTitle.text($(this).text());
+                $(this).parent().parent().prev().prev().children('p').text($(this).text());
 
             });
 

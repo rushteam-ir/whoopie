@@ -11,6 +11,28 @@ $WC : 180px;
     position: relative;
     z-index: 100;
 
+    .select_click {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 300;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .WCD_layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        z-index: 10;
+        cursor: pointer;
+    }
+
     .WCD_title {
         height: 38px;
         width: $WC;
@@ -20,12 +42,12 @@ $WC : 180px;
         line-height: 38px;
         position: relative;
         cursor: pointer;
-
+        
         i {
             width: 15px;
             position: absolute;
             top: 11px;
-            left: 27px;
+            left: 4px;
         }
     }
 

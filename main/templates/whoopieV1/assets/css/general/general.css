@@ -3,7 +3,7 @@ a:hover {
     color: black;
 }
 
-label{
+label {
     font-size: 1rem;
 }
 
@@ -40,13 +40,14 @@ button:focus {
 
 .form-control:focus {
     border-color: none !important;
-    box-shadow:none;
+    box-shadow: none;
 }
 
-input{
+input {
     border-radius: 15px !important;
 }
 
-textarea{
+textarea {
     border-radius: 15px !important;
 }
+

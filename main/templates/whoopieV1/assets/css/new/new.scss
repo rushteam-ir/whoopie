@@ -2,8 +2,7 @@
 @import '../partials/font';
 @import '../partials/mixin';
 @import '../partials/select';
-@import '../partials/checkbox-design';
-@import '../partials/Puploader';
+@import '../partials/tags';
 
 .profile_inp_field {
     .main_field_of_profile {
@@ -27,22 +26,6 @@
             direction: rtl;
             text-align: right;
 
-
-            .born_day {
-                label {
-                    width: 100%;
-                }
-
-                input {
-                    width: 80px;
-                    display: inline-block;
-                }
-
-                span {
-                    padding: 0px 5px;
-                }
-            }
-
             .profile_sub {
                 background-color: $accent_color;
                 width: 100%;
@@ -57,19 +40,6 @@
                 &:hover {
                     background-color: $hover_ac;
                 }
-            }
-
-            .telegram_checked {
-                display: none;
-            }
-
-            .lable_of_social_media {
-                width: 100%;
-            }
-
-            .T_id,
-            .I_id {
-                display: none;
             }
         }
     }
@@ -91,7 +61,7 @@
             font-family: $TF;
         }
 
-        .select_click{
+        .select_click {
             height: 36px;
             position: absolute;
             top: 33px;
@@ -108,3 +78,4 @@
         }
     }
 }
+

@@ -15,7 +15,7 @@
                 <div class="col-6 offset-3">
                     <div class="main_field_of_profile">
                         <h1>اطلاعات حساب کاربری</h1>
-                        <form>
+                        <form action="{app_url}user/profile/edit-profile" method="post">
                             <div class="field_of_img_template">
                                 <div class="box_of_img_template">
                                     <div class="box_of_img_template img-box">

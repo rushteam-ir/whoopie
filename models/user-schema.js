@@ -130,10 +130,21 @@ user_schema.statics = {
     editProfile : async (user_data, data)=>{
 
         let find_user = await user_model.findOne({username : user_data.username});
-
+        log(find_user)
         if(find_user){
 
-            return await bcrypt.compare(user_data.password, find_user.password) ? await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true}) : null;
+            let auth_result = user_data.password == find_user.password ? true : false;
+
+            if(auth_result){
+
+                return await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true});
+
+            }
+            else{
+
+                return null;
+
+            }
 
         }
         else{

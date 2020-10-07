@@ -66,16 +66,18 @@
                                         <div class="category_title WCD_title"><p>جنسیت</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="sex_select"></div>
                                         <div class="WCD_optopn">
-                                            {#g_sex_list}
-                                                {@eq key="{user_info.sex}" value="{$idx}"}
-                                                    <span selected="selected" value="{$idx}">{.}</span>
-                                                {:else}
-                                                    <span value="{$idx}">{.}</span>
-                                                {/eq}
-                                            {/g_sex_list}
+                                            <div>
+                                                {#g_sex_list}
+                                                    {@eq key="{user_info.sex}" value="{$idx}"}
+                                                        <span selected="selected" value="{$idx}">{.}</span>
+                                                    {:else}
+                                                        <span value="{$idx}">{.}</span>
+                                                    {/eq}
+                                                {/g_sex_list}
+                                            </div>
                                         </div>
-                                        <input type="hidden" name="sex_inp" value="-1">
                                     </div>
+                                    <input type="hidden" name="sex_inp" value="-1">
                                     <div class="WC_dropdown mr-2">
                                         <label for="maried_select">وضعیت خدمت</label>
                                         <div class="category_title WCD_title"><p>وضعیت خدمت</p><i class="fas fa-angle-down"></i></div>
@@ -90,8 +92,8 @@
                                                     {/eq}
                                                 {/g_military_list}
                                             </div>
+                                            <input type="hidden" name="military_service_inp" value="-1">
                                         </div>
-                                        <input type="hidden" name="military_service_inp" value="-1">
                                     </div>
                                 </div>
                                 <div class="col-12 mt-4">
@@ -100,15 +102,17 @@
                                         <div class="category_title WCD_title"><p>وضعیت تاهل</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="married_select"></div>
                                         <div class="WCD_optopn">
-                                            {#g_marital_list}
-                                                {@eq key="{user_info.marital_status}" value="{$idx}"}
-                                                    <span selected="selected" value="{$idx}">{.}</span>
-                                                {:else}
-                                                    <span value="{$idx}">{.}</span>
-                                                {/eq}
-                                            {/g_marital_list}
+                                            <div>
+                                                {#g_marital_list}
+                                                    {@eq key="{user_info.marital_status}" value="{$idx}"}
+                                                        <span selected="selected" value="{$idx}">{.}</span>
+                                                    {:else}
+                                                        <span value="{$idx}">{.}</span>
+                                                    {/eq}
+                                                {/g_marital_list}
+                                            </div>
+                                            <input type="hidden" name="marital_status_inp" value="-1">
                                         </div>
-                                        <input type="hidden" name="marital_status_inp" value="-1">
                                     </div>
                                     <div class="WC_dropdown mr-2">
                                         <label for="maried_select">شهر</label>
@@ -124,8 +128,8 @@
                                                     {/eq}
                                                 {/g_city_list}
                                             </div>
+                                            <input type="hidden" name="city_inp" value="-1">
                                         </div>
-                                        <input type="hidden" name="city_inp" value="-1">
                                     </div>
                                 </div>
                             </div>
@@ -135,11 +139,11 @@
                             </div>
                             <div class="form-group born_day">
                                 <label for="family">تاریخ تولد</label>
-                                <input type="number" class="form-control" id="day" name="day_inp" value="{user_info.day}">
+                                <input type="number" class="form-control" id="day" name="day_inp" value="{user_info.birth_day}">
                                 <span>/</span>
-                                <input type="number" class="form-control" id="month" name="month_inp" value="{user_info.month}">
+                                <input type="number" class="form-control" id="month" name="month_inp" value="{user_info.birth_month}">
                                 <span>/</span>
-                                <input type="number" class="form-control" id="year" name="year_inp" value="{user_info.year}">
+                                <input type="number" class="form-control" id="year" name="year_inp" value="{user_info.birth_year}">
                             </div>
                             <div class="form-group social_checked">
                                 <label class="lable_of_social_media">دوست داری چجوری باهات در ارتباط باشن ؟</label>

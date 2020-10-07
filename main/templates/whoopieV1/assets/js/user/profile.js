@@ -5,8 +5,8 @@ $('#TAC').change(function(){
     if ($('#TAC').is(":checked")){
 
         $('.telegram_checked').show();
-        $('#id_TAC').prop('checked', false);
-        $('#phone_TAC').prop('checked', true);
+        // $('#id_TAC').prop('checked', false);
+        // $('#phone_TAC').prop('checked', true);
 
     }else{
 

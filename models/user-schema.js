@@ -207,6 +207,34 @@ user_schema.statics = {
 
     },
 
+    changeAvatar : async (user_data, data)=>{
+
+        let find_user = await user_model.findOne({username : user_data.username.toLowerCase()});
+
+        if(find_user){
+
+            let auth_result = user_data.password == find_user.password ? true : false;
+
+            if(auth_result){
+
+                return await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true});
+
+            }
+            else{
+
+                return null;
+
+            }
+
+        }
+        else{
+
+            return null;
+
+        }
+
+    },
+
     getByUserName : async (data)=>{
 
         let find_user = await user_model.findOne({username : data});

@@ -24,10 +24,12 @@ router.post('/', async(req, res, next)=>{
                 }
                 else{
 
+
                     let avatar_info = {
                         avatar : file_name
                     }
-                    let result = await user_model.editProfile(req.session.user_info, avatar_info);
+
+                    let result = await user_model.changeAvatar(req.session.user_info, avatar_info);
 
                     if(result){
 

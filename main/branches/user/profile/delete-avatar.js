@@ -12,7 +12,7 @@ router.get('/', async(req, res, next)=>{
                     avatar : ''
                 }
 
-                let result = await user_model.editProfile(req.session.user_info, avatar_info);
+                let result = await user_model.changeAvatar(req.session.user_info, avatar_info);
                 req.session.user_info = result;
 
                 return res.redirect(`${app_url}user/profile`)
@@ -23,7 +23,7 @@ router.get('/', async(req, res, next)=>{
                 let avatar_info = {
                     avatar : ''
                 }
-                let result = await user_model.editProfile(req.session.user_info, avatar_info);
+                let result = await user_model.changeAvatar(req.session.user_info, avatar_info);
 
                 if(result){
 

@@ -76,8 +76,8 @@
                                                 {/g_sex_list}
                                             </div>
                                         </div>
+                                        <input type="hidden" name="sex_inp" value="-1">
                                     </div>
-                                    <input type="hidden" name="sex_inp" value="-1">
                                     <div class="WC_dropdown mr-2">
                                         <label for="maried_select">وضعیت خدمت</label>
                                         <div class="category_title WCD_title"><p>وضعیت خدمت</p><i class="fas fa-angle-down"></i></div>

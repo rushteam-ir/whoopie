@@ -5,6 +5,7 @@ router.post('/', async(req, res, next)=>{
     try{
 
         log(req.body);
+        return res.end();
         let {first_name_inp, last_name_inp, username_inp, email_inp, phone_number_inp, sex_inp, military_service_inp,
             marital_status_inp, city_inp, biography_inp, day_inp, month_inp, year_inp} = req.body;
         let contacts_type_inp = req.body['contacts_type_inp[]'];

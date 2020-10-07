@@ -1,3 +1,71 @@
-<html>
-    NEW
-</html>
+{>"layouts/main-layout"/}
+
+{<css}
+    <link rel="stylesheet" href="css/new/new.css">
+{/css}
+
+{<js}
+<script src="js/user/profile.js"></script>
+<script src="js/custom/select-input.js"></script>
+<script src="js/custom/tags.js"></script>
+{/js}
+
+{<body}
+    <section class="profile_inp_field">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <div class="main_field_of_profile">
+                        <h1>ثبت آگهی جدید</h1>
+                        <form action="{app_url}user/profile/edit-profile" method="post">
+                            <div class="form-group mt-3">
+                                <label for="ad_title">تیتر آگهی</label>
+                                <input id="test" type="text" class="form-control" id="ad_title" name="first_name_inp" value="{user_info.first_name}">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="ad_description">توضیحات آگهی</label>
+                                <textarea type="text" class="form-control" id="ad_description" rows="5" name="biography_inp">{user_info.biography}</textarea>
+                            </div>
+                            <div class="row profile_wc">
+                                <div class="col-12">
+                                    <div class="WC_dropdown">
+                                        <label for="maried_select">دسته بندی</label>
+                                        <div class="category_title WCD_title"><p>دسته بندی</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="select_click" id="sex_select"></div>
+                                        <div class="WCD_optopn">
+                                            <div>
+                                                {#g_category_list}
+                                                {@eq key="{category_value}" value="{title}"}
+                                                    <span selected="selected" value="{_id}">{title}</span>
+                                                {:else}
+                                                    <span value="{_id}">{title}</span>
+                                                {/eq}
+                                            {/g_category_list}
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="sex_inp" value="-1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="more_description">توضیحات تکمیلی</label>
+                                <textarea type="text" class="form-control" id="more_description" rows="5" name="biography_inp">{user_info.biography}</textarea>
+                            </div>
+                            <div class="form-group position-relative">
+                                <label for="tags_field">برچسب ها</label>
+                                <input type="text" class="form-control main_form_design " id="tags_field">
+                                <button type="button" class="btn add_tags">
+                                    <i class="far fa-check"></i>
+                                </button>
+                                <div class="tags_lable_field">
+
+                                </div>
+                            </div>
+                            <button type="submit" class="btn profile_sub">ثبت آگهی</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+{/body}

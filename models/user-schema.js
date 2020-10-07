@@ -42,6 +42,7 @@ user_schema.virtual('full_name').get(()=>{return `${this.first_name} ${this.last
 user_schema.statics = {
 
     register : async (data)=>{
+        data.username = data.username.toLowerCase();
 
         let find_user1 = await user_model.findOne({username : data.username});
         let find_user2 = await user_model.findOne({email : data.email});
@@ -98,8 +99,7 @@ user_schema.statics = {
 
         if(find_user){
 
-            let current_password_hashed = await bcrypt.hash(user_data.current_password, 10);
-            let auth_result = current_password_hashed == find_user.password ? true : false;
+            let auth_result = await bcrypt.compare(data.current_password, find_user.password) ? find_user : null;
 
             if(auth_result){
 
@@ -134,6 +134,8 @@ user_schema.statics = {
 
     editProfile : async (user_data, data)=>{
 
+        data.username = data.username.toLowerCase();
+
         let find_user = await user_model.findOne({username : user_data.username});
 
         if(find_user){
@@ -142,19 +144,45 @@ user_schema.statics = {
 
             if(auth_result){
 
+                let check_username = await user_model.findOne({username : data.username});
+                let check_email = await user_model.findOne({email : data.email});
+                let check_phone = await user_model.findOne({phone_number : data.phone_number});
+
+                if(check_username){
+
+                    if(check_username._id != user_data._id){
+                        return 'نام کاربری وارد شده تکراری می باشد.'
+                    }
+
+                }
+                else if(check_email){
+
+                    if(check_email._id != user_data._id){
+                        return 'پست الکترونیکی وارد شده تکراری می باشد.'
+                    }
+
+                }
+                else if(check_phone){
+
+                    if(check_phone._id != user_data._id){
+                        return 'شماره تلفن وارد شده تکراری می باشد.'
+                    }
+
+                }
+
                 return await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true});
 
             }
             else{
 
-                return null;
+                return 'خطا';
 
             }
 
         }
         else{
 
-            return null;
+            return 'خطا';
 
         }
 

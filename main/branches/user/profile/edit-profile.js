@@ -99,7 +99,7 @@ router.post('/', async(req, res, next)=>{
 
         let result = await user_model.editProfile(req.session.user_info, profile_data);
 
-        if(result){
+        if(typeof result != 'string'){
 
             req.session.user_info = result;
             return res.json({'success' : 'success'});
@@ -107,7 +107,7 @@ router.post('/', async(req, res, next)=>{
         }
         else{
 
-            return res.json('خطا در برقراری ارتباط با سرور.');
+            return res.json(result);
 
         }
 

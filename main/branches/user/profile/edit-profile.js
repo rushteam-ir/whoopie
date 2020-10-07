@@ -45,15 +45,24 @@ router.post('/', async(req, res, next)=>{
 
         }
 
-        if(c_contact_telegram_inp == 'on' && c_telegram_type_inp == '1'){
+        if(c_contact_telegram_inp == 'on'){
 
-            let telegram_validation_result = new Validation([
-                {value : contact_telegram_inp, type : 'telegram'},
-            ]).check();
+            if(c_telegram_type_inp == '-1'){
 
-            if(telegram_validation_result){
+                return res.json('لطفا یک گزینه ارتباطی برای تلگرام انتخاب کنید.');
 
-                return res.json(telegram_validation_result);
+            }
+            else if(c_telegram_type_inp == '1'){
+
+                let telegram_validation_result = new Validation([
+                    {value : contact_telegram_inp, type : 'telegram'},
+                ]).check();
+
+                if(telegram_validation_result){
+
+                    return res.json(telegram_validation_result);
+
+                }
 
             }
 

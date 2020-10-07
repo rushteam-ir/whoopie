@@ -5,8 +5,7 @@ $('#TAC').change(function(){
     if ($('#TAC').is(":checked")){
 
         $('.telegram_checked').show();
-        // $('#id_TAC').prop('checked', false);
-        // $('#phone_TAC').prop('checked', true);
+        $('.T_id').show();
 
     }else{
 
@@ -14,7 +13,6 @@ $('#TAC').change(function(){
         $('.T_id').hide();
 
     }
-
 });
 
 // when user chose id for telegram , input for enter id show to him 
@@ -54,8 +52,29 @@ $('#IAC').change(function(){
 
 });
 
+// if page loaded and user checked instageram check box , instagram id input show
+if($('#IAC').is(':checked')){
+
+    $('.I_id').show();
+
+}
+
+// if user chose yelegram for contact to him , open check box for chose phone or id
+
+if($('#TAC').is(':checked')){
+
+    $('.telegram_checked').show();
+
+    if($('#id_TAC').is(':checked')){
+
+        $('.T_id').show();
+    
+    }
+
+}
+
 // when user chose man on the sex select , show militeries select
-$('#sex_select').next().children().click(function(){
+$('#sex_select').next().children().children().click(function(){
 
     if($(this).text() == 'مرد'){
 

@@ -65,7 +65,7 @@
                                 <div class="col-12">
                                     <div class="WC_dropdown">
                                         <label for="maried_select">جنسیت</label>
-                                        <div class="category_title WCD_title"><p>جنسیت</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="WCD_title"><p>جنسیت</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="sex_select"></div>
                                         <div class="WCD_optopn">
                                             <div>
@@ -80,9 +80,9 @@
                                         </div>
                                         <input type="hidden" name="sex_inp" value="{user_info.sex}">
                                     </div>
-                                    <div class="WC_dropdown mr-2">
+                                    <div class="WC_dropdown militeries_select mr-2">
                                         <label for="maried_select">وضعیت خدمت</label>
-                                        <div class="category_title WCD_title"><p>وضعیت خدمت</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="WCD_title"><p>وضعیت خدمت</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="military_select"></div>
                                         <div class="WCD_optopn">
                                             <div>
@@ -136,11 +136,11 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <label for="family">درباره من </label>
-                                <textarea type="text" class="form-control" id="family" rows="5" name="biography_inp">{user_info.biography}</textarea>
+                                <label for="about_me">درباره من </label>
+                                <textarea type="text" class="form-control" id="about_me" rows="5" name="biography_inp">{user_info.biography}</textarea>
                             </div>
                             <div class="form-group born_day">
-                                <label for="family">تاریخ تولد</label>
+                                <label>تاریخ تولد</label>
                                 <input type="number" class="form-control" id="day" name="day_inp" value="{user_info.birth_day}">
                                 <span>/</span>
                                 <input type="number" class="form-control" id="month" name="month_inp" value="{user_info.birth_month}">
@@ -201,7 +201,7 @@
                                     </span>
                                     <span> اینستاگرام</span>
                                 </label>
-                                {@eq key="{user_info.contact_instagram}" value="true"}
+                                {@eq key="{user_info.contact_telegram}" value="true"}
                                     <input class="inp-cbx" id="TAC" type="checkbox" checked="checked" name="c_contact_telegram_inp" style="display: none"/>
                                 {:else}
                                     <input class="inp-cbx" id="TAC" type="checkbox" name="c_contact_telegram_inp" style="display: none"/>

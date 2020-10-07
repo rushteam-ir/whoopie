@@ -5,6 +5,10 @@
 @import '../partials/checkbox-design';
 @import '../partials/Puploader';
 
+.militeries_select{
+    display: none;
+}
+
 .profile_inp_field {
     .main_field_of_profile {
         width: 100%;
@@ -91,7 +95,7 @@
             font-family: $TF;
         }
 
-        .select_click{
+        .select_click {
             height: 36px;
             position: absolute;
             top: 33px;

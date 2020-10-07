@@ -47,7 +47,7 @@ router.post('/', async(req, res, next)=>{
 
         if(c_contact_telegram_inp == 'on'){
 
-            if(c_telegram_type_inp == '-1'){
+            if(isUndefined(c_telegram_type_inp)){
 
                 return res.json('لطفا یک گزینه ارتباطی برای تلگرام انتخاب کنید.');
 

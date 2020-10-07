@@ -33,6 +33,7 @@ for (let j = 0; j < title.length; j++) {
 
                 $(this).parent().parent().prev().prev().children('p').text($(this).text());
 
+
             });
 
         }
@@ -58,3 +59,4 @@ title.click(function(){
     });
 
 });
+

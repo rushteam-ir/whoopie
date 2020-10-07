@@ -12,16 +12,26 @@ let user_schema = new mongoose.Schema({
     password : String,
     first_name : String,
     last_name : String,
-    avatar : String,
-    city : String,
-    birth_date : Date,
-    military_service : Number,
-    marital_status : Number,
-    sex : Number,
-    contacts : [{
+    phone_number : {
         type : String,
-        link : String,
-    }],
+        unique : true,
+    },
+    sex : String,
+    military_status : String,
+    marital_status : String,
+    city : String,
+    biography: String,
+    birth_day : String,
+    birth_month : String,
+    birth_year : String,
+    contact_phone : Boolean,
+    contact_email : Boolean,
+    contact_whatsapp : Boolean,
+    contact_instagram : Boolean,
+    contact_telegram : Boolean,
+    contact_telegram_type : String,
+    contact_telegram_id : String,
+    contact_instagram_id : String,
 });
 
 // Defining model virtuals
@@ -123,20 +133,7 @@ user_schema.statics = {
 
         if(find_user){
 
-            await bcrypt.compare(user_data.password, find_user.password, async(err, result)=>{
-
-                if(result){
-
-                    return await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true});
-
-                }
-                else{
-
-                    return null;
-
-                }
-
-            });
+            return await bcrypt.compare(user_data.password, find_user.password) ? await user_model.findByIdAndUpdate(find_user._id, {$set : data}, {new : true}) : null;
 
         }
         else{

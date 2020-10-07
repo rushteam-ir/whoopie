@@ -41,23 +41,23 @@
                             </div>
                             <div class="form-group mt-3">
                                 <label for="name">نام</label>
-                                <input type="text" class="form-control" id="name" name="first_name_inp">
+                                <input type="text" class="form-control" id="name" name="first_name_inp" value="{user_info.first_name}">
                             </div>
                             <div class="form-group">
                                 <label for="family">نام خانوادگی</label>
-                                <input type="text" class="form-control" id="family" name="last_name_inp">
+                                <input type="text" class="form-control" id="family" name="last_name_inp" value="{user_info.last_name}">
                             </div>
                             <div class="form-group">
                                 <label for="username">نام کاربری</label>
-                                <input type="text" class="form-control" id="username" name="username_inp">
+                                <input type="text" class="form-control" id="username" name="username_inp" value="{user_info.username}">
                             </div>
                             <div class="form-group">
                                 <label for="email">ایمیل</label>
-                                <input type="text" class="form-control" id="email" name="email_inp">
+                                <input type="text" class="form-control" id="email" name="email_inp" value="{user_info.email}">
                             </div>
                             <div class="form-group">
                                 <label for="phone_number">شماره تلفن</label>
-                                <input type="text" class="form-control" id="phone_number" name="phone_number_inp">
+                                <input type="text" class="form-control" id="phone_number" name="phone_number_inp"  value="{user_info.phone_number}">
                             </div>
                             <div class="row profile_wc">
                                 <div class="col-12">
@@ -66,12 +66,15 @@
                                         <div class="category_title WCD_title"><p>جنسیت</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="sex_select"></div>
                                         <div class="WCD_optopn">
-                                            <div>
-                                                <span value="0">مرد</span>
-                                                <span value="1">زن</span>
-                                            </div>
+                                            {#g_sex_list}
+                                                {@eq key="{user_info.sex}" value="{$idx}"}
+                                                    <span selected="selected" value="{$idx}">{.}</span>
+                                                {:else}
+                                                    <span value="{$idx}">{.}</span>
+                                                {/eq}
+                                            {/g_sex_list}
                                         </div>
-                                        <input type="hidden" name="sex_inp">
+                                        <input type="hidden" name="sex_inp" value="-1">
                                     </div>
                                     <div class="WC_dropdown mr-2">
                                         <label for="maried_select">وضعیت خدمت</label>
@@ -79,14 +82,16 @@
                                         <div class="select_click" id="military_select"></div>
                                         <div class="WCD_optopn">
                                             <div>
-                                                <span value="0">معافیت تحصیلی</span>
-                                                <span value="1">معافیت دائم</span>
-                                                <span value="2">پایان خدمت</span>
-                                                <span value="3">درحال خدمت</span>
-                                                <span value="4">مشمول</span>
+                                                {#g_military_list}
+                                                    {@eq key="{user_info.military_status}" value="{$idx}"}
+                                                        <span selected="selected" value="{$idx}">{.}</span>
+                                                    {:else}
+                                                        <span value="{$idx}">{.}</span>
+                                                    {/eq}
+                                                {/g_military_list}
                                             </div>
                                         </div>
-                                        <input type="hidden" name="military_service_inp">
+                                        <input type="hidden" name="military_service_inp" value="-1">
                                     </div>
                                 </div>
                                 <div class="col-12 mt-4">
@@ -95,12 +100,15 @@
                                         <div class="category_title WCD_title"><p>وضعیت تاهل</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="married_select"></div>
                                         <div class="WCD_optopn">
-                                            <div>
-                                                <span value="0">مجرد</span>
-                                                <span value="1">متاهل</span>
-                                            </div>
+                                            {#g_marital_list}
+                                                {@eq key="{user_info.marital_status}" value="{$idx}"}
+                                                    <span selected="selected" value="{$idx}">{.}</span>
+                                                {:else}
+                                                    <span value="{$idx}">{.}</span>
+                                                {/eq}
+                                            {/g_marital_list}
                                         </div>
-                                        <input type="hidden" name="military_service_inp">
+                                        <input type="hidden" name="marital_status_inp" value="-1">
                                     </div>
                                     <div class="WC_dropdown mr-2">
                                         <label for="maried_select">شهر</label>
@@ -109,32 +117,37 @@
                                         <div class="WCD_optopn">
                                             <div>
                                                 {#g_city_list}
-                                                    {@eq key="{city_value}" value="{.}"}
-                                                        <span selected="selected" value="{.}">{.}</span>
+                                                    {@eq key="{city_value}" value="{$idx}"}
+                                                        <span selected="selected" value="{$idx}">{.}</span>
                                                     {:else}
-                                                        <span value="{.}">{.}</span>
+                                                        <span value="{$idx}">{.}</span>
                                                     {/eq}
                                                 {/g_city_list}
                                             </div>
                                         </div>
+                                        <input type="hidden" name="city_inp" value="-1">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group mt-3">
                                 <label for="family">درباره من </label>
-                                <textarea type="text" class="form-control" id="family" rows="5" name="biography_inp"></textarea>
+                                <textarea type="text" class="form-control" id="family" rows="5" name="biography_inp">{user_info.biography}</textarea>
                             </div>
                             <div class="form-group born_day">
                                 <label for="family">تاریخ تولد</label>
-                                <input type="number" class="form-control" id="day" name="day_inp">
+                                <input type="number" class="form-control" id="day" name="day_inp" value="{user_info.day}">
                                 <span>/</span>
-                                <input type="number" class="form-control" id="month" name="month_inp">
+                                <input type="number" class="form-control" id="month" name="month_inp" value="{user_info.month}">
                                 <span>/</span>
-                                <input type="number" class="form-control" id="year" name="year_inp">
+                                <input type="number" class="form-control" id="year" name="year_inp" value="{user_info.year}">
                             </div>
                             <div class="form-group social_checked">
                                 <label class="lable_of_social_media">دوست داری چجوری باهات در ارتباط باشن ؟</label>
-                                <input class="inp-cbx" id="PNC" type="checkbox" name="c_contact_phone_number_inp" style="display: none"/>
+                                {@eq key="{user_info.contact_phone}" value="true"}
+                                    <input class="inp-cbx" id="PNC" type="checkbox" checked="checked" name="c_contact_phone_number_inp" style="display: none"/>
+                                {:else}
+                                    <input class="inp-cbx" id="PNC" type="checkbox" name="c_contact_phone_number_inp" style="display: none"/>
+                                {/eq}
                                 <label class="cbx" for="PNC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -143,7 +156,11 @@
                                     </span>
                                     <span>شماره تماس</span>
                                 </label>
-                                <input class="inp-cbx" id="EAC" type="checkbox" name="c_contact_email_inp" style="display: none"/>
+                                {@eq key="{user_info.contact_email}" value="true"}
+                                    <input class="inp-cbx" id="EAC" type="checkbox" checked="checked" name="c_contact_email_inp" style="display: none"/>
+                                {:else}
+                                    <input class="inp-cbx" id="EAC" type="checkbox" name="c_contact_email_inp" style="display: none"/>
+                                {/eq}
                                 <label class="cbx" for="EAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -152,7 +169,11 @@
                                     </span>
                                     <span>پست الکترونیکی</span>
                                 </label>
-                                <input class="inp-cbx" id="WAC" type="checkbox" name="c_contact_whatsapp_inp" style="display: none"/>
+                                {@eq key="{user_info.contact_whatsapp}" value="true"}
+                                    <input class="inp-cbx" id="WAC" type="checkbox" checked="checked" name="c_contact_whatsapp_inp" style="display: none"/>
+                                {:else}
+                                    <input class="inp-cbx" id="WAC" type="checkbox" name="c_contact_whatsapp_inp" style="display: none"/>
+                                {/eq}
                                 <label class="cbx" for="WAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -161,7 +182,11 @@
                                     </span>
                                     <span>واتس اپ</span>
                                 </label>
-                                <input class="inp-cbx" id="IAC" type="checkbox" name="c_contact_instagram_inp" style="display: none"/>
+                                {@eq key="{user_info.contact_instagram}" value="true"}
+                                    <input class="inp-cbx" id="IAC" type="checkbox" checked="checked" name="c_contact_instagram_inp" style="display: none"/>
+                                {:else}
+                                    <input class="inp-cbx" id="IAC" type="checkbox" name="c_contact_instagram_inp" style="display: none"/>
+                                {/eq}
                                 <label class="cbx" for="IAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -170,8 +195,11 @@
                                     </span>
                                     <span> اینستاگرام</span>
                                 </label>
-    
-                                <input class="inp-cbx" id="TAC" type="checkbox" name="c_contact_telegram_inp" style="display: none"/>
+                                {@eq key="{user_info.contact_instagram}" value="true"}
+                                    <input class="inp-cbx" id="TAC" type="checkbox" checked="checked" name="c_contact_telegram_inp" style="display: none"/>
+                                {:else}
+                                    <input class="inp-cbx" id="TAC" type="checkbox" name="c_contact_telegram_inp" style="display: none"/>
+                                {/eq}
                                 <label class="cbx" for="TAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -182,8 +210,12 @@
                                 </label>
                             </div>
                             <div class="form-group telegram_checked">
-                                <label class="lable_of_social_media">برای تلگرام ، شماره تماس باشه یا ایدیت ؟</label>
-                                <input class="inp-cbx" id="phone_TAC" type="radio" name="c_telegram_type_inp" style="display: none" value="0"/>
+                                <label class="lable_of_social_media">برای تلگرام ، شماره تماس باشه یا آی دیت ؟</label>
+                                {@eq key="{user_info.contact_telegram_type}" value="0"}
+                                    <input class="inp-cbx" id="phone_TAC" type="radio" checked="checked" name="c_telegram_type_inp" style="display: none" value="0"/>
+                                {:else}
+                                    <input class="inp-cbx" id="phone_TAC" type="radio" name="c_telegram_type_inp" style="display: none" value="0"/>
+                                {/eq}
                                 <label class="cbx" for="phone_TAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -192,7 +224,11 @@
                                     </span>
                                     <span>شماره تلفن</span>
                                 </label>
-                                <input class="inp-cbx" id="id_TAC" type="radio" name="c_telegram_type_inp" style="display: none" value="1"/>
+                                {@eq key="{user_info.contact_telegram_type}" value="1"}
+                                    <input class="inp-cbx" id="id_TAC" type="radio" checked="checked" name="c_telegram_type_inp" style="display: none" value="1"/>
+                                {:else}
+                                    <input class="inp-cbx" id="id_TAC" type="radio" name="c_telegram_type_inp" style="display: none" value="1"/>
+                                {/eq}
                                 <label class="cbx" for="id_TAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -204,11 +240,11 @@
                             </div>
                             <div class="form-group T_id">
                                 <label for="telegram_id">آی دی تلگرام</label>
-                                <input type="text" class="form-control" id="telegram_id" name="contact_telegram_inp">
+                                <input type="text" class="form-control" id="telegram_id" name="contact_telegram_inp" value="{user_info.contact_telegram_id}">
                             </div>
                             <div class="form-group I_id">
                                 <label for="instagram_id">آی دی اینستا گرام</label>
-                                <input type="text" class="form-control" id="instagram_id" name="contact_instagram_inp">
+                                <input type="text" class="form-control" id="instagram_id" name="contact_instagram_inp" value="{user_info.contact_instagram_id}">
                             </div>
                             <button type="submit" class="btn profile_sub">ثبت تغییرات</button>
                         </form>

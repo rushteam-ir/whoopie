@@ -29,12 +29,7 @@ module.exports = Validation = class {
 
     checkInitiate(input){
 
-        if(input.value == '' || isUndefined(input.value)){
-
-            return 'لطفا تمام ورودی ها را وارد کنید.';
-
-        }
-        else if(input.type != 'array' && (Array.isArray(input.value))){
+        if(input.type != 'array' && (Array.isArray(input.value))){
 
             return 'ورودی های وارد شده معتبر نمی باشد';
 
@@ -44,13 +39,45 @@ module.exports = Validation = class {
 
             switch(input.type){
 
+                case 'name':
+                {
+
+                    if(input.value == ''){
+                        return 'لطفا نام و نام خانوادگی خود را وارد کنید'
+                    }
+                    if(input.value.length < 2 || input.value.length > 20){
+
+                        return "نام و نام خانوادگی نباید بیشتر از 20 حرف باشد."
+
+                    }
+
+                    break;
+
+                }
+
+                case 'biography':
+                {
+
+                    if(input.value.length > 310){
+
+                        return "قسمت درباره من از مجاز بیشتر شده است."
+
+                    }
+
+                    break;
+
+                }
+
                 case 'username':
                 {
 
+                    if(input.value == ''){
+                        return 'لطفا نام کاربری خود را وارد کنید'
+                    }
                     let regex = /^[\w.-]{4,25}$/;
                     if(!regex.test(input.value)){
 
-                        return "نام کابری وارد شده معتبر نمی باشد."
+                        return "نام کاربری نباید شامل حروف غیر مجاز باشد."
 
                     }
 
@@ -61,6 +88,9 @@ module.exports = Validation = class {
                 case 'password':
                 {
 
+                    if(input.value == ''){
+                        return 'لطفا رمز عبور خود را وارد کنید'
+                    }
                     if(input.value.length < 8) {
 
                         return 'رمز عبور باید بیشتر از 8 حرف باشد.';
@@ -74,11 +104,14 @@ module.exports = Validation = class {
                 case 'email':
                 {
 
+                    if(input.value == ''){
+                        return 'لطفا پست الکترونیکی خود را وارد کنید'
+                    }
                     let email_regexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
                     if(!email_regexp.test(input.value)){
 
-                        return 'ایمیل وارد شده معتبر نمی باشد.';
+                        return 'پست الکترونیکی وارد شده معتبر نمی باشد.';
 
                     }
 
@@ -89,9 +122,12 @@ module.exports = Validation = class {
                 case 'phone':
                 {
 
-                    if(input.value.length != 11){
+                    if(input.value == ''){
+                        return 'لطفا شماره تلفن خود را وارد کنید'
+                    }
+                    if(input.value.length != 11 && input.value.startsWith('09')){
 
-                        return 'شماره تلفن همراه معتبر نمی باشد.';
+                        return 'شماره تلفن معتبر نمی باشد.';
 
                     }
 
@@ -102,6 +138,9 @@ module.exports = Validation = class {
                 case 'number':
                 {
 
+                    if(input.value == ''){
+                        return 'لطفا تمام ورودی ها را وارد کنید'
+                    }
                     if(isNaN(parseInt(input.value))){
 
                         return 'ورودی وارد شده باید به صورت عدد باشد.';
@@ -134,6 +173,40 @@ module.exports = Validation = class {
                     }
                     else if(year < 1300){
                         return 'تاریخ وارد شده معتبر نمی باشد.'
+                    }
+
+                    break;
+
+                }
+
+                case 'telegram':
+                {
+
+                    if(input.value == ''){
+                        return 'لطفا آی دی تلگرام خود را وارد کنید'
+                    }
+                    let regex = /^[\w_]{5,32}$/;
+                    if(!regex.test(input.value)){
+
+                        return "آی دی تلگرام نباید شامل حروف غیر مجاز باشد."
+
+                    }
+
+                    break;
+
+                }
+
+                case 'instagram':
+                {
+
+                    if(input.value == ''){
+                        return 'لطفا آی دی اینستاگرام خود را وارد کنید'
+                    }
+                    let regex = /^[\w.-]{4,25}$/;
+                    if(!regex.test(input.value)){
+
+                        return "آی دی اینستاگرام نباید شامل حروف غیر مجاز باشد."
+
                     }
 
                     break;

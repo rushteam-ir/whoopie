@@ -1,6 +1,6 @@
 $( function () {
         if(sessionStorage.getItem('reload') == 'true') {
-            showMessage(sessionStorage.getItem('message'));
+            //showMessage(sessionStorage.getItem('message'));
             $('.error_info').addClass('success_error')
             sessionStorage.setItem('reload', 'false');
         }
@@ -28,11 +28,11 @@ $('.form_ajax').submit(function(event){
 
     switch(form_type){
 
-        case 'login':
+        case 'profile':
         {
 
-            let front_validation = loginError();
-            if(!front_validation) return false;
+            // let front_validation = profileError();
+            // if(!front_validation) return false;
             break;
 
         }
@@ -61,7 +61,7 @@ $('.form_ajax').submit(function(event){
             redirect(response.url);
         }
         else{
-            showMessage(response)
+            //showMessage(response)
         }
 
     });

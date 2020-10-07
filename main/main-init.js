@@ -4,7 +4,7 @@ main = express();
 main.use(express.static(`${app_dir}main/templates/${config.main_template}/assets`));
 main.set('views', `${app_dir}main/templates/${config.main_template}/views`);
 
-main_not_allowd_urls = ['user/profile', 'edit', 'list', 'new', 'user/password'];
+main_not_allowd_urls = ['user', 'edit', 'list', 'new'];
 main_city_list = [
     'آذربایجان شرقی',
     'آذربایجان غربی',

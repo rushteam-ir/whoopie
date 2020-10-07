@@ -6,6 +6,7 @@
 
 {<js}
     <script src="js/profile/profile.js"></script>
+    <script src="js/custom/select-input.js"></script>
 {/js}
 
 {<body}
@@ -15,7 +16,7 @@
                 <div class="col-6 offset-3">
                     <div class="main_field_of_profile">
                         <h1>اطلاعات حساب کاربری</h1>
-                        <form>
+                        <form action="{app_url}user/profile/edit-profile" method="post">
                             <div class="field_of_img_template">
                                 <div class="box_of_img_template">
                                     <div class="box_of_img_template img-box">
@@ -67,6 +68,7 @@
                                             <span value="0">مرد</span>
                                             <span value="1">زن</span>
                                         </div>
+                                        <input type="hidden" name="sex_inp">
                                     </div>
                                     <div class="WC_dropdown militeries_select">
                                         <label for="militeries_select">وضعیت خدمت</label>
@@ -78,6 +80,7 @@
                                             <span value="3">معافیت تحصیلی</span>
                                             <span value="4">مشمول</span>
                                         </div>
+                                        <input type="hidden" name="military_service_inp">
                                     </div>
                                 </div>
                             </div>
@@ -87,8 +90,8 @@
                                 <div class="WCD_optopn">
                                     <span value="0">مجرد</span>
                                     <span value="1">متاهل</span>
-    
                                 </div>
+                                <input type="hidden" name="marital_status_inp">
                             </div>
                             <div class="WC_dropdown profile_select">
                                 <label for="profile_select">شهر</label>
@@ -102,6 +105,7 @@
                                     <span value="">حمزه خوری</span>
                                     <span value="">حمزه بری</span>
                                 </div>
+                                <input type="hidden"  name="city_inp">
                             </div>
                             <div class="form-group">
                                 <label for="family">درباره من </label>
@@ -166,7 +170,7 @@
                             </div>
                             <div class="form-group telegram_checked">
                                 <label class="lable_of_social_media">برای تلگرام ، شماره تماس باشه یا ایدیت ؟</label>
-                                <input class="inp-cbx" id="phone_TAC" type="radio" name="c_telegram_type_inp" style="display: none"/>
+                                <input class="inp-cbx" id="phone_TAC" type="radio" name="c_telegram_type_inp" style="display: none" value="0"/>
                                 <label class="cbx" for="phone_TAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">
@@ -175,7 +179,7 @@
                                     </span>
                                     <span>شماره تلفن</span>
                                 </label>
-                                <input class="inp-cbx" id="id_TAC" type="radio" name="c_telegram_type_inp" style="display: none"/>
+                                <input class="inp-cbx" id="id_TAC" type="radio" name="c_telegram_type_inp" style="display: none" value="1"/>
                                 <label class="cbx" for="id_TAC">
                                     <span>
                                         <svg width="12px" height="10px" viewbox="0 0 12 10">

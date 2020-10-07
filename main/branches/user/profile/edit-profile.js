@@ -4,8 +4,10 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {username_inp, email_inp, first_name_inp , last_name_inp, city_inp, day_inp, month_inp, year_inp, biography_inp,
-            military_service_inp, marital_status_inp, sex_inp} = req.body;
+        log(req.body);
+        return res.end();
+        let {first_name_inp, last_name_inp, username_inp, email_inp, phone_number_inp, sex_inp, military_service_inp,
+            marital_status_inp, city_inp, biography_inp, day_inp, month_inp, year_inp} = req.body;
         let contacts_type_inp = req.body['contacts_type_inp[]'];
         let contacts_link_inp = req.body['contacts_link_inp[]'];
         let date = `${year_inp}/${month_inp}/${day_inp}`

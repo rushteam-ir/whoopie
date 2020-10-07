@@ -5,7 +5,11 @@ $('#TAC').change(function(){
     if ($('#TAC').is(":checked")){
 
         $('.telegram_checked').show();
-        $('.T_id').show();
+        if($('#id_TAC').is(':checked')){
+
+            $('.T_id').show();
+        
+        }
 
     }else{
 

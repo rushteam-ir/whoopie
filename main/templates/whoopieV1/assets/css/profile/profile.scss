@@ -5,13 +5,13 @@
 @import '../partials/checkbox-design';
 @import '../partials/Puploader';
 
-.field_of_img_template{
+.field_of_img_template {
     width: 200px;
     margin: 0 auto;
     height: 200px;
 }
 
-.btn-tertiary2{
+.btn-tertiary2 {
     width: 200px;
     height: 200px;
     border: 2px dashed #CED4DA;
@@ -22,7 +22,7 @@
     color: rgb(138, 138, 138);
 }
 
-.uploading_img_from_brows{
+.uploading_img_from_brows {
     border-radius: 15px;
 }
 
@@ -52,46 +52,6 @@
             direction: rtl;
             text-align: right;
 
-            .profile_select,
-            .maried_select,
-            .sex_select,
-            .militeries_select {
-                border-radius: 15px;
-                margin-right: 0px;
-                width: 49.99%;
-                margin-bottom: 15px;
-
-                label {
-                    text-align: right;
-                    direction: rtl;
-                    width: 100%;
-                    font-family: $TF;
-                    font-size: 1rem;
-                }
-
-                .WCD_title {
-                    background-color: $white;
-                    width: 98%;
-                }
-
-                .WCD_optopn {
-                    width: 98%;
-                    top: 70px;
-                    overflow: hidden;
-                    div{
-                        overflow: auto;
-                    }
-                }
-            }
-
-            .sex_select,
-            .militeries_select {
-                z-index: 500;
-            }
-
-            .militeries_select {
-                display: none;
-            }
 
             .born_day {
                 label {
@@ -142,4 +102,34 @@
 
 .show {
     display: inline-block !important;
+}
+
+.profile_wc {
+    .WC_dropdown {
+        width: 49%;
+        margin-right: 0;
+
+        label {
+            width: 100%;
+            text-align: right;
+            font-weight: normal;
+            font-family: $TF;
+        }
+
+        .select_click{
+            height: 36px;
+            position: absolute;
+            top: 33px;
+            z-index: unset;
+        }
+
+        .WCD_optopn {
+            top: 70px;
+            width: 100%;
+        }
+
+        .WCD_title {
+            width: 100%;
+        }
+    }
 }

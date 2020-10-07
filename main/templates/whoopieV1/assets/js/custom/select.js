@@ -8,6 +8,8 @@ let option_parent = $('.WCD_optopn');
 for (let j = 0; j < title.length; j++) {
 
     title.eq(j).click(function () {
+
+        $(this).parent().toggleClass('up_up')
         
         let ThisOptionParent = $(this).next();
         let thisOption = $(this).next().children().children();

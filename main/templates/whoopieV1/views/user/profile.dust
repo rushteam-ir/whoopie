@@ -59,55 +59,68 @@
                                 <label for="phone_number">شماره تلفن</label>
                                 <input type="text" class="form-control" id="phone_number" name="phone_number_inp">
                             </div>
-                            <div class="row">
+                            <div class="row profile_wc">
                                 <div class="col-12">
-                                    <div class="WC_dropdown sex_select">
-                                        <label for="sex_select">جنسیت</label>
-                                        <div class="WCD_title" id="sex_select">جنسیت<i class="fas fa-angle-down"></i></div>
+                                    <div class="WC_dropdown">
+                                        <label for="maried_select">جنسیت</label>
+                                        <div class="category_title WCD_title"><p>جنسیت</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="select_click" id="sex_select"></div>
                                         <div class="WCD_optopn">
-                                            <span value="0">مرد</span>
-                                            <span value="1">زن</span>
+                                            <div>
+                                                <span value="0">مرد</span>
+                                                <span value="1">زن</span>
+                                            </div>
                                         </div>
                                         <input type="hidden" name="sex_inp">
                                     </div>
-                                    <div class="WC_dropdown militeries_select">
-                                        <label for="militeries_select">وضعیت خدمت</label>
-                                        <div class="WCD_title" id="militeries_select">وضعیت خدمت<i class="fas fa-angle-down"></i></div>
+                                    <div class="WC_dropdown mr-2">
+                                        <label for="maried_select">وضعیت خدمت</label>
+                                        <div class="category_title WCD_title"><p>وضعیت خدمت</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="select_click" id="military_select"></div>
                                         <div class="WCD_optopn">
-                                            <span value="0">پایان خدمت </span>
-                                            <span value="1">درحال خدمت</span>
-                                            <span value="2">معافیت دائم</span>
-                                            <span value="3">معافیت تحصیلی</span>
-                                            <span value="4">مشمول</span>
+                                            <div>
+                                                <span value="0">معافیت تحصیلی</span>
+                                                <span value="1">معافیت دائم</span>
+                                                <span value="2">پایان خدمت</span>
+                                                <span value="3">درحال خدمت</span>
+                                                <span value="4">مشمول</span>
+                                            </div>
                                         </div>
                                         <input type="hidden" name="military_service_inp">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="WC_dropdown maried_select">
-                                <label for="maried_select">وضعیت تاهل</label>
-                                <div class="WCD_title" id="maried_select">وضعیت تاهل<i class="fas fa-angle-down"></i></div>
-                                <div class="WCD_optopn">
-                                    <span value="0">مجرد</span>
-                                    <span value="1">متاهل</span>
+                                <div class="col-12 mt-4">
+                                    <div class="WC_dropdown">
+                                        <label for="maried_select">وضعیت تاهل</label>
+                                        <div class="category_title WCD_title"><p>وضعیت تاهل</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="select_click" id="married_select"></div>
+                                        <div class="WCD_optopn">
+                                            <div>
+                                                <span value="0">مجرد</span>
+                                                <span value="1">متاهل</span>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="military_service_inp">
+                                    </div>
+                                    <div class="WC_dropdown mr-2">
+                                        <label for="maried_select">شهر</label>
+                                        <div class="category_title WCD_title"><p>شهر</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="select_click" id="cityP_select"></div>
+                                        <div class="WCD_optopn">
+                                            <div>
+                                                {#g_city_list}
+                                                    {@eq key="{city_value}" value="{.}"}
+                                                        <span selected="selected" value="{.}">{.}</span>
+                                                    {:else}
+                                                        <span value="{.}">{.}</span>
+                                                    {/eq}
+                                                {/g_city_list}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <input type="hidden" name="marital_status_inp">
                             </div>
-                            <div class="WC_dropdown profile_select">
-                                <label for="profile_select">شهر</label>
-                                <div class="WCD_title" id="profile_select">شهر<i class="fas fa-angle-down"></i></div>
-                                <div class="WCD_optopn">
-                                    <span value="">برنامه نویسی</span>
-                                    <span value="">حمزه خوری</span>
-                                    <span value="">حمزه بری</span>
-                                    <span value="">شاشیدن تو همه چی</span>
-                                    <span value="">برنامه نویسی</span>
-                                    <span value="">حمزه خوری</span>
-                                    <span value="">حمزه بری</span>
-                                </div>
-                                <input type="hidden"  name="city_inp">
-                            </div>
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <label for="family">درباره من </label>
                                 <textarea type="text" class="form-control" id="family" rows="5" name="biography_inp"></textarea>
                             </div>

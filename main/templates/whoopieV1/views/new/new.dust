@@ -8,6 +8,7 @@
 <script src="js/user/profile.js"></script>
 <script src="js/custom/select-input.js"></script>
 <script src="js/custom/tags.js"></script>
+<script src="js/custom/file-upload.js"></script>
 {/js}
 
 {<body}
@@ -60,6 +61,10 @@
                                 <div class="tags_lable_field">
 
                                 </div>
+                            </div>
+                            <div class="form-group position-relative">
+                                <label for="article_photo">عکس مقاله</label>
+                                <input type="file" class="form-control chose_file_inp main_form_design fal ajax_file" name="main_image" id="article_photo">
                             </div>
                             <button type="submit" class="btn profile_sub">ثبت آگهی</button>
                         </form>

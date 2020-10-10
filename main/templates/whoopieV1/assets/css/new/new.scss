@@ -3,6 +3,7 @@
 @import '../partials/mixin';
 @import '../partials/select';
 @import '../partials/tags';
+@import '../partials/file-uploader';
 
 .profile_inp_field {
     .main_field_of_profile {
@@ -79,3 +80,13 @@
     }
 }
 
+.chose_file_inp{
+    border: 2px dashed #CED4DA;
+    &:hover{
+        border: 2px dashed $main_color;
+    }
+}
+
+.chose_file_inp:before {
+    top: 3px;
+}

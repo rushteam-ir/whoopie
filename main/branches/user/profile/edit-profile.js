@@ -44,7 +44,7 @@ router.post('/', async(req, res, next)=>{
             }
 
         }
-        if(c_contact_phone_number_inp && )
+        // if(c_contact_phone_number_inp)
         if(c_contact_telegram_inp == 'on'){
 
             if(isUndefined(c_telegram_type_inp)){

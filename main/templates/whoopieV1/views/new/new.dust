@@ -53,6 +53,27 @@
                                 <label for="more_description">توضیحات تکمیلی</label>
                                 <textarea type="text" class="form-control" id="more_description" rows="5" name="describe_inp"></textarea>
                             </div>
+                            <label class="partner_type">نوع همکاری</label>
+                            <div class="PT_checkbox">
+                                <input class="inp-cbx" id="remote" type="radio" name="c_contact_whatsapp_inp" style="display: none"/>
+                                <label class="cbx" for="remote">
+                                    <span>
+                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg>
+                                    </span>
+                                    <span>واتس اپ</span>
+                                </label>
+                                <input class="inp-cbx" id="FTF" type="radio" name="c_contact_whatsapp_inp" style="display: none"/>
+                                <label class="cbx" for="FTF">
+                                    <span>
+                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg>
+                                    </span>
+                                    <span>واتس اپ</span>
+                                </label>
+                            </div>
                             <div class="form-group position-relative">
                                 <label for="tags_field">برچسب ها</label>
                                 <input type="text" class="form-control main_form_design " id="tags_field">

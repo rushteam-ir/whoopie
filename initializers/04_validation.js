@@ -39,6 +39,17 @@ module.exports = Validation = class {
 
             switch(input.type){
 
+                case 'empty':
+                {
+
+                    if(input.value == ''){
+                        return 'لطفا ورودی های مهم را وارد کنید'
+                    }
+
+                    break;
+
+                }
+
                 case 'name':
                 {
 

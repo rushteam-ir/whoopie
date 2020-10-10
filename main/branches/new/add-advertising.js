@@ -4,13 +4,13 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {title_inp, summary_inp, category_inp, describe_inp} = req.body;
+        let {title_inp, summary_inp, category_inp, describe_inp, type_inp} = req.body;
         let tags_inp = req.body['tags_inp[]'];
         let validation_result = new Validation([
-            {value : title_inp},
-            {value : summary_inp},
-            {value : category_inp},
-            {value : describe_inp},
+            {value : title_inp, type : 'empty'},
+            {value : summary_inp, type : 'empty'},
+            {value : category_inp, type : 'number'},
+            {value : describe_inp, type : 'empty'},
         ]).check();
 
         if(validation_result){
@@ -21,48 +21,71 @@ router.post('/', async(req, res, next)=>{
 
         let ad_data = {
             title : title_inp,
-            describe : describe_inp,
+            summary : summary_inp,
             category : category_inp,
-            other_describe : other_describe_inp,
+            describe : describe_inp,
             tags : tags_inp,
-            author : req.session.user_info._id
+            author : req.session.user_info._id,
+            type : type_inp
         }
 
-        // if (req.files || Object.keys(req.files).length !== 0) {
-        //
-        //     // let avatar = req.files.avatar_inp;
-        //     // let file_name = `${randomSha1String()}.${avatar_inp.name.split(".").pop()}`;
-        //     //
-        //     // if(avatar.size/1024 <= image_limited_size) {
-        //     //
-        //     //     await avatar.mv(`${app_dir}media/avatars/${file_name}`, async (err) => {
-        //     //
-        //     //         if (err) {
-        //     //
-        //     //             next(err);
-        //     //
-        //     //         }
-        //     //         else {
-        //     //
-        //     //
-        //     //         }
-        //     //
-        //     //     });
-        //     //
-        //     // }
-        //
-        // }
+        if (req.files) {
 
-        let result = await ad_model.add(ad_data);
+            let portfolio = req.files.portfolio_inp;
+            let file_name = `${req.session.user_info.username}_${randomUUID()}.${portfolio.name.split(".").pop()}`;
 
-        if(result){
+            if(portfolio.size/(1024*1024) <= image_limited_size){
 
-            return res.json({'success' : 'success'});
+                await portfolio.mv(`${app_dir}main/templates/whoopieV1/assets/media/portfolios/${file_name}`, async(err)=>{
+
+                    if(err){
+
+                        next(err);
+
+                    }
+                    else{
+
+                        ad_data.portfolio = file_name;
+
+                        let result = await ad_model.add(ad_data);
+
+                        if(result){
+
+                            return res.json({'success' : 'success'});
+
+                        }
+                        else{
+
+                            return res.json({'fail' : 'fail'});
+
+                        }
+
+                    }
+
+                });
+
+            }
+            else{
+
+                return res.json(`حداکثر حجم مجاز برای آپلود نمونه کار ${portfolio_limited_size} مگابایت می باشد.`);
+
+            }
 
         }
         else{
 
-            return res.json({'fail' : 'fail'});
+            let result = await ad_model.add(ad_data);
+
+            if(result){
+
+                return res.json({'success' : 'success'});
+
+            }
+            else{
+
+                return res.json({'fail' : 'fail'});
+
+            }
 
         }
 

@@ -31,11 +31,7 @@ ad_schema.statics = {
         data.unique_id = randomUUID();
 
         let new_doc = new ad_model(data);
-        return await new_doc.save((err, res)=>{
-
-            if (err) throw err;
-
-        });
+        return await new_doc.save();
 
     },
 

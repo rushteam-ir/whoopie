@@ -6,6 +6,7 @@ app_url = `http://${config.app_address}:${config.app_port}/`;
 app_dir = require.main.path + '/';
 db_url = `mongodb://localhost:${config.db_port}/${config.db_name}`;
 image_limited_size = config.image_limited_size;
+portfolio_limited_size = config.portfolio_limited_size;
 
 // Connect MongoDB with options below
 mongoose.connect(db_url, {

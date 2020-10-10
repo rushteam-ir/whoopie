@@ -114,13 +114,13 @@
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-lg-4">
                     <div class="main_field_of_debug_modal">
                         <i class="fas fa-times" id="close_BM"></i>
-                        <h3>باگی رو که پیدا کردی به تیم <span>ووپــــــــــای</span> گزارش بده تا به روند بهبود سایت کمک کرده باشی !</h3>
-                        <form>
+                        <h3>باگی رو که پیدا کردی به تیم <span>ووپــــــای</span> گزارش بده تا به روند بهبود سایت کمک کرده باشی !</h3>
+                        <form method="post" action="{app_url}api/v1/report/general" autocomplete="off">
                             <div class="form-group">
-                              <textarea type="password" class="form-control" id="bug_description" rows="10"></textarea>
+                              <textarea class="form-control" id="bug_description" rows="10" name="text_inp"></textarea>
                             </div>
                             <button type="submit" class="btn bug_sub">گزارش باگ</button>
-                          </form>
+                        </form>
                     </div>
                 </div>
             </div>

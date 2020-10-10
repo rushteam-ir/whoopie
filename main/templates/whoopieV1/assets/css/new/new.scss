@@ -4,6 +4,7 @@
 @import '../partials/select';
 @import '../partials/tags';
 @import '../partials/file-uploader';
+@import '../partials/checkbox-design';
 
 .profile_inp_field {
     .main_field_of_profile {
@@ -89,4 +90,17 @@
 
 .chose_file_inp:before {
     top: 3px;
+}
+
+.cbx{
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.partner_type{
+    width: 100%;
+}
+
+.PT_checkbox{
+    display: flex;
 }

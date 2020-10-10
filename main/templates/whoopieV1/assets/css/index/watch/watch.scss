@@ -1,0 +1,172 @@
+@import '../../partials/color';
+@import '../../partials/font';
+@import '../../partials/mixin';
+
+.main_field_of_watch {
+    width: 100%;
+    padding: 30px;
+    background-color: $white;
+    margin: 30px 0px;
+    border-radius: 15px;
+    direction: rtl;
+    text-align: right;
+    position: relative;
+
+    .share_report {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+
+        button {
+            opacity: 0.5;
+            padding: 0;
+            font-size: 1.3rem;
+            @include transition(0.2s, linear, 0s);
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:nth-child(1) {
+                margin-left: 13px;
+                color: #ff7b7b;
+            }
+
+            &:nth-child(2) {
+                color: $main_color
+            }
+        }
+    }
+
+    .user_INC {
+        img {
+            display: inline-block;
+            border-radius: 50px;
+            width: 90px;
+            height: 90px;
+        }
+
+        div {
+            display: inline-block;
+            margin-right: 15px;
+            position: relative;
+            top: 13px;
+
+            p {
+                &:first-child {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    margin: 0;
+                    margin-bottom: 7px;
+                }
+
+                &:last-child {
+                    font-size: 0.9rem;
+                    direction: ltr;
+                }
+            }
+        }
+    }
+
+    .user_bio {
+        text-align: justify;
+        margin-top: 15px;
+        font-size: 0.9rem;
+        line-height: 30px;
+
+        span {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+
+    .tags {
+        span {
+            display: inline-block;
+            width: max-content;
+            padding: 7px;
+            background-color: #F3F6F9;
+            color: #2b2b2b;
+            border-radius: 7px;
+            text-align: right;
+            direction: rtl;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+    }
+
+    .ad_info {
+
+        .ad_info_header {
+            h1 {
+                display: inline-block;
+                font-size: 2.2rem;
+                margin-bottom: 0;
+                line-height: 50px;
+                margin-top: 10px;
+            }
+
+            p {
+                display: inline-block;
+                font-size: 0.9rem;
+                position: relative;
+                top: -5px;
+                margin-right: 10px;
+                color: #bebebe;
+            }
+        }
+
+        .ad_description {
+            font-size: 0.9rem;
+            line-height: 28px;
+
+        }
+    }
+
+    .header_of_portfolio {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .portfolio_link {
+        width: 100px;
+        height: 100px;
+        background-color: #f3f6f9;
+        border-radius: 15px;
+        display: block;
+        text-align: center;
+        @include transition(0.2s, linear, 0s);
+
+        &:hover {
+            background-color:  #eff0f1;
+            i{
+                color: #7a7a7a;
+            }
+        }
+
+        i {
+            @include transition(0.2s, linear, 0s);
+            color: #c5c5c5;
+            line-height: 90px;
+            font-size: 2rem;
+        }
+    }
+    .contact_ways{
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            width: 50%;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: rgb(61, 61, 61);
+            i{
+                margin-left: 8px;
+                font-size: 1.3rem;
+                position: relative;
+                top: 2px;
+                color: $main_color;
+            }
+        }
+    }
+}

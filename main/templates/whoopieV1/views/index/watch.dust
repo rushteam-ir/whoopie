@@ -1,7 +1,7 @@
 {>"layouts/main-layout"/}
 
 {<css}
-
+    <link rel="stylesheet" href="css/index/watch/watch.css">
 {/css}
 
 {<js}
@@ -9,5 +9,93 @@
 {/js}
 
 {<body}
-        {ad_info}
+    <section class="watch_main_field">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+                    <div class="main_field_of_watch">
+                        <div class="share_report">
+                            <button class="btn">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                        <div class="user_INC">
+                            <img src="img/AP03.png" alt="">
+                            <div>
+                                <p>کسری حبیب بیگی</p>
+                                <p>تهران</p>
+                            </div>
+                        </div>
+                        <p Class="user_bio">
+                            <span>درباره من : </span>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهاا مورد استفاده قرار گیرد.
+                        </p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <p>جنسیت : مرد</p>
+                                <p>نوع همکاری : دور کاری</p>
+                                <p> وضعیت نظام وضیفه : معافیت تحصیلی</p>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <p>وضعیت تاهل : نا معلوم</p>
+                                <p class="mb-1">تاریخ تولد : 1400/10/12</p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div Class="ad_info">
+                            <div class="ad_info_header">
+                                <h1>Node.js</h1>
+                                <p>#برنامه نویسی</p>
+                            </div>
+                            <p class="ad_description"> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهاا مورد استفاده قرار گیرد لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهاا مورد استفاده قرار گیرد</p>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <p class="header_of_portfolio">
+                                        نمونه کار های من :
+                                    </p>
+                                    <a href="" class="portfolio_link mr-2">
+                                        <i class="fal fa-download"></i> 
+                                    </a>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <p class="header_of_portfolio">
+                                        برچسب ها :
+                                    </p>
+                                    <p class="tags"><span>برنامه نویسی</span><span>کار پیدا کرد</span><span>ایول ایول</span><span>ایول ایول</span><span>کار پیدا کرد</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="contact_ways">
+                            <a href="">
+                                <i class="fab fa-whatsapp"></i>
+                                09021414866
+                            </a>
+                            <a href="">
+                                <i class="fab fa-telegram-plane"></i>
+                                meganoob
+                            </a>
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                                kasra habibbeygi
+                            </a>
+                            <a href="">
+                                <i class="far fa-phone"></i>
+                                09021414866
+                            </a>
+                            <a href="">
+                                <i class="far fa-at"></i>
+                                kasrahabibbeygi@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
 {/body}

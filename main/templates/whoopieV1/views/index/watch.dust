@@ -23,75 +23,141 @@
                             </button>
                         </div>
                         <div class="user_INC">
-                            <img src="img/AP03.png" alt="">
+                            {@eq key="{ad_info.author.avatar}" value="{null}"}
+                                <img src="img/AP03.png" alt="">
+                            {:else}
+                                <img src="media/avatars/{ad_info.author.avatar}" alt="">
+                            {/eq}
                             <div>
-                                <p>کسری حبیب بیگی</p>
-                                <p>تهران</p>
+                                <p>{ad_info.author.first_name} {ad_info.author.last_name}</p>
+                                <p>
+                                    {#g_city_list}
+                                        {@eq key="{$idx}" value="{ad_info.author.city}"}
+                                            {.}
+                                        {/eq}
+                                    {/g_city_list}
+                                </p>
                             </div>
                         </div>
                         <p Class="user_bio">
                             <span>درباره من : </span>
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهاا مورد استفاده قرار گیرد.
+                            {@eq key="{ad_info.author.biography}" value=""}
+                                هنوز چیزی ننوشتم !
+                            {:else}
+                                {ad_info.author.biography}
+                            {/eq}
                         </p>
                         <hr>
                         <div class="row">
                             <div class="col-12 col-sm-6">
-                                <p>جنسیت : مرد</p>
-                                <p>نوع همکاری : دور کاری</p>
-                                <p> وضعیت نظام وضیفه : معافیت تحصیلی</p>
+                                <p>
+                                    {#g_sex_list}
+                                        {@eq key="{$idx}" value="{ad_info.author.sex}"}
+                                            جنسیت : {.}
+                                        {/eq}
+                                    {/g_sex_list}
+                                </p>
+                                <p>
+                                    {@eq key="{ad_info.type}" value="0"}
+                                        نوع همکاری : حضوری
+                                    {:else}
+                                        نوع همکاری : دور کاری
+                                    {/eq}
+                                </p>
+                                {@eq key="{ad_info.author.sex}" value="0"}
+                                    {#g_military_list}
+                                        {@eq key="{$idx}" value="{ad_info.author.military_status}"}
+                                            <p>
+                                                وضعیت نظام وظیفه : {.}
+                                            </p>
+                                        {/eq}
+                                    {/g_military_list}
+                                {/eq}
                             </div>
                             <div class="col-12 col-sm-6">
-                                <p>وضعیت تاهل : نا معلوم</p>
-                                <p class="mb-1">تاریخ تولد : 1400/10/12</p>
+                                <p>
+                                    {#g_marital_list}
+                                        {@eq key="{$idx}" value="{ad_info.author.marital_status}"}
+                                            وضعیت تاهل : {.}
+                                        {/eq}
+                                    {/g_marital_list}
+                                </p>
+                                <p class="mb-1">تاریخ تولد : {ad_info.author.birth_year}/{ad_info.author.birth_month}/{ad_info.author.birth_day}</p>
                                 <p></p>
                             </div>
                         </div>
                         <hr>
                         <div Class="ad_info">
                             <div class="ad_info_header">
-                                <h1>Node.js</h1>
-                                <p>#برنامه نویسی</p>
+                                <h1>{ad_info.title}</h1>
+                                <p>
+                                    #{ad_info.category.title}
+                                </p>
                             </div>
-                            <p class="ad_description"> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهاا مورد استفاده قرار گیرد لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهاا مورد استفاده قرار گیرد</p>
+                            <p class="ad_description">
+                                {ad_info.describe}
+                            </p>
                             <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <p class="header_of_portfolio">
-                                        نمونه کار های من :
-                                    </p>
-                                    <a href="" class="portfolio_link mr-2">
-                                        <i class="fal fa-download"></i> 
-                                    </a>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <p class="header_of_portfolio">
-                                        برچسب ها :
-                                    </p>
-                                    <p class="tags"><span>برنامه نویسی</span><span>کار پیدا کرد</span><span>ایول ایول</span><span>ایول ایول</span><span>کار پیدا کرد</span></p>
-                                </div>
+                                {@ne key="{ad_info.portfolio}" value=""}
+                                    <div class="col-12 col-sm-6">
+                                        <p class="header_of_portfolio">
+                                            نمونه کار های من :
+                                        </p>
+                                        <a href="{app_url}media/portfolios/{ad_info.portfolio}" class="portfolio_link mr-2">
+                                            <i class="fal fa-download"></i>
+                                        </a>
+                                    </div>
+                                {/ne}
+                                {@ne key="{ad_info.tags}" value="{null}"}
+                                    <div class="col-12 col-sm-6">
+                                        <p class="header_of_portfolio">
+                                            برچسب ها :
+                                        </p>
+                                        <p class="tags">
+                                            {#ad_info.tags}
+                                                <span>{.}</span>
+                                            {/ad_info.tags}
+                                        </p>
+                                    </div>
+                                {/ne}
                             </div>
                         </div>
                         <hr>
                         <div class="contact_ways">
-                            <a href="">
-                                <i class="fab fa-whatsapp"></i>
-                                09021414866
-                            </a>
-                            <a href="">
-                                <i class="fab fa-telegram-plane"></i>
-                                meganoob
-                            </a>
-                            <a href="">
-                                <i class="fab fa-instagram"></i>
-                                kasra habibbeygi
-                            </a>
-                            <a href="">
-                                <i class="far fa-phone"></i>
-                                09021414866
-                            </a>
-                            <a href="">
-                                <i class="far fa-at"></i>
-                                kasrahabibbeygi@gmail.com
-                            </a>
+                            {@eq key="{ad_info.author.contact_phone}" value="true"}
+                                <a href="">
+                                    <i class="far fa-phone"></i>
+                                    {ad_info.author.phone_number}
+                                </a>
+                            {/eq}
+                            {@eq key="{ad_info.author.contact_email}" value="true"}
+                                <a href="">
+                                    <i class="far fa-at"></i>
+                                    {ad_info.author.email}
+                                </a>
+                            {/eq}
+                            {@eq key="{ad_info.author.contact_whatsapp}" value="true"}
+                                <a href="">
+                                    <i class="fab fa-whatsapp"></i>
+                                    {ad_info.author.phone_number}
+                                </a>
+                            {/eq}
+                            {@eq key="{ad_info.author.contact_instagram}" value="true"}
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                    {ad_info.author.contact_instagram_id}
+                                </a>
+                            {/eq}
+                            {@eq key="{ad_info.author.contact_telegram}" value="true"}
+                                <a href="">
+                                    <i class="fab fa-telegram-plane"></i>
+                                    {@eq key="{ad_info.author.contact_telegram_type}" value="0"}
+                                        {ad_info.author.phone_number}
+                                    {:else}
+                                        {ad_info.author.contact_telegram_id}
+                                    {/eq}
+                                </a>
+                            {/eq}
                         </div>
                     </div>
                 </div>

@@ -9,8 +9,14 @@ let ad_schema = new mongoose.Schema({
         ref : 'category'
     },
     describe : String,
-    tags : [String],
-    portfolio : String,
+    tags : {
+        type : [String],
+        default: null
+    },
+    portfolio : {
+        type : String,
+        default : ''
+    },
     author : {
         type: 'ObjectId',
         ref: 'user'
@@ -37,7 +43,7 @@ ad_schema.statics = {
 
     getById : async (data)=>{
 
-        let find_ad = await ad_model.findOne(data);
+        let find_ad = await ad_model.findOne(data).populate('category').populate('author');
 
         if(find_ad){
 
@@ -54,7 +60,7 @@ ad_schema.statics = {
 
     getAll : async (data)=>{
 
-        return await ad_model.find({author : data._id});
+        return await ad_model.find({author : data._id}).populate('category').populate('author');
 
     },
 

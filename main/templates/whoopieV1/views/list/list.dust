@@ -13,40 +13,64 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                    <div class="ads_card_field mb-4 mt-5">
-                        <div class="right_card_box">
-                            <div class="RS_field">
-                                <button class="btn">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                                <button class="btn">
-                                    <i class="fas fa-trash-alt"></i>
-                                </button>
-                                <button class="btn">
-                                    <i class="fas fa-share-alt"></i>
-                                </button>
-                            </div>
-                            <div class="ads_profile_info">
-                                <img src="img/AP03.png" alt="">
-                                <div>
-                                    <p>کسری حبیب بیگی</p>
-                                    <p>تهران</p>
+                    {#ad_list_info}
+                        <div class="ads_card_field mb-4 mt-5">
+                            <div class="right_card_box">
+                                <div class="RS_field">
+                                    <button class="btn">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <button class="btn">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                                <div class="ads_profile_info">
+                                    {@eq key="{author.avatar}" value="{null}"}
+                                        <img src="img/AP03.png" alt="">
+                                    {:else}
+                                        <img src="media/avatars/{author.avatar}" alt="">
+                                    {/eq}
+                                    <div>
+                                        <p>{author.first_name} {author.last_name}</p>
+                                        <p>
+                                            {#g_city_list}
+                                                {@eq key="{$idx}" value="{author.city}"}
+                                                    {.}
+                                                {/eq}
+                                            {/g_city_list}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ads_card_info">
+                                    <p>
+                                        {title}
+                                        <span>#{category.title}</span>
+                                    </p>
+                                    <p>{summary}</p>
                                 </div>
                             </div>
-                            <div class="ads_card_info">
-                                <p>
-                                    node.js
-                                    <span># برنامه نویسی</span>
+                            <div class="left_card_box">
+                                <p><span> جنسیت :  </span>
+                                    {#g_sex_list}
+                                        {@eq key="{$idx}" value="{author.sex}"}
+                                            {.}
+                                        {/eq}
+                                    {/g_sex_list}
                                 </p>
-                                <p>برنامه نویس هوشمند و اسکل و علاقه مند به حرف زدن های حمزه من طالبیه شیرینم تستم کن !</p>
+                                <p><span> نوع همکاری : </span>
+                                    {@eq key="{type}" value="0"}
+                                        حضوری
+                                    {:else}
+                                        دور کاری
+                                    {/eq}
+                                </p>
+                                <a href="{app_url}/?w={unique_id}" class="btn">مشاهده</a>
                             </div>
                         </div>
-                        <div class="left_card_box">
-                            <p><span> جنسیت :  </span> دو جنسه</p>
-                            <p><span> نوع همکاری : </span>دورکاری</p>
-                            <button class="btn">مشاهده</button>
-                        </div>
-                    </div>
+                    {/ad_list_info}
                     <div class="refrech_card_btn mb-5">
                         <button class="btn">
                             <i class="fas fa-plus"></i>

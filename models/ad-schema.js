@@ -15,7 +15,7 @@ let ad_schema = new mongoose.Schema({
         type: 'ObjectId',
         ref: 'user'
     },
-    type : Number,
+    type : String,
     reports : [{
         type : 'ObjectId',
         ref : 'report'

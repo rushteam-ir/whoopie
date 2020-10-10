@@ -4,12 +4,12 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {title_inp, summary_inp, category_inp, describe_inp} = req.body;
+        let {title_inp, summary_inp, category_inp, describe_inp, type_inp} = req.body;
         let tags_inp = req.body['tags_inp[]'];
         let validation_result = new Validation([
             {value : title_inp, type : 'empty'},
             {value : summary_inp, type : 'empty'},
-            {value : category_inp, type : 'empty'},
+            {value : category_inp, type : 'number'},
             {value : describe_inp, type : 'empty'},
         ]).check();
 
@@ -25,7 +25,8 @@ router.post('/', async(req, res, next)=>{
             category : category_inp,
             describe : describe_inp,
             tags : tags_inp,
-            author : req.session.user_info._id
+            author : req.session.user_info._id,
+            type : type_inp
         }
 
         if (req.files) {

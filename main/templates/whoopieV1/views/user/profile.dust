@@ -2,6 +2,7 @@
 
 {<css}
     <link rel="stylesheet" href="css/user/profile.css">
+    <link rel="stylesheet" href="css/user/profile-mediaquery.css">
 {/css}
 
 {<js}
@@ -13,7 +14,7 @@
     <section class="profile_inp_field">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6 offset-3">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                     <div class="main_field_of_profile">
                         <h1>اطلاعات حساب کاربری</h1>
                         <form action="{app_url}user/profile/change-avatar" method="post" enctype="multipart/form-data">
@@ -62,8 +63,8 @@
                                 <input type="text" class="form-control" id="phone_number" name="phone_number_inp"  value="{user_info.phone_number}">
                             </div>
                             <div class="row profile_wc">
-                                <div class="col-12">
-                                    <div class="WC_dropdown">
+                                <div class="col-12 ">
+                                    <div class="WC_dropdown mt-3">
                                         <label for="maried_select">جنسیت</label>
                                         <div class="WCD_title"><p>جنسیت</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="sex_select"></div>
@@ -80,7 +81,7 @@
                                         </div>
                                         <input type="hidden" name="sex_inp" value="{user_info.sex}">
                                     </div>
-                                    <div class="WC_dropdown militeries_select mr-2">
+                                    <div class="WC_dropdown mt-3 mr-2">
                                         <label for="maried_select">وضعیت خدمت</label>
                                         <div class="WCD_title"><p>وضعیت خدمت</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="military_select"></div>
@@ -98,7 +99,7 @@
                                         <input type="hidden" name="military_service_inp" value="{user_info.military_status}">
                                     </div>
                                 </div>
-                                <div class="col-12 mt-4">
+                                <div class="col-12 mt-3">
                                     <div class="WC_dropdown">
                                         <label for="maried_select">وضعیت تاهل</label>
                                         <div class="category_title WCD_title"><p>وضعیت تاهل</p><i class="fas fa-angle-down"></i></div>
@@ -116,7 +117,7 @@
                                         </div>
                                         <input type="hidden" name="marital_status_inp" value="{user_info.marital_status}">
                                     </div>
-                                    <div class="WC_dropdown mr-2">
+                                    <div class="WC_dropdown mr-2 mt-3">
                                         <label for="maried_select">شهر</label>
                                         <div class="category_title WCD_title"><p>شهر</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="cityP_select"></div>

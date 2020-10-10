@@ -62,7 +62,7 @@
                                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                         </svg>
                                     </span>
-                                    <span>واتس اپ</span>
+                                    <span>حضوری</span>
                                 </label>
                                 <input class="inp-cbx" id="FTF" type="radio" name="c_contact_whatsapp_inp" style="display: none"/>
                                 <label class="cbx" for="FTF">
@@ -71,7 +71,7 @@
                                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                         </svg>
                                     </span>
-                                    <span>واتس اپ</span>
+                                    <span>دور کاری</span>
                                 </label>
                             </div>
                             <div class="form-group position-relative">

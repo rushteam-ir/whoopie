@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
                     {#ad_list_info}
-                        <div class="ads_card_field mb-4 mt-5">
+                        <div class="ads_card_field mb-4 mt-3">
                             <div class="right_card_box">
                                 <div class="RS_field">
                                     <button class="btn">
@@ -67,14 +67,14 @@
                                         دور کاری
                                     {/eq}
                                 </p>
-                                <a href="{app_url}/?w={unique_id}" class="btn">مشاهده</a>
+                                <a href="{app_url}?w={unique_id}" class="btn">مشاهده</a>
                             </div>
                         </div>
                     {/ad_list_info}
                     <div class="refrech_card_btn mb-5">
                         <button class="btn">
                             <i class="fas fa-plus"></i>
-                            یه لیست جدید بده !
+                            ثبت آگهی جدید
                         </button>
                     </div>
                 </div>

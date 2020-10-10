@@ -16,6 +16,7 @@ router.get('/:id', async(req, res, next)=>{
             let data = {
                 ad_info : ad_info
             }
+            req.session.ad_id = ad_id;
 
             return res.render('edit/edit', data);
 

@@ -1,3 +1,111 @@
-<html>
-    EDIT
-</html>
+{>"layouts/main-layout"/}
+
+{<css}
+    <link rel="stylesheet" href="css/new/new.css">
+    <link rel="stylesheet" href="css/new/new-mediaquery.css">
+{/css}
+
+{<js}
+    <script src="js/custom/select-input.js"></script>
+    <script src="js/custom/tags.js"></script>
+    <script src="js/custom/file-upload.js"></script>
+{/js}
+
+{<body}
+    <section class="profile_inp_field">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+                    <div class="main_field_of_profile">
+                        <h1>ویرایش آگهی</h1>
+                        <form action="{app_url}edit/edit-advertising" method="post" enctype="multipart/form-data">
+                            <div class="form-group mt-3">
+                                <label for="ad_title">تیتر آگهی</label>
+                                <input id="test" type="text" class="form-control" id="ad_title" name="title_inp" value="{ad_info.title}">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="ad_description">توضیحات آگهی</label>
+                                <textarea type="text" class="form-control" id="ad_description" rows="5" name="summary_inp">{ad_info.summary}</textarea>
+                            </div>
+                            <div class="row profile_wc">
+                                <div class="col-12">
+                                    <div class="WC_dropdown">
+                                        <label for="maried_select">دسته بندی</label>
+                                        <div class="category_title WCD_title"><p>دسته بندی</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="select_click" id="sex_select"></div>
+                                        <div class="WCD_optopn">
+                                            <div>
+                                                {#g_category_list}
+                                                    {@eq key="{category_value}" value="{title}"}
+                                                        <span selected="selected" value="{_id}">{title}</span>
+                                                    {:else}
+                                                        <span value="{_id}">{title}</span>
+                                                    {/eq}
+                                                {/g_category_list}
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="category_inp" value="{ad_info.category._id}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="more_description">توضیحات تکمیلی</label>
+                                <textarea type="text" class="form-control" id="more_description" rows="5" name="describe_inp">{ad_info.describe}</textarea>
+                            </div>
+                            <label class="partner_type">نوع همکاری</label>
+                            <div class="PT_checkbox">
+                                {@eq key="{ad_info.type}" value="0"}
+                                    <input class="inp-cbx" id="remote" type="radio" checked="checked" name="type_inp" value="0" style="display: none"/>
+                                {:else}
+                                    <input class="inp-cbx" id="remote" type="radio" name="type_inp" value="0" style="display: none"/>
+                                {/eq}
+                                <label class="cbx" for="remote">
+                                    <span>
+                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg>
+                                    </span>
+                                    <span>حضوری</span>
+                                </label>
+                                {@eq key="{ad_info.type}" value="1"}
+                                    <input class="inp-cbx" id="remote" type="radio" checked="checked" name="type_inp" value="1" style="display: none"/>
+                                {:else}
+                                    <input class="inp-cbx" id="remote" type="radio" name="type_inp" value="1" style="display: none"/>
+                                {/eq}
+                                <label class="cbx" for="FTF">
+                                    <span>
+                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg>
+                                    </span>
+                                    <span>دور کاری</span>
+                                </label>
+                            </div>
+                            <div class="form-group position-relative">
+                                <label for="tags_field">برچسب ها</label>
+                                <input type="text" class="form-control main_form_design " id="tags_field">
+                                <button type="button" class="btn add_tags">
+                                    <i class="far fa-check"></i>
+                                </button>
+                                <div class="tags_lable_field">
+                                    {#ad_info.tags}
+                                        <div class="tags_lable mr-2">
+                                            <p>{.}</p>
+                                            <i class="fas fa-times remove_tag"></i>
+                                            <input type="hidden" name="tags_inp[]" value="{.}">
+                                        </div>
+                                    {/ad_info.tags}
+                                </div>
+                            </div>
+                            <div class="form-group position-relative">
+                                <label for="article_photo">نمونه کار</label>
+                                <input type="file" class="form-control chose_file_inp main_form_design fal ajax_file" name="portfolio_inp" accept=".docx,.doc,.pdf,.md,.pptx,.ppt,.txt" id="article_photo">
+                            </div>
+                            <button type="submit" class="btn profile_sub">ویرایش آگهی</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{/body}

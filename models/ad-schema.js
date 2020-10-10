@@ -41,6 +41,12 @@ ad_schema.statics = {
 
     },
 
+    edit : async (ad_id, data)=>{
+
+        return await ad_model.findOneAndUpdate({unique_id : ad_id}, {$set : data}, {new : true});
+
+    },
+
     getById : async (data)=>{
 
         let find_ad = await ad_model.findOne(data).populate('category').populate('author');

@@ -2,6 +2,7 @@
 
 {<css}
     <link rel="stylesheet" href="css/new/new.css">
+    <link rel="stylesheet" href="css/new/new-mediaquery.css">
 {/css}
 
 {<js}

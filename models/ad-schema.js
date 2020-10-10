@@ -3,17 +3,14 @@ let ad_schema = new mongoose.Schema({
     unique_id : String,
     created_date : Date,
     title : String,
-    describe : String,
+    summary : String,
     category : {
         type : 'ObjectId',
         ref : 'category'
     },
-    other_describe : {
-        type : String,
-        es_indexed : true
-    },
+    describe : String,
     tags : [String],
-    portfolio : [String],
+    portfolio : String,
     author : {
         type: 'ObjectId',
         ref: 'user'

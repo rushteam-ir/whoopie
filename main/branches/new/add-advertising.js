@@ -4,13 +4,13 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {title_inp, describe_inp, category_inp, other_describe_inp} = req.body;
+        let {title_inp, summary_inp, category_inp, describe_inp} = req.body;
         let tags_inp = req.body['tags_inp[]'];
         let validation_result = new Validation([
             {value : title_inp},
-            {value : describe_inp},
+            {value : summary_inp},
             {value : category_inp},
-            {value : other_describe_inp},
+            {value : describe_inp},
         ]).check();
 
         if(validation_result){

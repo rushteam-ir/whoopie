@@ -42,7 +42,9 @@ user_schema.virtual('full_name').get(()=>{return `${this.first_name} ${this.last
 user_schema.statics = {
 
     register : async (data)=>{
+
         data.username = data.username.toLowerCase();
+        data.email = data.email.toLowerCase();
 
         let find_user1 = await user_model.findOne({username : data.username});
         let find_user2 = await user_model.findOne({email : data.email});
@@ -72,6 +74,8 @@ user_schema.statics = {
     },
 
     login : async (data)=>{
+
+        data.username_or_email = data.username_or_email.toLowerCase();
 
         let find_user1 = await user_model.findOne({username : data.username_or_email});
         let find_user2 = await user_model.findOne({email : data.username_or_email});
@@ -135,6 +139,7 @@ user_schema.statics = {
     editProfile : async (user_data, data)=>{
 
         data.username = data.username.toLowerCase();
+        data.email = data.email.toLowerCase();
 
         let find_user = await user_model.findOne({username : user_data.username});
 

@@ -16,7 +16,7 @@
     <section class="profile_inp_field">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6 offset-3">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
                     <div class="main_field_of_profile">
                         <h1>ثبت آگهی جدید</h1>
                         <form action="{app_url}user/profile/edit-profile" method="post">

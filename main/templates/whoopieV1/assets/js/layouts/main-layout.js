@@ -46,16 +46,17 @@ $(window).click(function (e) {
 });
 
 // report bug modal 
-
 $('#report_bug').click(function (e) {
 
     e.preventDefault();
     $('#bug_modal').fadeIn();
+    $('body').css('overflow' , 'hidden');
 
     $('#close_BM').click(function () {
 
         $('#bug_modal').fadeOut();
+        $('body').css('overflow' , 'auto');
 
     })
 
-})
+});

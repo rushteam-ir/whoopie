@@ -3,6 +3,10 @@ a:hover {
     color: black;
 }
 
+textarea{
+    resize: none;
+}
+
 label {
     font-size: 1rem;
 }

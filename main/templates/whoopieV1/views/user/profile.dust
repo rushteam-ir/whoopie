@@ -16,7 +16,12 @@
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                     <div class="main_field_of_profile">
                         <h1>اطلاعات حساب کاربری</h1>
-                        <form action="{app_url}user/profile/change-avatar" method="post" enctype="multipart/form-data">
+                        <div class="error_info warning_error">
+                            <i class="fal fa-exclamation-circle"></i>
+                            <p></p>
+                            <i class="fal fa-times"></i>
+                        </div>
+                        <form class="form_ajax" action="{app_url}user/profile/change-avatar" method="post" enctype="multipart/form-data">
                             <div class="field_of_img_template">
                                 <div class="box_of_img_template">
                                     <div class="box_of_img_template img-box">
@@ -31,7 +36,7 @@
                                             {/eq}
                                         </div>
                                         <input type="file" name="avatar_inp" id="avatar_img"
-                                               class="input-file-custom ajax_file" accept="image/jpeg, image/png, image/jpg, image/gif">
+                                               class="input-file-custom file_ajax" accept="image/jpeg, image/png, image/jpg, image/gif">
                                         <label for="avatar_img" class="btn btn-tertiary2 js-labelFile ">
                                             <i class="icon fa fa-check"></i>
                                             <span class="js-fileName mr-2">تصویر پروفایل</span>
@@ -40,7 +45,7 @@
                                 </div>
                             </div>
                         </form>
-                        <form action="{app_url}user/profile/edit-profile" method="post">
+                        <form class="form_ajax" action="{app_url}user/profile/edit-profile" method="post">
                             <div class="form-group mt-3">
                                 <label for="name">نام</label>
                                 <input type="text" class="form-control" id="name" name="first_name_inp" value="{user_info.first_name}">

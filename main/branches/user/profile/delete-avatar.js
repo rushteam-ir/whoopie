@@ -28,12 +28,12 @@ router.get('/', async(req, res, next)=>{
                 if(result){
 
                     req.session.user_info = result;
-                    return res.json('تصویر پروفایل با موفقیت حذف شد.');
+                    return res.redirect(`${app_url}user/profile`)
 
                 }
                 else{
 
-                    return res.json('حذف تصویر با خطا مواجه شد.')
+                    return res.redirect(`${app_url}user/profile`)
 
                 }
 

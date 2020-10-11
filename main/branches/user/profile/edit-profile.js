@@ -44,7 +44,12 @@ router.post('/', async(req, res, next)=>{
             }
 
         }
-        // if(c_contact_phone_number_inp)
+        if(isUndefined(c_contact_phone_number_inp) && isUndefined(c_contact_email_inp) &&
+           isUndefined(c_contact_whatsapp_inp) && isUndefined(c_contact_instagram_inp) && isUndefined(c_contact_telegram_inp)){
+
+            return res.json('حداقل یک راه ارتباطی باید انتخاب نمایید.')
+
+        }
         if(c_contact_telegram_inp == 'on'){
 
             if(isUndefined(c_telegram_type_inp)){
@@ -111,7 +116,11 @@ router.post('/', async(req, res, next)=>{
         if(typeof result != 'string'){
 
             req.session.user_info = result;
-            return res.json({'success' : 'success'});
+            return res.json({
+                status : 'success',
+                msg : 'اطلاعات کاربری با موفقیت ویرایش شد.',
+                url : `${app_url}user/profile`
+            });
 
         }
         else{

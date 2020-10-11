@@ -32,7 +32,11 @@ router.post('/', async(req, res, next)=>{
         if(result){
 
             req.session.user_info = result;
-            return res.json({'success' : 'success'});
+            return res.json({
+                status : 'success',
+                msg : 'رمز عبور با موفقیت تعویض شد.',
+                url : `${app_url}user/password`
+            });
 
         }
         else{

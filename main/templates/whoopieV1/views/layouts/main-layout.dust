@@ -146,6 +146,7 @@
     <script src="js/custom/select-input.js"></script>
     <script src="js/custom/error-handler.js"></script>
     <script src="js/custom/main-error.js"></script>
+    <script src="js/custom/form-ajax.js"></script>
     {+js/}
 </body>
 

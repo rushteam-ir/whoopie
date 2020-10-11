@@ -1,6 +1,6 @@
 $( function () {
         if(sessionStorage.getItem('reload') == 'true') {
-            //showMessage(sessionStorage.getItem('message'));
+            showMessage(sessionStorage.getItem('message'));
             $('.error_info').addClass('success_error')
             sessionStorage.setItem('reload', 'false');
         }
@@ -17,7 +17,7 @@ $('.form_ajax').submit(function(event){
     let form_type = $(this).attr("name");
     let form_data = getFormData($(this), fd_object);
 
-    let isFileUpload = document.getElementsByClassName('ajax_file');
+    let isFileUpload = document.getElementsByClassName('file_ajax');
     let ajax_options = {
         url : post_url,
         method: request_method,
@@ -26,23 +26,23 @@ $('.form_ajax').submit(function(event){
         processData : false,
     }
 
-    switch(form_type){
-
-        case 'profile':
-        {
-
-            // let front_validation = profileError();
-            // if(!front_validation) return false;
-            break;
-
-        }
-
-    }
+    // switch(form_type){
+    //
+    //     case 'profile':
+    //     {
+    //
+    //         let front_validation = profileError();
+    //         if(!front_validation) return false;
+    //         break;
+    //
+    //     }
+    //
+    // }
 
     if (Object.keys(form_data).length == 0 && isFileUpload.length > 0) {
 
-        let files = $('.ajax_file')[0].files[0];
-        let file_name = $('.ajax_file').attr('name');
+        let files = $('.file_ajax')[0].files[0];
+        let file_name = $('.file_ajax').attr('name');
         form_data.append(file_name, files);
 
     }
@@ -61,7 +61,7 @@ $('.form_ajax').submit(function(event){
             redirect(response.url);
         }
         else{
-            //showMessage(response)
+            showMessage(response)
         }
 
     });
@@ -84,8 +84,4 @@ function showMessage(text){
     $('.error_info p').text(text)
     return false;
 
-}
-
-function redirect(url) {
-    location.href = url
 }

@@ -85,7 +85,7 @@ ad_schema.statics = {
 
         for(let doc of category_filter_list){
 
-            if(filters.city){
+            if(filters.city != '0'){
 
                 if(doc.author.city === filters.city) {
 
@@ -104,8 +104,8 @@ ad_schema.statics = {
 
         for(let doc of city_filter_list){
 
-            let index_for_search = `${doc.title} ${doc.describe} ${doc.other_describe} ${doc.tags.toString()}
-                                ${doc.author.first_name} ${doc.author.last_name} ${doc.author.last_name}`;
+            let index_for_search = `${doc.title} ${doc.describe} ${doc.summary} ${doc.tags.toString()}
+                                ${doc.author.first_name} ${doc.author.last_name}`;
 
             doc.index_for_search = index_for_search;
 

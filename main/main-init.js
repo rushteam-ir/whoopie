@@ -6,6 +6,7 @@ main.set('views', `${app_dir}main/templates/${config.main_template}/views`);
 
 main_not_allowd_urls = ['user', 'edit', 'list', 'new'];
 main_city_list = [
+    'همه شهر ها',
     'آذربایجان شرقی',
     'آذربایجان غربی',
     'اردبیل',

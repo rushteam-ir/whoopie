@@ -35,9 +35,6 @@ let user_schema = new mongoose.Schema({
     contact_instagram_id : String,
 });
 
-// Defining model virtuals
-user_schema.virtual('full_name').get(()=>{return `${this.first_name} ${this.last_name}`});
-
 // Defining model statics
 user_schema.statics = {
 
@@ -198,8 +195,6 @@ user_schema.statics = {
         let find_user = await user_model.findById(data._id);
 
         if(find_user){
-
-            find_user.birth_date = find_user.birth_date;
 
             return find_user;
 

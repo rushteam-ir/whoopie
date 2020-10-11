@@ -35,10 +35,11 @@
                     </div>
                 </div>
                 <div class="WC_dropdown">
-                    <div class="category_title WCD_title"><p>دسته بندی</p><i class="fas fa-angle-down"></i></div>
+                    <div class="category_title WCD_title"><p>همه دسته بندی ها</p><i class="fas fa-angle-down"></i></div>
                     <div class="select_click" id="category_select"></div>
-                    <div class="category_input WCD_optopn">
+                    <div class="WCD_optopn">
                         <div>
+                            <span value="0">همه دسته بندی ها</span>
                             {#g_category_list}
                                 {@eq key="{category_value}" value="{title}"}
                                     <span selected="selected" value="{_id}">{title}</span>
@@ -48,21 +49,23 @@
                             {/g_category_list}
                         </div>
                     </div>
+                    <input class="search_category_input" type="hidden" name="search_category_inp" value="{category_value}">
                 </div>
                 <div class="WC_dropdown">
-                    <div class="category_title WCD_title"><p>شهر</p><i class="fas fa-angle-down"></i></div>
+                    <div class="category_title WCD_title"><p>همه شهر ها</p><i class="fas fa-angle-down"></i></div>
                     <div class="select_click" id="city_select"></div>
-                    <div class="category_input WCD_optopn">
+                    <div class="WCD_optopn">
                         <div>
                             {#g_city_list}
                                 {@eq key="{city_value}" value="{.}"}
-                                    <span selected="selected" value="{.}">{.}</span>
+                                    <span selected="selected" value="{$idx}">{.}</span>
                                 {:else}
-                                    <span value="{.}">{.}</span>
+                                    <span value="{$idx}">{.}</span>
                                 {/eq}
                             {/g_city_list}
                         </div>
                     </div>
+                    <input type="hidden" class="search_city_input" name="search_city_inp" value="{city_value}">
                 </div>
             </div>
             {@ne key="{g_user_info}" value="{null}"}
@@ -140,6 +143,7 @@
     <script src="js/general/wow.js"></script>
     <script src="js/layouts/main-layout.js"></script>
     <script src="js/custom/select.js"></script>
+    <script src="js/custom/select-input.js"></script>
     {+js/}
 </body>
 

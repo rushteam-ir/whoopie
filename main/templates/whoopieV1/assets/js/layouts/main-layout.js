@@ -2,8 +2,8 @@ $('.fa-search').click(function () {
 
     let redirect_url = `${app_url}`;
     let search_input = $('.search_input').val();
-    let category_input = $(".category_input span[selected='selected']").attr('value');
-    let location_input = $(".location_input span[selected='selected']").attr('value');
+    let category_input = $(".search_category_input").val() ? $(".search_category_input").val() : '0';
+    let location_input = $(".search_city_input").val() ? $(".search_city_input").val() : '0';
 
     redirect_url += `?s=${search_input}`;
     if (category_input != "") {

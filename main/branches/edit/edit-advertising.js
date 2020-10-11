@@ -51,12 +51,15 @@ router.post('/', async(req, res, next)=>{
 
                         if(result){
 
-                            return res.json({'success' : 'success'});
+                            return res.json({
+                                status : 'success',
+                                msg : 'اطلاعات کاربری با موفقیت ویرایش شد.'
+                            });
 
                         }
                         else{
 
-                            return res.json({'fail' : 'fail'});
+                            return res.json('خطا در برقراری ارتباط با سرور');
 
                         }
 

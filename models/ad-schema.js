@@ -104,8 +104,14 @@ ad_schema.statics = {
 
         for(let doc of city_filter_list){
 
-            let index_for_search = `${doc.title} ${doc.describe} ${doc.summary} ${doc.tags.toString()}
-                                ${doc.author.first_name} ${doc.author.last_name}`;
+            let index_for_search = `${doc.title} ${doc.describe} ${doc.summary}
+                                ${doc.author.first_name} ${doc.author.last_name} `;
+
+            if(doc.tags){
+
+                index_for_search += doc.tags.toString;
+
+            }
 
             doc.index_for_search = index_for_search;
 
@@ -114,6 +120,7 @@ ad_schema.statics = {
                 if(doc.index_for_search.includes(query)){
 
                     final_list.push(doc);
+                    break;
 
                 }
 

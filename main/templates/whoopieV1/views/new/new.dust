@@ -6,7 +6,6 @@
 {/css}
 
 {<js}
-<script src="js/custom/select-input.js"></script>
 <script src="js/custom/tags.js"></script>
 <script src="js/custom/file-upload.js"></script>
 {/js}

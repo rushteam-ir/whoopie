@@ -143,12 +143,9 @@
     <script src="js/general/wow.js"></script>
     <script src="js/layouts/main-layout.js"></script>
     <script src="js/custom/select.js"></script>
-<<<<<<< HEAD
     <script src="js/custom/select-input.js"></script>
-=======
     <script src="js/custom/error-handler.js"></script>
     <script src="js/custom/main-error.js"></script>
->>>>>>> 4affab4fd0e6ddecdcc62c505a10dab3a359f7af
     {+js/}
 </body>
 

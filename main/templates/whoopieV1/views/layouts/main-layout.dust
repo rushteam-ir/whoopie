@@ -140,6 +140,8 @@
     <script src="js/general/wow.js"></script>
     <script src="js/layouts/main-layout.js"></script>
     <script src="js/custom/select.js"></script>
+    <script src="js/custom/error-handler.js"></script>
+    <script src="js/custom/main-error.js"></script>
     {+js/}
 </body>
 

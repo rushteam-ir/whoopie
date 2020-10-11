@@ -68,9 +68,9 @@
                                     <span>حضوری</span>
                                 </label>
                                 {@eq key="{ad_info.type}" value="1"}
-                                    <input class="inp-cbx" id="remote" type="radio" checked="checked" name="type_inp" value="1" style="display: none"/>
+                                    <input class="inp-cbx" id="FTF" type="radio" checked="checked" name="type_inp" value="1" style="display: none"/>
                                 {:else}
-                                    <input class="inp-cbx" id="remote" type="radio" name="type_inp" value="1" style="display: none"/>
+                                    <input class="inp-cbx" id="FTF" type="radio" name="type_inp" value="1" style="display: none"/>
                                 {/eq}
                                 <label class="cbx" for="FTF">
                                     <span>

@@ -2,11 +2,11 @@
 let user_schema = new mongoose.Schema({
     username : {
         type : String,
-        unique : true,
+        //unique : true,
     },
     email : {
         type : String,
-        unique : true,
+        //unique : true,
     },
     created_date : Date,
     password : String,
@@ -15,7 +15,7 @@ let user_schema = new mongoose.Schema({
     last_name : String,
     phone_number : {
         type : String,
-        unique : true,
+        //unique : true,
     },
     sex : String,
     military_status : String,

@@ -149,12 +149,12 @@ module.exports = Validation = class {
                 case 'number':
                 {
 
-                    if(input.value == ''){
+                    if(input.value == '' || input.value == '-1'){
                         return 'لطفا تمام ورودی ها را وارد کنید'
                     }
                     if(isNaN(parseInt(input.value))){
 
-                        return 'ورودی وارد شده باید به صورت عدد باشد.';
+                        return 'ورودی وارد شده باید معتبر نمی باشد.';
 
                     }
 

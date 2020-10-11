@@ -70,6 +70,12 @@ ad_schema.statics = {
 
     },
 
+    delete : async (data)=>{
+
+        return await ad_model.findOneAndDelete({unique_id : data});
+
+    },
+
     getBySearch : async(search_inp, filters)=>{
 
         let category_filter_list = await ad_model.find(filters.category ? {category : filters.category} : null).populate('author').populate('category');

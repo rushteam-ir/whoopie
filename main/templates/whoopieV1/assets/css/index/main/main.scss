@@ -87,7 +87,7 @@
         .start_btn_field {
             padding: 10px;
             background-color: #444444;
-            color: white;
+            color: $white;
             border-radius: 50px;
             padding: 16px 50px;
             font-size: 1.7rem;
@@ -179,17 +179,17 @@
 
         a {
             &:nth-child(1) {
-                background-color: #5edd8e;
+                background-color: $accent_color;
                 @include transition(0.2s, linear, 0s);
 
                 &:hover {
-                    background-color: #56CF40;
+                    background-color: $hover_ac;
                 }
             }
 
             display: inline-block;
             width: max-content;
-            color: white;
+            color: $white;
             padding: 20px 40px;
             font-size: 1.3rem;
             font-weight: bold;
@@ -280,7 +280,7 @@
                 background-color: $main-color;
                 font-size: 1.4rem;
                 font-weight: bold;
-                color: white;
+                color: $white;
                 border-radius: 50px;
                 margin-top: 20px;
                 @include transition(0.2s, linear, 0s);
@@ -347,7 +347,7 @@
                 background-color: $main-color;
                 font-size: 1.4rem;
                 font-weight: bold;
-                color: white;
+                color: $white;
                 border-radius: 50px;
                 margin-top: 20px;
                 @include transition(0.2s, linear, 0s);

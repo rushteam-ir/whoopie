@@ -6,14 +6,6 @@
 
 }
 
-@media only screen and (max-width: 1400px) {
-
-    #ads_bug .main_field_of_AR {
-        width: 80%;
-        margin-left: 10%;
-    }
-}
-
 @media only screen and (max-width: 1350px) {
 
     .ads_card_field .right_card_box {
@@ -51,66 +43,13 @@
 
 }
 
-@media only screen and (max-width: 1200px) {
-
-    #ads_bug .main_field_of_AR {
-        width: 100%;
-        margin-left: 0%;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-
-    #ads_bug .main_field_of_AR {
-        width: 80%;
-        margin-left: 10%;
-    }
-}
-
-@media only screen and (max-width: 850px) {
-
-    #ads_bug .main_field_of_AR {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    #ads_bug .main_field_of_AR h3 {
-        font-size: 1.2rem;
-
-        span {
-            font-size: 1.4rem;
-        }
-    }
-
-    #ads_bug .main_field_of_AR .bug_sub {
-        font-size: 1.3rem;
-    }
-
-}
-
 @media only screen and (max-width: 800px) {
 
-    .refrech_card_btn button {
+    .refrech_card_btn a {
         font-size: 1.2rem;
     }
 
-}
 
-@media only screen and (max-width: 768px) {
-
-    #ads_bug .main_field_of_AR {
-        width: 80%;
-        margin-left: 10%;
-    }
-
-}
-
-@media only screen and (max-width: 630px) {
-
-    #ads_bug .main_field_of_AR {
-        width: 90%;
-        margin-left: 5%;
-    }
 
 }
 
@@ -125,7 +64,7 @@
         height: 60px;
     }
 
-    .ads_card_field .left_card_box button {
+    .ads_card_field .left_card_box a {
         font-size: 1rem;
     }
 
@@ -168,7 +107,7 @@
         width: 140px;
     }
 
-    .ads_card_field .left_card_box button {
+    .ads_card_field .left_card_box a {
         position: unset;
         font-size: 1.4rem;
         width: 40%;
@@ -176,35 +115,6 @@
         margin-top: 10px;
 
     }
-}
-
-@media only screen and (max-width: 430px) {
-
-    #ads_bug .main_field_of_AR {
-        width: 100%;
-        margin-left: 0%;
-        padding: 35px;
-    }
-
-    #ads_bug .main_field_of_AR h3 {
-        line-height: 30px;
-        font-size: 1rem;
-
-        span {
-            font-size: 1.2rem;
-        }
-    }
-
-    #ads_bug .main_field_of_AR .bug_sub {
-        font-size: 1rem;
-    }
-
-    #ads_bug .main_field_of_AR i {
-        top: 15px;
-        right: 18px;
-        font-size: 1.4rem;
-    }
-
 }
 
 
@@ -218,7 +128,7 @@
         }
     }
 
-    .ads_card_field .left_card_box button {
+    .ads_card_field .left_card_box a {
         font-size: 1.1rem;
         width: 50%;
         margin-right: 20%;

@@ -17,9 +17,9 @@
                         <div class="ads_card_field mb-4 mt-3">
                             <div class="right_card_box">
                                 <div class="RS_field">
-                                    <button class="btn">
+                                    <a href="{app_url}edit/{unique_id}" class="btn">
                                         <i class="fas fa-edit"></i>
-                                    </button>
+                                    </a>
                                     <button class="btn">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
@@ -72,10 +72,10 @@
                         </div>
                     {/ad_list_info}
                     <div class="refrech_card_btn mb-5">
-                        <button class="btn">
+                        <a href="{app_url}new" class="btn">
                             <i class="fas fa-plus"></i>
                             ثبت آگهی جدید
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

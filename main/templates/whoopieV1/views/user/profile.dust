@@ -70,7 +70,7 @@
                                 <div class="col-12 ">
                                     <div class="WC_dropdown mt-3">
                                         <label for="maried_select">جنسیت</label>
-                                        <div class="WCD_title"><p>جنسیت</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="WCD_title"><p></p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="sex_select"></div>
                                         <div class="WCD_optopn">
                                             <div>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="WC_dropdown militeries_select mt-3 mr-2">
                                         <label for="maried_select">وضعیت خدمت</label>
-                                        <div class="WCD_title"><p>وضعیت خدمت</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="WCD_title"><p></p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="military_select"></div>
                                         <div class="WCD_optopn">
                                             <div>
@@ -106,7 +106,7 @@
                                 <div class="col-12 mt-3">
                                     <div class="WC_dropdown">
                                         <label for="maried_select">وضعیت تاهل</label>
-                                        <div class="category_title WCD_title"><p>وضعیت تاهل</p><i class="fas fa-angle-down"></i></div>
+                                        <div class="category_title WCD_title"><p></p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="married_select"></div>
                                         <div class="WCD_optopn">
                                             <div>

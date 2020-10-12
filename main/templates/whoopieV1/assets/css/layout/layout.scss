@@ -28,9 +28,9 @@ nav {
             direction: rtl;
             text-align: right;
             width: max-content;
+            display: flex;
 
             .category_nav {
-                display: inline-block;
                 margin-right: 10px;
 
                 select {
@@ -39,7 +39,6 @@ nav {
             }
 
             .city_nav {
-                display: inline-block;
                 margin-right: 10px;
 
                 select {
@@ -48,7 +47,6 @@ nav {
             }
 
             .search_nav {
-                display: inline-block;
                 margin-right: 10px;
 
                 input {

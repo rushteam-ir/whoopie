@@ -51,12 +51,16 @@ router.post('/', async(req, res, next)=>{
 
                         if(result){
 
-                            return res.json({'success' : 'success'});
+                            return res.json({
+                                status : 'success',
+                                msg : '',
+                                url : `${app_url}list`
+                            });
 
                         }
                         else{
 
-                            return res.json({'fail' : 'fail'});
+                            return res.json('مشکل برقراری ارتباط با سرور');
 
                         }
 
@@ -78,12 +82,16 @@ router.post('/', async(req, res, next)=>{
 
             if(result){
 
-                return res.json({'success' : 'success'});
+                return res.json({
+                    status : 'success',
+                    msg : '',
+                    url : `${app_url}list`
+                });
 
             }
             else{
 
-                return res.json({'fail' : 'fail'});
+                return res.json('مشکل برقراری ارتباط با سرور');
 
             }
 

@@ -144,6 +144,7 @@
     <script src="js/general/jquery.js"></script>
     <script src="js/general/popper.js"></script>
     <script src="js/general/bootstrap.js"></script>
+    <script src="js/general/sweetalert.js"></script>
     <script src="js/general/wow.js"></script>
     <script src="js/layouts/main-layout.js"></script>
     <script src="js/custom/select.js"></script>

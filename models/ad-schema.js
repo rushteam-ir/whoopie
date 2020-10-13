@@ -113,11 +113,11 @@ ad_schema.statics = {
 
             }
 
-            doc.index_for_search = index_for_search;
+            doc.index_for_search = index_for_search.toLowerCase();
 
             for(let query of search_query){
 
-                if(doc.index_for_search.includes(query)){
+                if(doc.index_for_search.includes(query.toLowerCase())){
 
                     final_list.push(doc);
                     break;

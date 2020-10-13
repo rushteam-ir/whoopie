@@ -22,7 +22,7 @@ router.post('/', async(req, res, next)=>{
         let ad_data = {
             title : title_inp,
             summary : summary_inp,
-            category : category_inp,
+            category : (category_inp == '0') ? null : category_inp,
             describe : describe_inp,
             tags : tags_inp,
             author : req.session.user_info._id,

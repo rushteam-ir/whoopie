@@ -84,7 +84,12 @@
                     <div class='main_field_of_RM'>
                         <p class="header_of_reg">ثبت نام در <span>ووپــــــــای</span></p>
                         <p class="small_of_reg_header">در کم تر از 1 دقیقه ثبت نام کن ! </p>
-                        <form action="{app_url}api/v1/auth/register" method="post" autocomplete="off">
+                        <div class="error_info warning_error">
+                            <i class="fal fa-exclamation-circle"></i>
+                            <p></p>
+                            <i class="fal fa-times"></i>
+                        </div>
+                        <form class="form_ajax" action="{app_url}api/v1/auth/register" method="post" autocomplete="off">
                             <div class="form-group">
                               <label for="reg_username">نام کاربری</label>
                               <input type="text" class="form-control" id="reg_username" name="username_inp">
@@ -120,7 +125,12 @@
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                     <div class="main_field_of_LM">
                         <p class="header_of_log">وررود به  <span>ووپــــــــای</span></p>
-                        <form action="{app_url}api/v1/auth/login" method="post" autocomplete="off">
+                        <div class="error_info warning_error">
+                            <i class="fal fa-exclamation-circle"></i>
+                            <p></p>
+                            <i class="fal fa-times"></i>
+                        </div>
+                        <form class="form_ajax" action="{app_url}api/v1/auth/login" method="post" autocomplete="off">
                             <div class="form-group">
                               <label for="reg_username">نام کاربری یا پست الکترونیکی</label>
                               <input type="text" class="form-control" id="reg_username" name="username_or_email_inp">

@@ -3,11 +3,11 @@ const router = express.Router();
 router.post('/', async(req, res, next)=>{
 
     try{
-
+        log(req.body)
         let {first_name_inp, last_name_inp, username_inp, email_inp, phone_number_inp, sex_inp, military_service_inp,
             marital_status_inp, city_inp, biography_inp, day_inp, month_inp, year_inp, c_contact_phone_number_inp,
             c_contact_email_inp, c_contact_whatsapp_inp, c_contact_instagram_inp, c_contact_telegram_inp,
-            c_telegram_type_inp, contact_telegram_inp, contact_instagram_inp} = req.body;
+            c_telegram_type_inp, contact_telegram_inp, contact_instagram_inp, delete_avatar_inp} = req.body;
         let date = `${year_inp}/${month_inp}/${day_inp}`
         let validation_result = new Validation([
             {value : first_name_inp, type : 'name'},
@@ -111,21 +111,89 @@ router.post('/', async(req, res, next)=>{
             contact_instagram_id : contact_instagram_inp,
         }
 
-        let result = await user_model.editProfile(req.session.user_info, profile_data);
+        if(delete_avatar_inp == '1'){
 
-        if(typeof result != 'string'){
+            profile_data.avatar = '';
+            await fs.unlink(`${app_dir}main/templates/whoopieV1/assets/media/avatars/${req.session.user_info.avatar}`, async(err) => {
 
-            req.session.user_info = result;
-            return res.json({
-                status : 'success',
-                msg : 'اطلاعات کاربری با موفقیت ویرایش شد.',
-                url : `${app_url}user/profile`
+                if (err) {
+
+                }
+                else{
+
+                }
+
             });
+
+        }
+
+        if (!req.files || Object.keys(req.files).length === 0) {
+
+            let result = await user_model.editProfile(req.session.user_info, profile_data);
+
+            if(typeof result != 'string'){
+
+                req.session.user_info = result;
+                return res.json({
+                    status : 'success',
+                    msg : 'اطلاعات کاربری با موفقیت ویرایش شد.',
+                    url : `${app_url}user/profile`
+                });
+
+            }
+            else{
+
+                return res.json(result);
+
+            }
 
         }
         else{
 
-            return res.json(result);
+            let avatar = req.files.avatar_inp;
+            let file_name = `${randomSha1String()}.${avatar.name.split(".").pop()}`;
+
+            if(avatar.size/(1024*1024) <= image_limited_size){
+
+                await avatar.mv(`${app_dir}main/templates/whoopieV1/assets/media/avatars/${file_name}`, async(err)=>{
+
+                    if(err){
+
+                        next(err);
+
+                    }
+                    else{
+
+                        profile_data.avatar = file_name;
+
+                        let result = await user_model.editProfile(req.session.user_info, profile_data);
+
+                        if(typeof result != 'string'){
+
+                            req.session.user_info = result;
+                            return res.json({
+                                status : 'success',
+                                msg : 'اطلاعات کاربری با موفقیت ویرایش شد.',
+                                url : `${app_url}user/profile`
+                            });
+
+                        }
+                        else{
+
+                            return res.json(result);
+
+                        }
+
+                    }
+
+                });
+
+            }
+            else{
+
+                return res.json(`حداکثر حجم مجاز برای آپلود تصویر ${image_limited_size} مگابایت می باشد.`);
+
+            }
 
         }
 

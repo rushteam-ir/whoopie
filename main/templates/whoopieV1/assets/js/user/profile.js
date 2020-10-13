@@ -146,6 +146,6 @@ $(document).on('click', '.remove', function (e) {
 
 $('.avatar_del').click(function (){
 
-    redirect(`${app_url}user/profile/delete-avatar`);
+    $('input[name=delete_avatar_inp]').val('1');
 
 })

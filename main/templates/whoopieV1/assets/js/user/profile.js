@@ -63,8 +63,7 @@ if($('#IAC').is(':checked')){
 
 }
 
-// if user chose yelegram for contact to him , open check box for chose phone or id
-
+// if user chose telegram for contact to him , open check box for chose phone or id
 if($('#TAC').is(':checked')){
 
     $('.telegram_checked').show();
@@ -92,6 +91,15 @@ $('#sex_select').next().children().children().click(function(){
 
 });
 
+// if when page load and sex select ,selected man , show militeries select 
+
+let sex_type = $('#sex_select').next().children().children('span[selected]').text();
+
+if(sex_type == "مرد"){
+
+    $('.militeries_select').addClass('show');
+
+}
 
 // upload custom
 
@@ -117,7 +125,7 @@ $(document).ready(function () {
 
             reader.onload = function (e) {
 
-                let fieldHTML = '<div class="remove_parent"><img class="uploading_img_from_brows" src="' + e.target.result + '"> <div class="remove_img_icon remove"></div>  <button type="submit" class="btn add_img_icon"></button>  </div>';
+                let fieldHTML = '<div class="remove_parent"><img class="uploading_img_from_brows" src="' + e.target.result + '"><div class="remove_img_icon remove"></div></div>';
                 $(input).prev().append(fieldHTML);
 
             }

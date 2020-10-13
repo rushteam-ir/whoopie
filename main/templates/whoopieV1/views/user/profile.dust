@@ -21,7 +21,7 @@
                             <p></p>
                             <i class="fal fa-times"></i>
                         </div>
-                        <form class="form_ajax" action="{app_url}user/profile/change-avatar" method="post" enctype="multipart/form-data">
+                        <form class="form_ajax" action="{app_url}user/profile/edit-profile" method="post">
                             <div class="field_of_img_template">
                                 <div class="box_of_img_template">
                                     <div class="box_of_img_template img-box">
@@ -44,8 +44,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        <form class="form_ajax" action="{app_url}user/profile/edit-profile" method="post">
                             <div class="form-group mt-3">
                                 <label for="name">نام</label>
                                 <input type="text" class="form-control" id="name" name="first_name_inp" value="{user_info.first_name}">

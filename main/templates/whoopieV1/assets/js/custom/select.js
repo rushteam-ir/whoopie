@@ -67,13 +67,22 @@ let idArray = [];
 
 for (let z = 0; z < $('.select_click').length; z++) {
 
+
     let get_id = $('.select_click').eq(z).attr('id');
 
     idArray.push(get_id);
     let temp = idArray[z];
 
     let selected_text = $(`#${temp}`).next().children().children('span[selected]').text();
-    
-    $(`#${temp}`).prev().children('p').text(selected_text);
+
+    if (selected_text == '') {
+
+        $(`#${temp}`).prev().children('p').text($(`#${temp}`).next().children().children('span:first-child').text());
+
+    } else {
+
+        $(`#${temp}`).prev().children('p').text(selected_text);
+
+    }
 
 }

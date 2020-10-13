@@ -1,7 +1,8 @@
 module.exports = async(req, res, next)=>{
 
-    let search_inp = req.query.s
+    let search_inp = req.query.s;
     req.query.c = isObjectId(req.query.c) ? req.query.c : '0';
+    req.query.l = (parseInt(req.query.l) < 0 || parseInt(req.query.l) > main_city_list.length || isNaN(req.query.l)) ? '0' : req.query.l;
 
     let filters = {
         category : req.query.c == '0' ? null : req.query.c,

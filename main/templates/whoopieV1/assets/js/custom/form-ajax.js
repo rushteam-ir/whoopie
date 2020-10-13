@@ -61,6 +61,19 @@ $('.form_ajax').submit(function(event){
             redirect(response.url);
         }
         else{
+
+            // scroll top when submit form
+            for (let k = 0; k < $('.scroll_top').length; k++) {
+
+                $('.scroll_top').eq(k).click(function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                })
+
+            }
+
             showMessage(response)
         }
 

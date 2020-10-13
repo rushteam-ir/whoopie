@@ -256,7 +256,7 @@
                                 <label for="instagram_id">آی دی اینستا گرام</label>
                                 <input type="text" class="form-control" id="instagram_id" name="contact_instagram_inp" value="{user_info.contact_instagram_id}">
                             </div>
-                            <button type="submit" class="btn profile_sub">ثبت تغییرات</button>
+                            <button type="submit" class="btn profile_sub scroll_top">ثبت تغییرات</button>
                         </form>
                     </div>
                 </div>

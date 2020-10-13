@@ -21,9 +21,6 @@
                                     ، دسته بندی <span>{title}</span>
                                 {/eq}
                             {/g_category_list}
-                            {@eq key="{category_value}" value="0"}
-                                ، <span>همه دسته بندی ها</span>
-                            {/eq}
                             {#g_city_list}
                                 {@eq key="{$idx}" value="{city_value}"}
                                     {@eq key="{$idx}" value="0"}

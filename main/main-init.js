@@ -41,6 +41,7 @@ main_city_list = [
 ];
 
 main_military_list = [
+    '-',
     'معافیت تحصیلی',
     'معافیت دائم',
     'پایان خدمت',
@@ -49,11 +50,13 @@ main_military_list = [
 ];
 
 main_marital_list = [
+    '-',
     'مجرد',
     'متاهل'
 ];
 
 main_sex_list = [
+    '-',
     'مرد',
     'زن',
 ];

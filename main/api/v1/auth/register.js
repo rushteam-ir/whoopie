@@ -36,12 +36,16 @@ router.post('/', async(req, res, next)=>{
             if(result){
 
                 req.session.user_info = result;
-                return res.json({success : 'success'});
+                return res.json({
+                    status : 'success',
+                    msg : '',
+                    url : `${app_url}`
+                });
 
             }
             else{
 
-                return res.json({fail : 'fail'});
+                return res.json('این نام کاربری یا ایمیل قبلا به ثبت رسیده است.');
 
             }
 

@@ -1,10 +1,10 @@
 const router = express.Router();
 
-router.post('/', async(req, res, next)=>{
+router.get('/', async(req, res, next)=>{
 
     try{
 
-        let {ad_id} = req.body;
+        let {ad_id} = req.query;
 
         let find_ad = await ad_model.getById({unique_id : ad_id});
 
@@ -21,7 +21,7 @@ router.post('/', async(req, res, next)=>{
 
                     });
 
-                    return res.json({"success": "success"});
+                    return res.redirect(`${app_url}list`)
 
                 }
 
@@ -29,7 +29,7 @@ router.post('/', async(req, res, next)=>{
 
         }
 
-        return res.json('خطا در برقراری ارتباط با سرور.');
+        return res.redirect(`${app_url}list`)
 
     }
     catch (error) {

@@ -6,7 +6,7 @@
 {/css}
 
 {<js}
-
+    <script src="js/list/list.js"></script>
 {/js}
 
 {<body}
@@ -23,7 +23,7 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <button class="btn">
-                                        <i class="fas fa-trash-alt"></i>
+                                        <i class="fas fa-trash-alt ad_delete" name="{unique_id}"></i>
                                     </button>
                                     <button class="btn">
                                         <i class="fas fa-share-alt"></i>

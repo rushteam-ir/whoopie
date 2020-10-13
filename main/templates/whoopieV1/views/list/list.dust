@@ -14,7 +14,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                    <h1>لیست آگهی های من</h1>
+                    <div class="row_custom row align-items-center">
+                        <div class="col-12">
+                            <div class="header_list">
+                                <h1>لیست آگهی های من</h1>
+                                <div class="empty_layout">
+                                    <p>هنوز در <span>ووپــــــــــای</span> آگهی ثبت نکردی؟ از <a href="{app_url}new">ایجا</a> آگهی خودت رو ثبت کن !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     {#ad_list_info}
                         <div class="ads_card_field mb-4 mt-3">
                             <div class="right_card_box">
@@ -73,12 +82,6 @@
                             </div>
                         </div>
                     {/ad_list_info}
-                    <div class="refrech_card_btn mb-5">
-                        <a href="{app_url}new" class="btn">
-                            <i class="fas fa-plus"></i>
-                            ثبت آگهی جدید
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

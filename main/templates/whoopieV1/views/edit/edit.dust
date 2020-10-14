@@ -107,7 +107,7 @@
                                 <input type="file" class="d-none file_ajax" name="portfolio_inp" id="file_upload" accept=".docx,.doc,.pdf,.md,.pptx,.ppt,.txt">
                                 <small class="small_inp_upload">بیشتر از 5 مگ آپلود نکن</small>
                             </div>
-                            <input type="hidden" name="delete_portfolio">
+                            <input type="hidden" name="delete_portfolio_inp">
                             <button type="submit" class="btn profile_sub">ویرایش آگهی</button>
                         </form>
                     </div>

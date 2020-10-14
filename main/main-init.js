@@ -61,4 +61,7 @@ main_sex_list = [
     'زن',
 ];
 
+main.locals.image_limited_size = image_limited_size;
+main.locals.portfolio_limited_size = portfolio_limited_size;
+
 main.locals.app_url = app_url;

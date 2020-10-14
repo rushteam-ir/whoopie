@@ -19,13 +19,14 @@ router.post('/', async(req, res, next)=>{
 
         }
 
+        let last_ad_data = await ad_model.findOne({unique_id : req.session.ad_id});
+
         let ad_data = {
             title : title_inp,
             summary : summary_inp,
             category : category_inp,
             describe : describe_inp,
             tags : tags_inp,
-            author : req.session.user_info._id,
             type : type_inp
         }
 
@@ -34,7 +35,7 @@ router.post('/', async(req, res, next)=>{
             let portfolio = req.files.portfolio_inp;
             let file_name = `${req.session.user_info.username}_${randomUUID()}.${portfolio.name.split(".").pop()}`;
 
-            if(portfolio.size/(1024*1024) <= image_limited_size){
+            if(portfolio.size/(1024*1024) <= portfolio_limited_size){
 
                 await portfolio.mv(`${app_dir}main/templates/whoopieV1/assets/media/portfolios/${file_name}`, async(err)=>{
 
@@ -45,21 +46,27 @@ router.post('/', async(req, res, next)=>{
                     }
                     else{
 
+                        await fs.unlink(`${app_dir}main/templates/whoopieV1/assets/media/portfolios/${last_ad_data.portfolio}`, async(err) => {
+
+
+                        });
+
                         ad_data.portfolio = file_name;
 
-                        let result = await ad_model.add(ad_data);
+                        let result = await ad_model.edit(req.session.ad_id, ad_data);
 
                         if(result){
 
                             return res.json({
                                 status : 'success',
-                                msg : 'اطلاعات کاربری با موفقیت ویرایش شد.'
+                                msg : '',
+                                url : `${app_url}list`
                             });
 
                         }
                         else{
 
-                            return res.json('خطا در برقراری ارتباط با سرور');
+                            return res.json('مشکل برقراری ارتباط با سرور');
 
                         }
 
@@ -81,12 +88,16 @@ router.post('/', async(req, res, next)=>{
 
             if(result){
 
-                return res.json({'success' : 'success'});
+                return res.json({
+                    status : 'success',
+                    msg : '',
+                    url : `${app_url}list`
+                });
 
             }
             else{
 
-                return res.json({'fail' : 'fail'});
+                return res.json('مشکل برقراری ارتباط با سرور');
 
             }
 

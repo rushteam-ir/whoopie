@@ -4,6 +4,7 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
+        log(req.body)
         let {title_inp, summary_inp, category_inp, describe_inp, type_inp} = req.body;
         let tags_inp = req.body['tags_inp[]'];
         let validation_result = new Validation([
@@ -34,7 +35,7 @@ router.post('/', async(req, res, next)=>{
             let portfolio = req.files.portfolio_inp;
             let file_name = `${req.session.user_info.username}_${randomUUID()}.${portfolio.name.split(".").pop()}`;
 
-            if(portfolio.size/(1024*1024) <= image_limited_size){
+            if(portfolio.size/(1024*1024) <= portfolio_limited_size){
 
                 await portfolio.mv(`${app_dir}main/templates/whoopieV1/assets/media/portfolios/${file_name}`, async(err)=>{
 

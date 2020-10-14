@@ -13,6 +13,12 @@
     جستجو - {search_value}
 {/title}
 
+{<nav}
+    <div class="right_field" id="nav_LR">
+        <a href="{app_url}">ورود به <span>ووپـــــــــــــــــــای</span></a>
+    </div>
+{/nav}
+
 {<body}
     <section>
         <div class="container-fluid">

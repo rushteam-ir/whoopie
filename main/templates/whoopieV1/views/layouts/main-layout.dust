@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/general/general.css">
     <link rel="stylesheet" href="css/layout/layout.css">
     <link rel="stylesheet" href="css/layout/layout-mediaquery.css">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.svg">
     {+css/}
     <title>ووپـــای | {+title/}</title>
 </head>
@@ -118,9 +118,7 @@
                     </div>
                 </div>
             {:else}
-            <div class="right_field" id="nav_LR">
-                <a href="{app_url}">ورود به <span>ووپـــــــــــــــــــای</span></a>
-            </div>
+                {+nav/}
             {/ne}
         </div>
     </nav>

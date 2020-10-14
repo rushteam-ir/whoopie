@@ -57,7 +57,7 @@
     line-height: 110px;
     width: 100%;
     display: block;
-    border: 1.3px solid #d6d6d6;
+    border: 1.3px solid ;
     height: 100%;
     font-size: 0.7rem;
 }
@@ -71,7 +71,7 @@
 .remove_img_icon {
     width: 25px;
     height: 25px;
-    background-color: #ffffff;
+    background-color: $white;
     position: absolute;
     z-index: 50;
     top: -10px;
@@ -121,7 +121,7 @@
 .add_img_icon {
     width: 25px;
     height: 25px;
-    background-color: #ffffff;
+    background-color: $white;
     position: absolute;
     z-index: 50;
     top: 20px;
@@ -167,12 +167,15 @@
 .btn-tertiary2 {
     width: 200px;
     height: 200px;
-    border: 2px dashed #CED4DA;
+    border: 2px dashed #73c6f980;
     border-radius: 15px;
     font-size: 1rem;
     line-height: 195px;
-    background-color: #f7f7f7;
+    background-color: $white;
     color: rgb(138, 138, 138);
+    &:hover{
+        border: 2px dashed $main_color;
+    }
 }
 
 .uploading_img_from_brows {

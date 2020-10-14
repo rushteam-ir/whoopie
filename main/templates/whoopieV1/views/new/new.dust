@@ -92,12 +92,11 @@
                                 </div>
                             </div>
                             <div class="form-group position-relative">
-                                <label for="article_photo">عکس مقاله</label>
-                                <span class="show_img mr-1">(مشاهده عکس)</span>
-                                <input type="file" class="form-control chose_file_inp main_form_design fal" id="article_photo">
-                                <div class="img_upload_field display_none">
-                                    <img src="" alt="">
-                                </div>
+                                <p class="chose_file_title">نمونه کار</p>
+                                <i class="fal fa-times-circle"></i>
+                                <label for="file_upload" class="chose_file_custom"><i class="fal fa-paperclip"></i> <span class="link_of_attach_file"></span></label>
+                                <input type="file" class="d-none" id="file_upload">
+                                <small class="small_inp_upload">بیشتر از 5 مگ آپلود نکن</small>
                             </div>
                             <button type="submit" class="btn profile_sub">ثبت آگهی</button>
                         </form>

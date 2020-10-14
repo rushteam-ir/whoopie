@@ -1,27 +1,31 @@
-$(".chose_file_inp").change(function () {
+$("#file_upload").change(function () {
 
     readURL(this);
 
     let img_name = ''
 
-    if(this.files && this.files.length){
+    if (this.files && this.files.length) {
 
         img_name = this.files[0].name;
+        $('.fa-times-circle').show();
 
-        $('.show_img').css('display', 'inline-block');
-
-    }
-    else{
+    } else {
 
         img_name = '';
-
-        $('.show_img').css('display', 'none');
-
-        $('.img_upload_field').css('display' , 'none');
+        $('.fa-times-circle').hide();
 
     }
 
-    $('.chose_file_inp').attr('data-value', img_name);
+    $('.link_of_attach_file').text(img_name);
+
+    // when click on remove btn , remove file from inp
+    $('.fa-times-circle').click(function(){
+
+        $("#file_upload").val('');
+        $('.link_of_attach_file').text('');
+        $('.fa-times-circle').hide();
+
+    })
 
 });
 
@@ -32,21 +36,8 @@ function readURL(input) {
 
         var reader = new FileReader();
 
-        reader.onload = function (e) {
-
-            $(input).next().children('img').attr('src', e.target.result);
-
-        }
-
         reader.readAsDataURL(input.files[0]);
 
     }
 
 };
-
-// show image when press (image show btn)
-$('.show_img').click(function () {
-
-    $('.img_upload_field').fadeToggle();
-
-});

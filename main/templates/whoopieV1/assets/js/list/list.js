@@ -12,9 +12,9 @@ $('.ad_delete').click(function (){
         confirmButtonText: '! آره پاک کن',
         cancelButtonText: 'نه'
     }).then((result) => {
-
-        redirect(`${app_url}list/delete-ad/?ad_id=${ad_id}`)
-
+        if(result.value){
+            redirect(`${app_url}list/delete-ad/?ad_id=${ad_id}`)
+        }
     })
 
 })

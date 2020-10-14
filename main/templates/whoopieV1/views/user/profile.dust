@@ -9,6 +9,10 @@
 <script src="js/user/profile.js"></script>
 {/js}
 
+{<title}
+    اطلاعات کاربری
+{/title}
+
 {<body}
     <section class="profile_inp_field">
         <div class="container-fluid">

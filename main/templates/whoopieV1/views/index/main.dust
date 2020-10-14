@@ -9,6 +9,10 @@
     <script src="js/index/index.js"></script>
 {/js}
 
+{<title}
+   سامانه مهارت یابی
+{/title}
+
 {<body}
     <section class="main_sec">
         <div class="container-md">

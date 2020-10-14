@@ -9,6 +9,10 @@
     <script src="js/list/list.js"></script>
 {/js}
 
+{<title}
+    لیست آگهی های من
+{/title}
+
 {<body}
     <section>
         <div class="container-fluid">

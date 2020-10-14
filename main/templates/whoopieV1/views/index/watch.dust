@@ -9,6 +9,10 @@
     <script src="js/index/watch.js"></script>
 {/js}
 
+{<title}
+    مشاهده آگهی - {ad_info.title}
+{/title}
+
 {<body}
     <section class="watch_main_field">
         <div class="container-fluid">

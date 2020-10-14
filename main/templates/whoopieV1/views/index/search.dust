@@ -9,6 +9,10 @@
     <script src="js/index/search.js"></script>
 {/js}
 
+{<title}
+    جستجو - {search_value}
+{/title}
+
 {<body}
     <section>
         <div class="container-fluid">

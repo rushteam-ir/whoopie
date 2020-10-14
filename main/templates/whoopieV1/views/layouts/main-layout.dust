@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/general/general.css">
     <link rel="stylesheet" href="css/layout/layout.css">
     <link rel="stylesheet" href="css/layout/layout-mediaquery.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     {+css/}
     <title>Whoopie</title>
 </head>

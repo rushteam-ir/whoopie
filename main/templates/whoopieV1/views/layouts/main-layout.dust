@@ -72,6 +72,11 @@
                     <input type="hidden" class="search_city_input" name="search_city_inp" value="{city_value}">
                 </div>
             </div>
+            <div class="left_field_navbar">
+                <a href="{app_url}">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
             {@ne key="{g_user_info}" value="{null}"}
                 <div class="right_field">
                     <div class="profile_field">
@@ -111,6 +116,10 @@
                         </a>
                     </div>
                 </div>
+            {:else}
+            <div class="right_field" id="nav_LR">
+                <a href="{app_url}">ورود به <span>ووپـــــــــــــــــــای</span></a>
+            </div>
             {/ne}
         </div>
     </nav>

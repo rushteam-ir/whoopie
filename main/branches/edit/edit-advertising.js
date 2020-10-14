@@ -30,6 +30,8 @@ router.post('/', async(req, res, next)=>{
             type : type_inp
         }
 
+        if(delete_portfolio)
+
         if (req.files) {
 
             let portfolio = req.files.portfolio_inp;

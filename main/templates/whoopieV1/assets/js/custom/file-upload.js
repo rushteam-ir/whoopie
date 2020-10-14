@@ -43,3 +43,10 @@ function readURL(input) {
     }
 
 };
+
+// show image when press (image show btn)
+$('.show_img').click(function () {
+
+    $('.img_upload_field').fadeToggle();
+
+});

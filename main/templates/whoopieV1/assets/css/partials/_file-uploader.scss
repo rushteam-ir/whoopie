@@ -27,6 +27,31 @@
         position: absolute;
         right: 40px;
         top: 44px;
-        font-family: $TF;
     }
+}
+
+.img_upload_field {
+    width: 190px;
+    border-radius: 7px;
+    position: absolute;
+    top: 4px;
+    right: -220px;
+
+    img {
+        width: 100%;
+        border-radius: 7px;
+    }
+}
+
+.show_img {
+    font-size: 0.8rem;
+    color: red;
+    margin-bottom: -10px;
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+}
+
+.display_none {
+    display: none;
 }

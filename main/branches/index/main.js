@@ -38,19 +38,8 @@ router.get('/', async(req, res, next)=>{
 
 });
 
-router.get('/@:username', async(req, res, next)=>{
+const profile = require('../profile/profile');
 
-    try{
-
-        await require('./profile')(req, res, next);
-
-    }
-    catch (error) {
-
-        next(error);
-
-    }
-
-});
+router.use('/', profile);
 
 module.exports = router;

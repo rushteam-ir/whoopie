@@ -61,3 +61,10 @@ getRandomArray = function (arr, n) {
     }
     return result;
 }
+
+getCurrentDate = function() {
+
+    let jdate = new jalali_date;
+
+    return(jdate.format('YYYY/MM/DD'));
+};

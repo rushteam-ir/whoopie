@@ -75,7 +75,7 @@
                                         نوع همکاری : دور کاری
                                     {/eq}
                                 </p>
-                                {@eq key="{ad_info.author.sex}" value="0"}
+                                {@eq key="{ad_info.author.sex}" value="1"}
                                     {#g_military_list}
                                         {@eq key="{$idx}" value="{ad_info.author.military_status}"}
                                             <p>

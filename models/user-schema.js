@@ -8,7 +8,7 @@ let user_schema = new mongoose.Schema({
         type : String,
         //unique : true,
     },
-    created_date : Date,
+    created_date : String,
     password : String,
     avatar : String,
     first_name : String,
@@ -18,6 +18,10 @@ let user_schema = new mongoose.Schema({
         //unique : true,
     },
     sex : String,
+    rep : {
+        type : Number,
+        default : 0,
+    },
     military_status : String,
     marital_status : String,
     city : String,
@@ -52,7 +56,7 @@ user_schema.statics = {
 
             if(hash_result){
                 data.password = hash_result;
-                data.created_date = new Date();
+                data.created_date = getCurrentDate();
 
                 let new_doc = new user_model(data);
                 return await new_doc.save();
@@ -240,8 +244,6 @@ user_schema.statics = {
         let find_user = await user_model.findOne({username : data});
 
         if(find_user){
-
-            find_user.birth_date = find_user.birth_date;
 
             return find_user;
 

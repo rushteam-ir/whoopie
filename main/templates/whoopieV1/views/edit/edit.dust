@@ -21,6 +21,11 @@
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
                     <div class="main_field_of_profile">
                         <h1>ویرایش آگهی</h1>
+                        <div class="error_info warning_error">
+                            <i class="fal fa-exclamation-circle"></i>
+                            <p></p>
+                            <i class="fal fa-times"></i>
+                        </div>
                         <form class="form_ajax" action="{app_url}edit/edit-advertising" method="post" enctype="multipart/form-data">
                             <div class="form-group mt-3">
                                 <label for="ad_title">تیتر آگهی</label>
@@ -105,7 +110,7 @@
                                 <i class="fal fa-times-circle"></i>
                                 <label for="file_upload" class="chose_file_custom"><i class="fal fa-paperclip"></i> <span class="link_of_attach_file">{ad_info.portfolio}</span></label>
                                 <input type="file" class="d-none file_ajax" name="portfolio_inp" id="file_upload" accept=".docx,.doc,.pdf,.md,.pptx,.ppt,.txt">
-                                <small class="small_inp_upload">بیشتر از 5 مگ آپلود نکن</small>
+                                <small class="small_inp_upload">* حداکثر حجم مجاز برای آپلود نمونه کار {portfolio_limited_size} مگابایت می باشد.</small>
                             </div>
                             <input type="hidden" name="delete_portfolio_inp"  id="delete_portfolio_inp">
                             <button type="submit" class="btn profile_sub">ویرایش آگهی</button>

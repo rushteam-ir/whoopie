@@ -4,7 +4,7 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {title_inp, summary_inp, category_inp, describe_inp, type_inp} = req.body;
+        let {title_inp, summary_inp, category_inp, describe_inp, type_inp, delete_portfolio_inp} = req.body;
         let tags_inp = req.body['tags_inp[]'];
         let validation_result = new Validation([
             {value : title_inp, type : 'empty'},
@@ -30,7 +30,17 @@ router.post('/', async(req, res, next)=>{
             type : type_inp
         }
 
-        if(delete_portfolio)
+        if(delete_portfolio_inp == '1'){
+
+            await fs.unlink(`${app_dir}main/templates/whoopieV1/assets/media/portfolios/${last_ad_data.portfolio}`, async(err) => {
+
+                ad_data.portfolio = '';
+                await ad_model.edit(req.session.ad_id, ad_data);
+
+            });
+
+        }
+
 
         if (req.files) {
 

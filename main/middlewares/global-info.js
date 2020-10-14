@@ -10,6 +10,11 @@ router.use(async(req, res, next)=>{
         res.locals.g_military_list = main_military_list;
         res.locals.g_marital_list = main_marital_list;
         res.locals.g_sex_list = main_sex_list;
+
+        res.locals.g_category_list_new = res.locals.g_category_list.slice(1);
+        res.locals.g_city_profile = res.locals.g_city_list.slice(1);
+        res.locals.g_city_profile.unshift('-');
+
         res.locals.g_user_info = null;
 
         if(!isUndefined(req.session.user_info)){

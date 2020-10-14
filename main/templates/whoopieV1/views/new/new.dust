@@ -43,13 +43,13 @@
                                         <div class="select_click" id="sex_select"></div>
                                         <div class="WCD_optopn">
                                             <div>
-                                                {#g_category_list}
-                                                {@eq key="{category_value}" value="{title}"}
-                                                    <span selected="selected" value="{_id}">{title}</span>
-                                                {:else}
-                                                    <span value="{_id}">{title}</span>
-                                                {/eq}
-                                            {/g_category_list}
+                                                {#g_category_list_new}
+                                                    {@eq key="{category_value}" value="{title}"}
+                                                        <span selected="selected" value="{_id}">{title}</span>
+                                                    {:else}
+                                                        <span value="{_id}">{title}</span>
+                                                    {/eq}
+                                                {/g_category_list_new}
                                             </div>
                                         </div>
                                         <input type="hidden" name="category_inp" value="-1">

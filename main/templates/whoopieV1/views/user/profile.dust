@@ -130,13 +130,13 @@
                                         <div class="select_click" id="cityP_select"></div>
                                         <div class="WCD_optopn">
                                             <div>
-                                                {#g_city_list}
+                                                {#g_city_profile}
                                                     {@eq key="{user_info.city}" value="{$idx}"}
                                                         <span selected="selected" value="{$idx}">{.}</span>
                                                     {:else}
                                                         <span value="{$idx}">{.}</span>
                                                     {/eq}
-                                                {/g_city_list}
+                                                {/g_city_profile}
                                             </div>
                                         </div>
                                         <input type="hidden" name="city_inp" value="{user_info.city}">

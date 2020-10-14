@@ -4,7 +4,6 @@ $WC : 180px;
     direction: rtl;
     text-align: center;
     display: inline-block;
-    font-family: $AF;
     width: $WC;
     margin-right: 8px;
     font-size: 0.9rem;
@@ -37,7 +36,7 @@ $WC : 180px;
         height: 38px;
         width: $WC;
         border: 1px solid #CED4DA;
-        color: #aaaaaa;
+        color: rgb(0, 0, 0);
         border-radius: 15px;
         line-height: 38px;
         position: relative;
@@ -54,6 +53,7 @@ $WC : 180px;
             position: absolute;
             top: 11px;
             left: 4px;
+            color: $main_color;
         }
     }
 
@@ -62,7 +62,7 @@ $WC : 180px;
         width: 180px;
         background-color: $white;
         border-radius: 15px;
-        color: #aaaaaa;
+        color: #000000;
         margin-top: 5px;
         position: absolute;
         top: 40px;

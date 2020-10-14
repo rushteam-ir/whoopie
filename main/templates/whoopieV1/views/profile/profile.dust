@@ -14,6 +14,10 @@
     </div>
 {/nav}
 
+{<title}
+    پروفایل {user_info.username}
+{/title}
+
 {<body}
 
 <section class="watch_main_field">

@@ -142,8 +142,34 @@ nav {
             }
         }
     }
+    .left_field_navbar{
+        position: absolute;
+        left: 20px;
+        top: -4px;
+        img{
+            width: 50%;
+        }
+    }
 }
 
+
+
+#nav_LR {
+    top: 5px;
+    right: 30px;
+
+    a {
+        color: black;
+        font-weight: bold;
+
+        span {
+            color: $main_color;
+        }
+    }
+}
+
+
+// footer
 .footer_info {
     width: 100%;
     text-align: center;
@@ -153,8 +179,10 @@ nav {
         color: #989898;
         margin: 0;
     }
+
 }
 
+// repost modal
 #report_bug {
     cursor: pointer;
 }

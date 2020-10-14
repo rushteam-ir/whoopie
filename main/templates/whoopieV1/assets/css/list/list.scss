@@ -124,10 +124,11 @@
                 line-height: 26px;
 
                 &:first-child {
-                    font-size: 2.2rem;
+                    font-size: 1.7rem;
                     margin-bottom: 0;
                     line-height: 50px;
                     margin-top: 10px;
+                    font-weight: bold;
 
                     span {
                         font-size: 0.9rem;
@@ -178,4 +179,17 @@
             }
         }
     }
+}
+
+.header_of_list{
+    width: 100%;
+    background-color: $white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 6px;
+    direction: rtl;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
 }

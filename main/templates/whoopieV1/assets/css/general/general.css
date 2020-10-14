@@ -5,6 +5,7 @@ a:hover {
 
 textarea{
     resize: none;
+    line-height: 28px !important;
 }
 
 label {

@@ -1,0 +1,142 @@
+{>"layouts/main-layout"/}
+
+{<css}
+<link rel="stylesheet" href="css/index/profile/profile.css">
+{/css}
+
+{<js}
+
+{/js}
+
+{<nav}
+    <div class="right_field" id="nav_LR">
+        <a href="{app_url}">ورود به <span>ووپـــــــــــــــــــای</span></a>
+    </div>
+{/nav}
+
+{<title}
+    پروفایل {user_info.username}
+{/title}
+
+{<body}
+
+<section class="watch_main_field">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+                <div class="main_field_of_profile">
+                    <div class="profile_header">
+                        <div class="user_img">
+                            {@eq key="{user_info.avatar}" value="{null}"}
+                                <img src="img/AP03.png" alt="">
+                            {:else}
+                                <img src="media/avatars/{user_info.avatar}" alt="">
+                            {/eq}
+                            <div>
+                                <p>{user_info.first_name} {user_info.last_name}</p>
+                                <p>{user_info.username}@</p>
+                            </div>
+                        </div>
+                        {@eq key="{g_user_info.username}" value="{user_info.username}"}
+                            <div class="profile_option">
+                                <a href="{app_url}@{g_user_info.username}/password">
+                                    تعویض رمز عبور
+                                </a>
+                                <a href="{app_url}@{g_user_info.username}/edit">
+                                    ویرایش پروفایل
+                                </a>
+                            </div>
+                        {/eq}
+                    </div>
+                    <div class="about_me">
+                        <p><span>درباره من :</span>{user_info.biography}</p>
+                    </div>
+                    <div class="user_info">
+                        <p>
+                            {#g_sex_list}
+                                {@eq key="{$idx}" value="{user_info.sex}"}
+                                    جنسیت : {.}
+                                {/eq}
+                            {/g_sex_list}
+                        </p>
+                        {@eq key="{user_info.sex}" value="1"}
+                            {#g_military_list}
+                                {@eq key="{$idx}" value="{user_info.military_status}"}
+                                    <p>
+                                        وضعیت نظام وظیفه : {.}
+                                    </p>
+                                {/eq}
+                            {/g_military_list}
+                        {/eq}
+                        <p>
+                            {#g_marital_list}
+                                {@eq key="{$idx}" value="{user_info.marital_status}"}
+                                    وضعیت تاهل : {.}
+                                {/eq}
+                            {/g_marital_list}
+                        </p>
+                        <p>تاریخ تولد : {user_info.birth_year}/{user_info.birth_month}/{user_info.birth_day}</p>
+                        <p>تاریخ عضویت : {user_info.created_date}</p>
+                    </div>
+                    <hr>
+                    <div class="user_ads">
+                        <h3>آگهی های من :</h3>
+                        {#ads_list}
+                            <a href="{app_url}?w={unique_id}" class="ads_field">
+                                <div>
+                                    {@math key="1" method="add" operand="{$idx}"/}
+                                </div>
+                                <p>
+                                    {title} | {summary}
+                                </p>
+                            </a>
+                        {/ads_list}
+                    </div>
+                    <hr>
+                    <div class="user_info">
+                        <h3>راه های ارتباطی با من :</h3>
+                        {@eq key="{user_info.contact_phone}" value="true"}
+                            <a href="tel:{user_info.phone_number}">
+                                <i class="far fa-phone"></i>
+                                {user_info.phone_number}
+                            </a>
+                        {/eq}
+                        {@eq key="{user_info.contact_email}" value="true"}
+                            <a href="mailto:{user_info.email}">
+                                <i class="far fa-at"></i>
+                                {user_info.email}
+                            </a>
+                        {/eq}
+                        {@eq key="{user_info.contact_whatsapp}" value="true"}
+                            <a href="https://wa.me/+98{user_info.phone_number}">
+                                <i class="fab fa-whatsapp"></i>
+                                {user_info.phone_number}
+                            </a>
+                        {/eq}
+                        {@eq key="{user_info.contact_instagram}" value="true"}
+                            <a href="https://www.instagram.com/{user_info.contact_instagram_id}">
+                                <i class="fab fa-instagram"></i>
+                                {user_info.contact_instagram_id}
+                            </a>
+                        {/eq}
+                        {@eq key="{user_info.contact_telegram}" value="true"}
+                            {@eq key="{user_info.contact_telegram_type}" value="0"}
+                                <a>
+                                    <i class="fab fa-telegram-plane"></i>
+                                    {user_info.phone_number}
+                                </a>
+                            {:else}
+                                <a href="https://t.me/{user_info.contact_telegram_id}">
+                                    <i class="fab fa-telegram-plane"></i>
+                                    {user_info.contact_telegram_id}
+                                </a>
+                            {/eq}
+                        {/eq}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+
+{/body}

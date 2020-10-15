@@ -25,7 +25,7 @@
                             <p></p>
                             <i class="fal fa-times"></i>
                         </div>
-                        <form class="form_ajax" action="{app_url}user/profile/edit-profile" method="post">
+                        <form class="form_ajax" action="{app_url}@{g_user_info.username}/edit/edit-profile" method="post">
                             <div class="field_of_img_template">
                                 <div class="box_of_img_template">
                                     <div class="box_of_img_template img-box">

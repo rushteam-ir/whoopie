@@ -35,7 +35,7 @@ router.post('/', async(req, res, next)=>{
             return res.json({
                 status : 'success',
                 msg : 'رمز عبور با موفقیت تعویض شد.',
-                url : `${app_url}user/password`
+                url : `${app_url}@${req.session.user_info.username}`
             });
 
         }

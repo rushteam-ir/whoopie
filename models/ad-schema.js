@@ -64,6 +64,23 @@ ad_schema.statics = {
 
     },
 
+    getByUserName : async (data)=>{
+
+        let find_ad = await ad_model.find(data).populate('category').populate('author');
+
+        if(find_ad){
+
+            return find_ad;
+
+        }
+        else{
+
+            return null;
+
+        }
+
+    },
+
     getAll : async (data)=>{
 
         return await ad_model.find({author : data._id}).populate('category').populate('author');

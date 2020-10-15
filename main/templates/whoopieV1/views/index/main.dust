@@ -68,7 +68,7 @@
                             لیست آگهی های من
                             <i class="fas fa-list"></i>
                         </a>
-                        <a href="{app_url}user/profile">
+                        <a href="{app_url}@{g_user_info.username}">
                             اطلاعات کاربری من
                             <i class="fas fa-user-crown"></i>
                         </a>

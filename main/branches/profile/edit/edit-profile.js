@@ -137,7 +137,7 @@ router.post('/', async(req, res, next)=>{
                 return res.json({
                     status : 'success',
                     msg : 'اطلاعات کاربری با موفقیت ویرایش شد.',
-                    url : `${app_url}user/profile`
+                    url : `${app_url}@${req.session.user_info.username}`
                 });
 
             }
@@ -174,7 +174,7 @@ router.post('/', async(req, res, next)=>{
                             return res.json({
                                 status : 'success',
                                 msg : 'اطلاعات کاربری با موفقیت ویرایش شد.',
-                                url : `${app_url}user/profile`
+                                url : `${app_url}@${req.session.user_info.username}`
                             });
 
                         }

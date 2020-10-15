@@ -6,10 +6,10 @@
     border-radius: 15px;
     padding: 0px 20px;
     margin: 0;
-    @include transition (0.2s , linear , 0s);
     opacity: 0;
     overflow: hidden;
     position: relative;
+    @include transition (0.2s , linear , 0s);
 
     i {
         position: relative;

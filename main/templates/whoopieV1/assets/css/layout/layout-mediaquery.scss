@@ -61,6 +61,10 @@
         margin-left: 10%;
     }
 
+    .footer_info p {
+        font-size: 0.9rem;
+    }
+
 }
 
 @media only screen and (max-width: 630px) {
@@ -68,6 +72,10 @@
     #bug_modal .main_field_of_debug_modal {
         width: 90%;
         margin-left: 5%;
+    }
+
+    .footer_info p {
+        font-size: 0.85rem;
     }
 
 }

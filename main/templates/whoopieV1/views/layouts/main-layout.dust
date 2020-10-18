@@ -122,8 +122,12 @@
             <div class="main_field_of_SN">
                 <i class="fas fa-times"  id="close_navmenu"></i>
                 <div class="SN_user_image">
-                    <img src="img/AP03.png" alt="">
-                    <p>کسری حبیب بیگی</p>
+                    {@eq key="{g_user_info.avatar}" value="{null}"}
+                        <img src="img/AP03.png" alt="">
+                    {:else}
+                        <img src="media/avatars/{g_user_info.avatar}" alt="">
+                    {/eq}
+                    <p>{g_user_info.username}</p>
                 </div>
                 <ul class="SN_option">
                     <li id="SV_S">
@@ -174,25 +178,25 @@
                         <button class="btn submit_SV">جستجو</button>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{app_url}">
                             <i class="fas fa-home"></i>
                             خانه
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{app_url}new">
                             <i class="fas fa-plus"></i>
                             ثبت آگهی جدید
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{app_url}list">
                             <i class="fas fa-list"></i>
                             لیست آگهی های من
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{app_url}@{g_user_info.username}">
                             <i class="fas fa-user-crown"></i>
                             پروفایل
                         </a>
@@ -202,7 +206,7 @@
                         گزارش باگ
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{app_url}api/v1/auth/logout">
                             <i class="fas fa-sign-out-alt"></i>
                             خروج
                         </a>

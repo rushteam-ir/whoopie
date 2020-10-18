@@ -107,6 +107,16 @@
             </div>
         </div>
     </section>
+
+    <section class="empty_search">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="main_field_of_ES">
+                    <p>هنوز در این دسته بندی آگهی موجود نمی باشد لطفا یک دسته بندی یا یک شهر دیگه را جستجو کنید.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <section id="ads_bug">
         <div class="container-fluid">

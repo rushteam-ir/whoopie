@@ -46,21 +46,30 @@ $(window).click(function (e) {
 });
 
 // report bug modal 
-$('#report_bug').click(function (e) {
+for (let h = 0; h < $('.report_bug').length; h++) {
 
-    e.preventDefault();
-    $('#bug_modal').fadeIn();
-    $('body').css('overflow', 'hidden');
+    $('.report_bug').eq(h).click(function (e) {
 
-    $('#close_BM').click(function () {
+        e.preventDefault();
+        $('#bug_modal').fadeIn();
+        $('body').css('overflow', 'hidden');
 
-        $('#bug_modal').fadeOut();
-        $('body').css('overflow', 'auto');
+        $('#close_BM').click(function () {
 
-    })
+            $('#bug_modal').fadeOut();
+            $('body').css('overflow', 'auto');
 
-});
+            if ($(window).width() < 1000) {
 
+                $('body').css('overflow', 'hidden');
+
+            }
+
+        });
+
+    });
+
+}
 
 // search in sandich nav bar custom js , when click on search text , open search inp and selects
 let nav_search = $('#SV_S');
@@ -129,3 +138,29 @@ $('.sandwich_nav').click(function () {
     })
 
 });
+
+// fix modal and navbar overflos bugs
+$(window).resize(function () {
+
+    if ($(this).width() > 1000) {
+
+        $('body').css('overflow', 'auto');
+
+    }
+    if ($('#bug_modal').css('display') == 'block') {
+
+        $('body').css('overflow', 'hidden');
+
+    }
+    if ($('#register_modal').css('display') == 'block') {
+
+        $('body').css('overflow', 'hidden');
+
+    }
+    if ($('#login_modal').css('display') == 'block') {
+
+        $('body').css('overflow', 'hidden');
+
+    }
+
+})

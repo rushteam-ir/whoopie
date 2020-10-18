@@ -1,12 +1,12 @@
 {>"layouts/main-layout"/}
 
 {<css}
-    <link rel="stylesheet" href="css/user/profile.css">
-    <link rel="stylesheet" href="css/user/profile-mediaquery.css">
+    <link rel="stylesheet" href="css/profile/profile.css">
+    <link rel="stylesheet" href="css/profile/profile-mediaquery.css">
 {/css}
 
 {<js}
-<script src="js/user/profile.js"></script>
+<script src="js/profile/profile.js"></script>
 {/js}
 
 {<title}

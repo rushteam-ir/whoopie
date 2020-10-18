@@ -60,3 +60,72 @@ $('#report_bug').click(function (e) {
     })
 
 });
+
+
+// search in sandich nav bar custom js , when click on search text , open search inp and selects
+let nav_search = $('#SV_S');
+let test = $('.search_option')[0].scrollHeight + 'px';
+
+nav_search.click(function () {
+
+    let search_op = $(this).next();
+    if (search_op.css('max-height') !== '0px') {
+
+        search_op.css('max-height', '0px');
+        search_op.css('overflow', 'hidden');
+        $(this).removeClass('change_background')
+
+    } else {
+
+        search_op.css('max-height', test);
+        $(this).addClass('change_background');
+
+        setTimeout(function () {
+
+            search_op.css('overflow', 'unset');
+
+        }, 200);
+
+    }
+
+});
+
+// when click on triple line in nav bar open sandwich nav bar for mobile and tablet
+$('.sandwich_nav').click(function () {
+
+    let nav_field = $(this).next();
+    nav_field.addClass('show_SN');
+    $('.SN_layout').addClass('show_layer');
+    $('body').css('overflow', 'hidden');
+
+    // if user resize browser , close sadwich navbar when window width bigger than 1000
+    $(window).resize(function () {
+
+        if ($(window).width() > 1000) {
+
+            nav_field.removeClass('show_SN');
+            $('.SN_layout').removeClass('show_layer');
+
+        }
+
+    });
+
+    // close sadwich nav bar when click on close icon
+    $('#close_navmenu').click(function () {
+
+        nav_field.removeClass('show_SN');
+        $('.SN_layout').removeClass('show_layer');
+        $('body').css('overflow', 'auto');
+
+    })
+
+    // close sandwich navbar when click on out side of navbar
+    $('.SN_layout').click(function () {
+
+        nav_field.removeClass('show_SN');
+        $('.SN_layout').removeClass('show_layer');
+        $('body').css('overflow', 'auto');
+
+    })
+
+});

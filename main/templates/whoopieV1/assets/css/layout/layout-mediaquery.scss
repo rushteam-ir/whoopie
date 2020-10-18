@@ -5,6 +5,10 @@
         margin-left: 15%;
     }
 
+    .sandwich_nav {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 1400px) {
@@ -13,6 +17,11 @@
         width: 80%;
         margin-left: 10%;
     }
+
+    .sandwich_nav {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -20,6 +29,33 @@
     #bug_modal .main_field_of_debug_modal {
         width: 100%;
         margin-left: 0%;
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+    nav .main_field_of_navbar .midle_field .search_nav input {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    nav .main_field_of_navbar .right_field {
+        display: none;
+    }
+
+    nav .main_field_of_navbar .midle_field {
+        display: none;
+    }
+
+    .sandwich_nav {
+        display: block;
+    }
+
+    .main_field_of_SN {
+        display: block;
     }
 
 }
@@ -76,6 +112,29 @@
 
     .footer_info p {
         font-size: 0.85rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .main_field_of_SN .SN_user_image p {
+        font-size: 1.1rem;
+    }
+
+    .main_field_of_SN .SN_option li {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .main_field_of_SN .SN_option li a {
+        line-height: 46px;
+    }
+    .main_field_of_SN .SN_option #SV_S p {
+        line-height: 40px;
+    }
+    .WC_dropdown .WCD_optopn span {
+        padding: 0px 0px;
     }
 
 }

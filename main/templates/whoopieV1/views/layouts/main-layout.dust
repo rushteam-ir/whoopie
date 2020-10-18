@@ -116,6 +116,102 @@
             {:else}
                 {+nav/}
             {/ne}
+            <div class="sandwich_nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="main_field_of_SN">
+                <i class="fas fa-times"  id="close_navmenu"></i>
+                <div class="SN_user_image">
+                    <img src="img/AP03.png" alt="">
+                    <p>کسری حبیب بیگی</p>
+                </div>
+                <ul class="SN_option">
+                    <li id="SV_S">
+                        <p>
+                            <i class="fal fa-search"></i>
+                            جستجو
+                        </p>
+                    </li>
+                    <li class="search_option">
+                        <input type="text" class="search_input form-control SN_inp" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
+                        <div class="WC_dropdown">
+                            <div class="category_title WCD_title">
+                            <p></p>
+                            <i class="fas fa-angle-down"></i></div>
+                            <div class="select_click" id="category_select_SV"></div>
+                            <div class="WCD_optopn">
+                                <div>
+                                    {#g_category_list}
+                                        {@eq key="{category_value}" value="{_id}"}
+                                            <span selected="selected" value="{_id}">{title}</span>
+                                        {:else}
+                                            <span value="{_id}">{title}</span>
+                                        {/eq}
+                                    {/g_category_list}
+                                </div>
+                            </div>
+                            <input class="search_category_input" type="hidden" name="search_category_inp" value="{category_value}">
+                        </div>
+                        <div class="WC_dropdown">
+                            <div class="category_title WCD_title">
+                            <p>
+                            </p>
+                            <i class="fas fa-angle-down"></i></div>
+                            <div class="select_click" id="city_select_SV"></div>
+                            <div class="WCD_optopn">
+                                <div>
+                                    {#g_city_list}
+                                        {@eq key="{city_value}" value="{$idx}"}
+                                            <span selected="selected" value="{$idx}">{.}</span>
+                                        {:else}
+                                            <span value="{$idx}">{.}</span>
+                                        {/eq}
+                                    {/g_city_list}
+                                </div>
+                            </div>
+                            <input type="hidden" class="search_city_input" name="search_city_inp" value="{city_value}">
+                        </div>
+                        <button class="btn submit_SV">جستجو</button>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-home"></i>
+                            خانه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-plus"></i>
+                            ثبت آگهی جدید
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-list"></i>
+                            لیست آگهی های من
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-user-crown"></i>
+                            پروفایل
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-bug"></i>
+                            گزارش باگ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-sign-out-alt"></i>
+                            خروج
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="SN_layout"></div>
         </div>
     </nav>
 

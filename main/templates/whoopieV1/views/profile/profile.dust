@@ -1,7 +1,7 @@
 {>"layouts/main-layout"/}
 
 {<css}
-<link rel="stylesheet" href="css/index/profile/profile.css">
+<link rel="stylesheet" href="css/profile/profile.css">
 {/css}
 
 {<js}

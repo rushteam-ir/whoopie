@@ -24,24 +24,36 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                    <div class="search_header mt-3">
-                        <p> نتایج جستجو برای <span> {search_value} </span>
-                            {#g_category_list}
-                                {@eq key="{_id}" value="{category_value}"}
-                                    ، دسته بندی <span>{title}</span>
-                                {/eq}
-                            {/g_category_list}
-                            {#g_city_list}
-                                {@eq key="{$idx}" value="{city_value}"}
-                                    {@eq key="{$idx}" value="0"}
-                                        ، <span>{.}</span>
-                                    {:else}
-                                         ، شهر <span>{.}</span>
+                    {?ad_list}
+                        <div class="search_header mt-3">
+                            <p> نتایج جستجو برای <span> {search_value} </span>
+                                {#g_category_list}
+                                    {@eq key="{_id}" value="{category_value}"}
+                                        ، دسته بندی <span>{title}</span>
                                     {/eq}
-                                {/eq}
-                            {/g_city_list}
-                        </p>
-                    </div>
+                                {/g_category_list}
+                                {#g_city_list}
+                                    {@eq key="{$idx}" value="{city_value}"}
+                                        {@eq key="{$idx}" value="0"}
+                                            ، <span>{.}</span>
+                                        {:else}
+                                            ، شهر <span>{.}</span>
+                                        {/eq}
+                                    {/eq}
+                                {/g_city_list}
+                            </p>
+                        </div>
+                    {:else}
+                        <section class="empty_search">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="main_field_of_ES">
+                                        <p>هنوز در این دسته بندی آگهی موجود نمی باشد لطفا یک دسته بندی یا یک شهر دیگه را جستجو کنید.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    {/ad_list}
                     {#ad_list}
                         <div class="ads_card_field mb-4">
                             <div class="right_card_box">
@@ -97,22 +109,14 @@
                             </div>
                         </div>
                     {/ad_list}
-                    <div class="refrech_card_btn mb-5">
-                        <button class="btn">
-                            <i class="fas fa-sync-alt"></i>
-                            یه لیست جدید بده !
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="empty_search">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="main_field_of_ES">
-                    <p>هنوز در این دسته بندی آگهی موجود نمی باشد لطفا یک دسته بندی یا یک شهر دیگه را جستجو کنید.</p>
+                    {?ad_list}
+                        <div class="refrech_card_btn mb-5">
+                            <button class="btn">
+                                <i class="fas fa-sync-alt"></i>
+                                یه لیست جدید بده !
+                            </button>
+                        </div>
+                    {/ad_list}
                 </div>
             </div>
         </div>

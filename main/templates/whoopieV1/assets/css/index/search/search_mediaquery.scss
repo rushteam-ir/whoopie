@@ -176,6 +176,18 @@
         margin-top: 10px;
 
     }
+
+    .ads_card_field .left_card_box a {
+        position: unset;
+        width: 120px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+    }
+    .ads_card_field .right_card_box .ads_card_info p:nth-child(2) {
+        margin-top: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 430px) {
@@ -199,10 +211,10 @@
         font-size: 1rem;
     }
 
-    #ads_bug .main_field_of_AR i {
-        top: 15px;
-        right: 18px;
-        font-size: 1.4rem;
+    #ads_bug #close_AB {
+        top: 10px;
+        right: 15px;
+        font-size: 1.3rem;
     }
 
 }
@@ -230,3 +242,5 @@
     }
 
 }
+
+

@@ -22,10 +22,7 @@ let ad_schema = new mongoose.Schema({
         ref: 'user'
     },
     type : String,
-    reports : [{
-        type : 'ObjectId',
-        ref : 'report'
-    }]
+    reports : [Object]
 });
 
 // Defining model statics
@@ -145,8 +142,7 @@ ad_schema.statics = {
 
         }
 
-        return final_list;
-
+        return final_list.slice((filters.page - 1) * 3, filters.page * 3);
 
     }
 

@@ -6,6 +6,13 @@
 {/css}
 
 {<js}
+    <script>
+        search_query = '{search_value}';
+        category_query = '{category_value}';
+        location_query = '{city_value}';
+        page_query = '{page_value}';
+
+    </script>
     <script src="js/index/search.js"></script>
 {/js}
 
@@ -54,69 +61,63 @@
                             </div>
                         </section>
                     {/ad_list}
-                    {#ad_list}
-                        <div class="ads_card_field mb-4">
-                            <div class="right_card_box">
-                                <div class="RS_field">
-                                    <button class="btn" id="ads_bug_open">
-                                        <i class="fas fa-exclamation-circle" ></i>
-                                    </button>
-                                    <button class="btn">
-                                        <i class="fas fa-share-alt"></i>
-                                    </button>
-                                </div>
-                                <div class="ads_profile_info">
-                                    {@eq key="{author.avatar}" value="{null}"}
-                                        <img src="img/AP03.png" alt="">
-                                    {:else}
-                                        <img src="media/avatars/{author.avatar}" alt="">
-                                    {/eq}
-                                    <div>
-                                        <p>{author.first_name} {author.last_name}</p>
+                    <div class="ads_card_list">
+                        {#ad_list}
+                            <div class="ads_card_field mb-4">
+                                <div class="right_card_box">
+                                    <div class="RS_field">
+                                        <button class="btn" id="ads_bug_open">
+                                            <i class="fas fa-exclamation-circle" ></i>
+                                        </button>
+                                        <button class="btn">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                    <div class="ads_profile_info">
+                                        {@eq key="{author.avatar}" value="{null}"}
+                                            <img src="img/AP03.png" alt="">
+                                        {:else}
+                                            <img src="media/avatars/{author.avatar}" alt="">
+                                        {/eq}
+                                        <div>
+                                            <p>{author.first_name} {author.last_name}</p>
+                                            <p>
+                                                {#g_city_list}
+                                                    {@eq key="{$idx}" value="{author.city}"}
+                                                        {.}
+                                                    {/eq}
+                                                {/g_city_list}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="ads_card_info">
                                         <p>
-                                            {#g_city_list}
-                                                {@eq key="{$idx}" value="{author.city}"}
-                                                    {.}
-                                                {/eq}
-                                            {/g_city_list}
+                                            {title}
+                                            <span>#{category.title}</span>
                                         </p>
+                                        <p>{summary}</p>
                                     </div>
                                 </div>
-                                <div class="ads_card_info">
-                                    <p>
-                                        {title}
-                                        <span>#{category.title}</span>
+                                <div class="left_card_box">
+                                    <p><span> جنسیت :  </span>
+                                        {#g_sex_list}
+                                            {@eq key="{$idx}" value="{author.sex}"}
+                                                {.}
+                                            {/eq}
+                                        {/g_sex_list}
                                     </p>
-                                    <p>{summary}</p>
+                                    <p><span> نوع همکاری : </span>
+                                        {@eq key="{type}" value="0"}
+                                            حضوری
+                                        {:else}
+                                            دور کاری
+                                        {/eq}
+                                    </p>
+                                    <a href="{app_url}?w={unique_id}" class="btn">مشاهده</a>
                                 </div>
                             </div>
-                            <div class="left_card_box">
-                                <p><span> جنسیت :  </span>
-                                    {#g_sex_list}
-                                        {@eq key="{$idx}" value="{author.sex}"}
-                                            {.}
-                                        {/eq}
-                                    {/g_sex_list}
-                                </p>
-                                <p><span> نوع همکاری : </span>
-                                    {@eq key="{type}" value="0"}
-                                        حضوری
-                                    {:else}
-                                        دور کاری
-                                    {/eq}
-                                </p>
-                                <a href="{app_url}?w={unique_id}" class="btn">مشاهده</a>
-                            </div>
-                        </div>
-                    {/ad_list}
-                    {?ad_list}
-                        <div class="refrech_card_btn mb-5">
-                            <button class="btn">
-                                <i class="fas fa-sync-alt"></i>
-                                یه لیست جدید بده !
-                            </button>
-                        </div>
-                    {/ad_list}
+                        {/ad_list}
+                    </div>
                 </div>
             </div>
         </div>

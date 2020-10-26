@@ -186,22 +186,28 @@
                     <div class="main_field_of_AR">
                         <i class="fas fa-times" id="close_AB"></i>
                         <h3>اگر توی اگهی منتشر شده مشکلی رو پیدا کردی با تیم <span>ووپـــــــــای</span> درمیون بزار</h3>
-                        <form method="post" action="" autocomplete="off">
+                        <div class="error_info warning_error">
+                            <i class="fal fa-exclamation-circle"></i>
+                            <p></p>
+                            <i class="fal fa-times"></i>
+                        </div>
+                        <form class="form_ajax" method="post" action="{app_url}api/v1/report/ad" autocomplete="off">
                             <div class="WC_dropdown" id="AB_select">
-                                <div class="category_title WCD_title"><p>همه دسته بندی ها</p><i class="fas fa-angle-down"></i></div>
+                                <div class="category_title WCD_title"><p>انتخاب موضوع تخلف</p><i class="fas fa-angle-down"></i></div>
                                 <div class="select_click" id="category_select"></div>
                                 <div class="WCD_optopn">
                                     <div>
-                                        <span value="0">آگهی حاوی حمزه بوده است</span>
-                                        <span value="0">تن حمزه خورد بهم مسموم شدم </span>
-                                        <span value="0">حمزه رو دیدم ترسیدم</span>
+                                        {#g_report_list}
+                                            <span value="{$idx}">{.}</span>
+                                        {/g_report_list}
                                     </div>
                                 </div>
-                                <input class="search_category_input" type="hidden" name="search_category_inp" value="{category_value}">
+                                <input type="hidden" name="report_type_inp" value="">
                             </div>
                             <div class="form-group">
                               <textarea class="form-control" id="ads_report_description" rows="10" name="text_inp"></textarea>
                             </div>
+                            <input type="hidden" name="ad_id_inp" value="{ad_info.unique_id}">
                             <button type="submit" class="btn bug_sub">گزارش تخلف</button>
                         </form>
                     </div>

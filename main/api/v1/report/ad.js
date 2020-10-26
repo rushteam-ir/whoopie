@@ -4,9 +4,11 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        let {ad_inp, text_inp} = req.body;
+        let {report_type_inp, text_inp, ad_id_inp} = req.body;
+
         let validation_result = new Validation([
-            {value : ad_inp},
+            {value : ad_id_inp},
+            {value : report_type_inp, type : 'number'},
             {value : text_inp},
         ]).check();
 
@@ -17,24 +19,27 @@ router.post('/', async(req, res, next)=>{
         }
 
         let report_data = {
-            type : `Ad`,
+            type : report_type_inp,
             text : text_inp,
-            url : req._parsedOriginalUrl.path,
             who : req.session.user_info,
             user_agent : req.headers['user-agent'],
             remote_address : req.connection.remoteAddress,
         }
 
-        let result = await report_model.addAd(ad_inp, report_data);
+        let result = await report_model.addAd(ad_id_inp, report_data);
 
         if(result){
 
-            return res.json({success : 'success'});
+            return res.json({
+                status : "success",
+                msg : "",
+                url : `${app_url}?w=${ad_id_inp}`
+            });
 
         }
         else{
 
-            return res.json({fail : 'fail'});
+            return res.json('درخواست شما با خطا مواجه شده است.');
 
         }
 

@@ -24,19 +24,7 @@ report_schema.statics = {
     addAd : async (ad_inp, data)=>{
 
         data.created_date = new Date();
-
-        let new_doc = new report_model(data);
-        let report_saved = await new_doc.save();
-        if(report_saved){
-
-            return await report_model.findOneAndUpdate({_id: ad_inp}, {$push: {reports: report_saved._id}});
-
-        }
-        else{
-
-            return null;
-
-        }
+        return await ad_model.findOneAndUpdate({unique_id: ad_inp}, {$push: {reports: data}});
 
     }
 

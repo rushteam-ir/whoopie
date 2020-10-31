@@ -101,7 +101,15 @@
                         </a>
                         <a href="{app_url}@{g_user_info.username}">
                             <i class="fas fa-user-crown"></i>
-                            پروفایل
+                            پروفایل من
+                        </a>
+                        <a href="{app_url}@{g_user_info.username}/edit">
+                            <i class="fas fa-pencil"></i>
+                            ویرایش پروفایل
+                        </a>
+                        <a href="{app_url}@{g_user_info.username}/password">
+                            <i class="fas fa-lock-alt"></i>
+                            تعویض رمز عبور
                         </a>
                         <a class="report_bug">
                             <i class="fas fa-bug"></i>
@@ -201,7 +209,19 @@
                         <li>
                             <a href="{app_url}@{g_user_info.username}">
                                 <i class="fas fa-user-crown"></i>
-                                پروفایل
+                                پروفایل من
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{app_url}@{g_user_info.username}/edit">
+                                <i class="fas fa-pencil"></i>
+                                ویرایش پروفایل
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{app_url}@{g_user_info.username}/password">
+                                <i class="fas fa-lock-alt"></i>
+                                تعویض رمز عبور
                             </a>
                         </li>
                         <li class="report_bug">

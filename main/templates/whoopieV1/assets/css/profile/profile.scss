@@ -15,7 +15,6 @@
     .profile_header {
         width: 100%;
         position: relative;
-        margin-top: 50px;
 
         .user_img {
             margin: 0px auto;
@@ -33,25 +32,9 @@
                 & :first-child {
                     margin: 0;
                     margin-top: 15px;
+                    font-weight: bold;
+                    font-size: 1.2rem;
                 }
-            }
-        }
-
-        .profile_option {
-            position: absolute;
-            top: -30px;
-            left: 0;
-
-            a {
-                color: $main_color;
-
-                &:hover {
-                    color: $hover_mc;
-                }
-            }
-
-            & :first-child {
-                margin-left: 20px;
             }
         }
     }

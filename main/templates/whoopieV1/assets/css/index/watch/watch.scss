@@ -39,6 +39,14 @@
     }
 
     .user_INC {
+        width: max-content;
+        display: block;
+        color: rgb(51, 51, 51);
+         
+        &:hover{
+            color: $hover_mc;
+        }
+
         img {
             display: inline-block;
             border-radius: 50px;

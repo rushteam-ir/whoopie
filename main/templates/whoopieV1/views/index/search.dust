@@ -73,7 +73,7 @@
                                             <i class="fas fa-share-alt"></i>
                                         </button>
                                     </div>
-                                    <div class="ads_profile_info">
+                                    <a href="{app_url}@{author.username}" class="ads_profile_info">
                                         {@eq key="{author.avatar}" value="{null}"}
                                             <img src="img/AP03.png" alt="">
                                         {:else}
@@ -89,7 +89,7 @@
                                                 {/g_city_list}
                                             </p>
                                         </div>
-                                    </div>
+                                    </a>
                                     <div class="ads_card_info">
                                         <p>
                                             {title}

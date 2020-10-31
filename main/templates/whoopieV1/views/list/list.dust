@@ -28,7 +28,7 @@
                                 <div class="header_list">
                                     <h1>لیست آگهی های من</h1>
                                     <div class="empty_layout">
-                                        <p>هنوز در <span>ووپــــــــــای</span> آگهی ثبت نکردی؟ از <a href="{app_url}new">ایجا</a> آگهی خودت رو ثبت کن !</p>
+                                        <p>هنوز در <span>ووپــــــــــای</span> آگهی ثبت نکردی؟ از <a href="{app_url}new">اینجا</a> آگهی خودت رو ثبت کن !</p>
                                     </div>
                                 </div>
                             </div>

@@ -19,6 +19,18 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+                    <!-- kos kon -->
+                    <div class="row_custom row align-items-center">
+                        <div class="col-12">
+                            <div class="header_list">
+                                <h1>ثبت آگهی جدید</h1>
+                                <div class="empty_layout">
+                                    <p>برای ثبت آگهی در <span>ووپــــــــــای</span> اول باید پروفایلت رو از <a href="{app_url}@{g_user_info.username}/edit">اینجا</a> تکمیل کنی !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- payan kos kon -->
                     <div class="main_field_of_profile">
                         <h1>ثبت آگهی جدید</h1>
                         <div class="error_info warning_error">

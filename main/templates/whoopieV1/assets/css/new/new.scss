@@ -6,6 +6,52 @@
 @import '../partials/file-uploader';
 @import '../partials/checkbox-design';
 
+.row_custom {
+    height: 85vh;
+}
+
+.header_list {
+
+    text-align: center;
+    color: #494949;
+    width: 100%;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    direction: rtl;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    h1 {
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+    .empty_layout {
+        font-size: 1.3rem;
+        direction: rtl;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: $main_color;
+
+            &:hover {
+                color: $hover_mc;
+            }
+        }
+
+        span {
+            color: $main_color;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+}
+
 .profile_inp_field {
     .main_field_of_profile {
         width: 100%;

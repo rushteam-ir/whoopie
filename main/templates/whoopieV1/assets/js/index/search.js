@@ -53,13 +53,15 @@ $(window).scroll(function() {
                                     <p>${ad_info.author.first_name} ${ad_info.author.last_name}</p>
                                     <p>
                                         ${city_list[ad_info.author.city]}
+                                        <span class="mx-1"> | </span>
+                                        تاریخ ایجاد : ${ad_info.created_date}
                                     </p>
                                 </div>
                             </div>
                                 <div class="ads_card_info">
                                     <div>
                                         <p>${ad_info.title}</p>
-                                        <span>#{category.title}</span>
+                                        <span>#${ad_info.category.title}</span>
                                     </div>
                                     <p class="ads_summary">${ad_info.summary}</p>
                                 </div>

@@ -85,7 +85,7 @@
                                     {@math key="1" method="add" operand="{$idx}"/}
                                 </div>
                                 <p>
-                                    {title} | {summary}
+                                    {title}
                                 </p>
                             </a>
                         {/ads_list}

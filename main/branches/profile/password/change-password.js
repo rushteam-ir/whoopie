@@ -4,6 +4,8 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
+        log('aaa')
+
         let {current_password_inp, new_password_inp, confirm_password_inp} = req.body;
         let validation_result = new Validation([
             {value : current_password_inp, type : 'password'},
@@ -41,7 +43,7 @@ router.post('/', async(req, res, next)=>{
         }
         else{
 
-            return res.json({'fail' : 'fail'});
+            return res.json('تعویض رمز با موفقیت انجام نشد.');
 
         }
 

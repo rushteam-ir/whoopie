@@ -100,6 +100,11 @@
         }
 
         .ads_profile_info {
+            color: rgb(54, 54, 54);
+
+            &:hover{
+                color:$hover_mc;
+            }
             img {
                 display: inline-block;
                 border-radius: 50px;

@@ -15,20 +15,6 @@ $(document).on('click', '.ads_bug_open', function() {
 
 });
 
-// $('.ads_bug_open').click(function () {
-//
-//     $('#ads_bug').fadeIn();
-//     $('body').css('overflow' , 'hidden');
-//
-//     $('#close_AB').click(function () {
-//
-//         $('#ads_bug').fadeOut();
-//         $('body').css('overflow' , 'auto');
-//
-//     })
-//
-// });
-
 $(window).scroll(function() {
     if($(window).scrollTop() >= $(document).height() - $(window).height()) {
 
@@ -70,13 +56,13 @@ $(window).scroll(function() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="ads_card_info">
-                                <p>
-                                    ${ad_info.title}
-                                    <span>#${ad_info.category.title}</span>
-                                </p>
-                                <p>${ad_info.summary}</p>
-                            </div>
+                                <div class="ads_card_info">
+                                    <div>
+                                        <p>${ad_info.title}</p>
+                                        <span>#{category.title}</span>
+                                    </div>
+                                    <p class="ads_summary">${ad_info.summary}</p>
+                                </div>
                         </div>
                         <div class="left_card_box">
                             <p><span> جنسیت :  </span>

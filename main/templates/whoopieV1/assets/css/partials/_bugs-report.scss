@@ -1,0 +1,173 @@
+// report ads modal
+
+#ads_bug {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.603);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100000000000000;
+    display: none;
+
+    #close_AB{
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 1.6rem;
+        color: #878787;
+        cursor: pointer;
+    }
+
+    .row {
+        height: 100vh;
+    }
+
+    .main_field_of_AR {
+        width: 70%;
+        margin-left: 15%;
+        padding: 50px;
+        background-color: $white;
+        border-radius: 15px;
+        direction: rtl;
+        text-align: right;
+        position: relative;
+
+        h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            line-height: 45px;
+            margin-bottom: 20px;
+
+            span {
+                color: $main_color;
+                font-size: 2rem;
+            }
+        }
+        textarea{
+            height: 150px;
+            margin-top: 15px;
+        }
+        .bug_sub {
+            background-color: #FF7A7A;
+            width: 100%;
+            margin-top: 20px;
+            color: $white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 30px;
+            border-radius: 50px;
+            @include transition(0.2s, linear, 0s);
+
+            &:hover {
+                background-color: #C02F2F;
+            }
+        }
+    }   
+    .WC_dropdown {
+        width: 100%;
+        margin: 0;
+    }
+    .WC_dropdown .WCD_title {
+        width: 100%;
+    }
+    .WC_dropdown .WCD_optopn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    #ads_bug .main_field_of_AR {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #ads_bug .main_field_of_AR {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    #ads_bug .main_field_of_AR {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    #ads_bug .main_field_of_AR {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #ads_bug .main_field_of_AR h3 {
+        font-size: 1.2rem;
+
+        span {
+            font-size: 1.4rem;
+        }
+    }
+
+    #ads_bug .main_field_of_AR .bug_sub {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    #ads_bug .main_field_of_AR {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+}
+
+@media only screen and (max-width: 630px) {
+
+    #ads_bug .main_field_of_AR {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 430px) {
+
+    #ads_bug .main_field_of_AR {
+        width: 100%;
+        margin-left: 0%;
+        padding: 35px;
+    }
+
+    #ads_bug .main_field_of_AR h3 {
+        line-height: 30px;
+        font-size: 1rem;
+
+        span {
+            font-size: 1.2rem;
+        }
+    }
+
+    #ads_bug .main_field_of_AR .bug_sub {
+        font-size: 1rem;
+    }
+
+    #ads_bug .main_field_of_AR i {
+        top: 15px;
+        right: 18px;
+        font-size: 1.4rem;
+    }
+
+}

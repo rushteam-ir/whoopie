@@ -1,6 +1,7 @@
 @import '../partials/color';
 @import '../partials/font';
 @import '../partials/mixin';
+@import '../partials/bugs-report';
 
 .main_field_of_profile {
     width: 100%;
@@ -114,6 +115,32 @@
                 &:hover {
                     color: $hover_mc;
                 }
+            }
+        }
+    }
+}
+
+.prodile_option {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    button {
+        font-size: 1.3rem;
+
+        &:nth-child(2) {
+            color: #73c6f96e;
+
+            &:hover {
+                color: #73C5F9;
+            }
+        }
+
+        &:nth-child(1) {
+            color: #ff71716c;
+
+            &:hover {
+                color: #ff7171;
             }
         }
     }

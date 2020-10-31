@@ -1,7 +1,7 @@
 // Defining schema model
 let ad_schema = new mongoose.Schema({
     unique_id : String,
-    created_date : Date,
+    created_date : String,
     title : String,
     summary : String,
     category : {
@@ -30,7 +30,7 @@ ad_schema.statics = {
 
     add : async (data)=>{
 
-        data.created_date = new Date();
+        data.created_date = getCurrentDate();
         data.unique_id = randomUUID();
 
         let new_doc = new ad_model(data);
@@ -40,6 +40,7 @@ ad_schema.statics = {
 
     edit : async (ad_id, data)=>{
 
+        data.created_date = getCurrentDate();
         return await ad_model.findOneAndUpdate({unique_id : ad_id}, {$set : data}, {new : true});
 
     },

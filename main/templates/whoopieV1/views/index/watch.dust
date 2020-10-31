@@ -47,6 +47,8 @@
                                             {.}
                                         {/eq}
                                     {/g_city_list}
+                                    <span class="mx-1"> | </span>
+                                    تاریخ ایجاد : {ad_info.created_date}
                                 </p>
                             </div>
                         </a>

@@ -13,58 +13,45 @@
     position: relative;
 
     .profile_header {
-        display: flex;
-        flex-wrap: wrap;
         width: 100%;
+        position: relative;
+        margin-top: 50px;
 
         .user_img {
-            width: 49%;
-            display: flex;
+            margin: 0px auto;
+            width: 200px;
+            text-align: center;
 
             img {
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
+                border-radius: 500px;
+                border: 3px solid $main_color;
             }
 
             div {
-                position: relative;
-                top: 15px;
-                right: 10px;
-                direction: rtl;
-                text-align: right;
-            }
-
-            p {
-                margin: 0;
-                margin-bottom: 5px;
-
-                &:last-child{
-                    font-size: 0.9rem;
-                }
-
-                &:first-child{
-                    font-weight: bold;
-                    font-size: 1.2rem;
+                & :first-child {
+                    margin: 0;
+                    margin-top: 15px;
                 }
             }
         }
 
         .profile_option {
-            width: 49%;
-            text-align: left;
-            direction: ltr;
-            margin-top: 10px;
+            position: absolute;
+            top: -30px;
+            left: 0;
 
             a {
-                display: inline-block;
-                width: max-content;
                 color: $main_color;
-                font-weight: bold;
-                font-size: 0.85rem;
 
-                &:last-child {
-                    margin-left: 15px;
+                &:hover {
+                    color: $hover_mc;
                 }
+            }
+
+            & :first-child {
+                margin-left: 20px;
             }
         }
     }
@@ -116,13 +103,15 @@
             font-weight: bold;
             font-size: 1.1rem;
         }
+
         a {
-            width: 100%;
+            width: max-content;
             padding: 5px 10px;
             text-align: right;
             direction: rtl;
             display: flex;
             flex-wrap: wrap;
+
 
             div {
                 border-radius: 5px;
@@ -137,7 +126,11 @@
                 position: relative;
                 top: 5px;
                 font-family: $AF;
-                color: #0064CC;
+                color: $main_color;
+
+                &:hover {
+                    color: $hover_mc;
+                }
             }
         }
     }

@@ -27,12 +27,12 @@
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="search_AA00">
-                                <button class="btn">
+                                <button class="btn search_button_1">
                                     <i class="fal fa-search"></i>
                                 </button>
                             </span>
                         </div>
-                        <input type="text" class="search_input form-control" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
+                        <input type="text" class="search_input_1 form-control" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
                     </div>
                 </div>
                 <div class="WC_dropdown">
@@ -51,7 +51,7 @@
                             {/g_category_list}
                         </div>
                     </div>
-                    <input class="search_category_input" type="hidden" name="search_category_inp" value="{category_value}">
+                    <input class="search_category_input_1" type="hidden" name="search_category_inp" value="{category_value}">
                 </div>
                 <div class="WC_dropdown">
                     <div class="category_title WCD_title">
@@ -70,7 +70,7 @@
                             {/g_city_list}
                         </div>
                     </div>
-                    <input type="hidden" class="search_city_input" name="search_city_inp" value="{city_value}">
+                    <input type="hidden" class="search_city_input_1" name="search_city_inp" value="{city_value}">
                 </div>
             </div>
             <div class="left_field_navbar">
@@ -139,7 +139,7 @@
                         </p>
                     </li>
                     <li class="search_option">
-                        <input type="text" class="search_input form-control SN_inp" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
+                        <input type="text" class="search_input_2 form-control SN_inp" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
                         <div class="WC_dropdown">
                             <div class="category_title WCD_title">
                             <p></p>
@@ -156,7 +156,7 @@
                                     {/g_category_list}
                                 </div>
                             </div>
-                            <input class="search_category_input" type="hidden" name="search_category_inp" value="{category_value}">
+                            <input class="search_category_input_2" type="hidden" name="search_category_inp" value="{category_value}">
                         </div>
                         <div class="WC_dropdown">
                             <div class="category_title WCD_title">
@@ -175,9 +175,9 @@
                                     {/g_city_list}
                                 </div>
                             </div>
-                            <input type="hidden" class="search_city_input" name="search_city_inp" value="{city_value}">
+                            <input type="hidden" class="search_city_input_2" name="search_city_inp" value="{city_value}">
                         </div>
-                        <button class="btn submit_SV">جستجو</button>
+                        <button class="btn submit_SV search_button_2">جستجو</button>
                     </li>
                     {@ne key="{g_user_info}" value="{null}"}
                         <li>

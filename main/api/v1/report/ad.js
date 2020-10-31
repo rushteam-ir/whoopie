@@ -5,11 +5,12 @@ router.post('/', async(req, res, next)=>{
     try{
 
         let {report_type_inp, text_inp, ad_id_inp} = req.body;
+        let back_url = req.header('Referer') || '/';
 
         let validation_result = new Validation([
-            {value : ad_id_inp},
+            {value : ad_id_inp, type: 'empty'},
             {value : report_type_inp, type : 'number'},
-            {value : text_inp},
+            {value : text_inp, type: 'empty'},
         ]).check();
 
         if(validation_result){
@@ -33,7 +34,7 @@ router.post('/', async(req, res, next)=>{
             return res.json({
                 status : "success",
                 msg : "",
-                url : `${app_url}?w=${ad_id_inp}`
+                url : back_url
             });
 
         }

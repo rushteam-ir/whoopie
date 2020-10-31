@@ -1,5 +1,7 @@
-// report bug modal 
-$('#ads_bug_open').click(function () {
+// report bug modal
+$(document).on('click', '.ads_bug_open', function() {
+
+    $("input[name=ad_id_inp]").attr('value', $(this).attr('name'))
 
     $('#ads_bug').fadeIn();
     $('body').css('overflow' , 'hidden');
@@ -13,8 +15,22 @@ $('#ads_bug_open').click(function () {
 
 });
 
+// $('.ads_bug_open').click(function () {
+//
+//     $('#ads_bug').fadeIn();
+//     $('body').css('overflow' , 'hidden');
+//
+//     $('#close_AB').click(function () {
+//
+//         $('#ads_bug').fadeOut();
+//         $('body').css('overflow' , 'auto');
+//
+//     })
+//
+// });
+
 $(window).scroll(function() {
-    if($(window).scrollTop() == $(document).height() - $(window).height()) {
+    if($(window).scrollTop() >= $(document).height() - $(window).height()) {
 
         page_query = (parseInt(page_query) + 1).toString();
 
@@ -38,7 +54,7 @@ $(window).scroll(function() {
                     <div class="ads_card_field mb-4">
                         <div class="right_card_box">
                             <div class="RS_field">
-                                <button class="btn" id="ads_bug_open">
+                                <button class="btn ads_bug_open">
                                     <i class="fas fa-exclamation-circle" ></i>
                                 </button>
                                 <button class="btn">

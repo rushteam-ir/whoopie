@@ -28,13 +28,23 @@ let ad_schema = new mongoose.Schema({
 // Defining model statics
 ad_schema.statics = {
 
-    add : async (data)=>{
+    add : async (author, data)=>{
 
         data.created_date = getCurrentDate();
         data.unique_id = randomUUID();
 
-        let new_doc = new ad_model(data);
-        return await new_doc.save();
+        let user_ad_list = await ad_model.getAll(author);
+        if(user_ad_list.length < 4){
+
+            let new_doc = new ad_model(data);
+            return await new_doc.save();
+
+        }
+        else{
+
+            return null;
+
+        }
 
     },
 

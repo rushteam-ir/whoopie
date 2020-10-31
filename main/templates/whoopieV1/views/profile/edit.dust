@@ -6,7 +6,7 @@
 {/css}
 
 {<js}
-<script src="js/profile/profile.js"></script>
+<script src="js/profile/edit.js"></script>
 {/js}
 
 {<title}

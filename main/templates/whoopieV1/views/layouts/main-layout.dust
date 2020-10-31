@@ -187,6 +187,11 @@
                         </div>
                         <button class="btn submit_SV search_button_2">جستجو</button>
                     </li>
+                    <li class="login_SN">
+                        <a href="{app_url}">
+                            ورود به <span>ووپـــــــــــــــــــای</span>
+                        </a>
+                    </li>
                     {@ne key="{g_user_info}" value="{null}"}
                         <li>
                             <a href="{app_url}">

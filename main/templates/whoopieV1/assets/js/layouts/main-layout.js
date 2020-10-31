@@ -186,4 +186,18 @@ $(window).resize(function () {
 
     }
 
-})
+});
+
+// when user dont login to the site , sandwich nav bar just have 2 element(search icon and search option like selectes)
+// so when user dont login , search icon go to top and blow js fix this
+let SN_children = $('.SN_option').children().length;
+
+if(SN_children < 4){
+
+    $('#SV_S').addClass('mt-5');
+
+}else{
+
+    $('.login_SN').remove()
+    
+}

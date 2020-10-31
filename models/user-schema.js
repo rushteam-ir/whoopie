@@ -8,6 +8,10 @@ let user_schema = new mongoose.Schema({
         type : String,
         //unique : true,
     },
+    confirm_profile : {
+        type : Boolean,
+        default : false
+    },
     created_date : String,
     password : String,
     avatar : String,

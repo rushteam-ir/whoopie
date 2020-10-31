@@ -66,11 +66,11 @@
                                     </div>
                                 </div>
                                 <div class="ads_card_info">
-                                    <p>
-                                        {title}
+                                    <div>
+                                        <p>{title}</p>
                                         <span>#{category.title}</span>
-                                    </p>
-                                    <p>{summary}</p>
+                                    </div>
+                                    <p class="ads_summary">{summary}</p>
                                 </div>
                             </div>
                             <div class="left_card_box">

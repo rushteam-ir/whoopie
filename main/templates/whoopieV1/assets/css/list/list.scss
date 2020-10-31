@@ -130,33 +130,31 @@
 
         .ads_card_info {
 
-            p {
-                font-size: 0.9rem;
+            div {
                 line-height: 26px;
+                display: flex;
+                font-size: 1.7rem;
+                margin-bottom: 0;
+                margin-top: 10px;
+                font-weight: bold;
+                margin-top: 20px;
 
-                &:first-child {
-                    font-size: 1.7rem;
-                    margin-bottom: 0;
-                    line-height: 50px;
-                    margin-top: 10px;
-                    font-weight: bold;
-
-                    span {
-                        font-size: 0.9rem;
-                        position: relative;
-                        top: -2px;
-                        margin-right: 10px;
-                        color: #bebebe;
-                        font-weight: normal;
-                    }
+                span {
+                    font-size: 0.9rem;
+                    font-weight: normal;
+                    height: max-content;
+                    position: relative;
+                    top: 0px;
+                    right: 10px;
+                    color: #b6b6b6;
                 }
+            }
 
-                &:nth-child(2) {
-                    width: 100%;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
+            .ads_summary {
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }

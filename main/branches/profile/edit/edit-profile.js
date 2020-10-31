@@ -3,7 +3,7 @@ const router = express.Router();
 router.post('/', async(req, res, next)=>{
 
     try{
-        log(req.body)
+
         let {first_name_inp, last_name_inp, username_inp, email_inp, phone_number_inp, sex_inp, military_service_inp,
             marital_status_inp, city_inp, biography_inp, day_inp, month_inp, year_inp, c_contact_phone_number_inp,
             c_contact_email_inp, c_contact_whatsapp_inp, c_contact_instagram_inp, c_contact_telegram_inp,
@@ -109,6 +109,7 @@ router.post('/', async(req, res, next)=>{
             contact_telegram_type : c_telegram_type_inp,
             contact_telegram_id : contact_telegram_inp,
             contact_instagram_id : contact_instagram_inp,
+            confirm_profile : true
         }
 
         if(delete_avatar_inp == '1'){

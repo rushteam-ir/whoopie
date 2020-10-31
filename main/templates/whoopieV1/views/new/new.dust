@@ -19,96 +19,97 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
-                    <!-- kos kon -->
-                    <div class="row_custom row align-items-center">
-                        <div class="col-12">
-                            <div class="header_list">
-                                <h1>ثبت آگهی جدید</h1>
-                                <div class="empty_layout">
-                                    <p>برای ثبت آگهی در <span>ووپــــــــــای</span> اول باید پروفایلت رو از <a href="{app_url}@{g_user_info.username}/edit">اینجا</a> تکمیل کنی !</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- payan kos kon -->
-                    <div class="main_field_of_profile">
-                        <h1>ثبت آگهی جدید</h1>
-                        <div class="error_info warning_error">
-                            <i class="fal fa-exclamation-circle"></i>
-                            <p></p>
-                            <i class="fal fa-times"></i>
-                        </div>
-                        <form class="form_ajax" action="{app_url}new/add-advertising" method="post" enctype="multipart/form-data">
-                            <div class="form-group mt-3">
-                                <label for="ad_title">تیتر آگهی</label>
-                                <input id="test" type="text" class="form-control" id="ad_title" name="title_inp">
-                            </div>
-                            <div class="form-group mt-3">
-                                <label for="ad_description">توضیحات آگهی</label>
-                                <textarea type="text" class="form-control" id="ad_description" rows="5" name="summary_inp"></textarea>
-                            </div>
-                            <div class="row profile_wc">
-                                <div class="col-12">
-                                    <div class="WC_dropdown">
-                                        <label for="maried_select">دسته بندی</label>
-                                        <div class="category_title WCD_title"><p>دسته بندی</p><i class="fas fa-angle-down"></i></div>
-                                        <div class="select_click" id="sex_select"></div>
-                                        <div class="WCD_optopn">
-                                            <div>
-                                                {#g_category_list_new}
-                                                    <span value="{_id}">{title}</span>
-                                                {/g_category_list_new}
-                                            </div>
-                                        </div>
-                                        <input type="hidden" name="category_inp" value="{g_category_list_new[0]._id}">
+                    {@ne key="{g_user_info.confirm_profile}" value="true"}
+                        <div class="row_custom row align-items-center">
+                            <div class="col-12">
+                                <div class="header_list">
+                                    <h1>ثبت آگهی جدید</h1>
+                                    <div class="empty_layout">
+                                        <p>برای ثبت آگهی در <span>ووپــــــــــای</span> اول باید پروفایلت رو از <a href="{app_url}@{g_user_info.username}/edit">اینجا</a> تکمیل کنی !</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-3">
-                                <label for="more_description">توضیحات تکمیلی</label>
-                                <textarea type="text" class="form-control" id="more_description" rows="5" name="describe_inp"></textarea>
+                        </div>
+                    {:else}
+                        <div class="main_field_of_profile">
+                            <h1>ثبت آگهی جدید</h1>
+                            <div class="error_info warning_error">
+                                <i class="fal fa-exclamation-circle"></i>
+                                <p></p>
+                                <i class="fal fa-times"></i>
                             </div>
-                            <label class="partner_type">نوع همکاری</label>
-                            <div class="PT_checkbox">
-                                <input class="inp-cbx" id="remote" type="radio" checked="checked" name="type_inp" value="0" style="display: none"/>
-                                <label class="cbx" for="remote">
-                                    <span>
-                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                        </svg>
-                                    </span>
-                                    <span>حضوری</span>
-                                </label>
-                                <input class="inp-cbx" id="FTF" type="radio" name="type_inp" value="1" style="display: none"/>
-                                <label class="cbx" for="FTF">
-                                    <span>
-                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                        </svg>
-                                    </span>
-                                    <span>دور کاری</span>
-                                </label>
-                            </div>
-                            <div class="form-group position-relative">
-                                <label for="tags_field">برچسب ها</label>
-                                <input type="text" class="form-control main_form_design " id="tags_field">
-                                <button type="button" class="btn add_tags">
-                                    <i class="far fa-check"></i>
-                                </button>
-                                <div class="tags_lable_field">
-
+                            <form class="form_ajax" action="{app_url}new/add-advertising" method="post" enctype="multipart/form-data">
+                                <div class="form-group mt-3">
+                                    <label for="ad_title">تیتر آگهی</label>
+                                    <input id="test" type="text" class="form-control" id="ad_title" name="title_inp">
                                 </div>
-                            </div>
-                            <div class="form-group position-relative">
-                                <p class="chose_file_title">نمونه کار</p>
-                                <i class="fal fa-times-circle"></i>
-                                <label for="file_upload" class="chose_file_custom"><i class="fal fa-paperclip"></i> <span class="link_of_attach_file"></span></label>
-                                <input type="file" class="d-none file_ajax" name="portfolio_inp" id="file_upload" accept=".docx,.doc,.pdf,.md,.pptx,.ppt,.txt">
-                                <small class="small_inp_upload">* حداکثر حجم مجاز برای آپلود نمونه کار {portfolio_limited_size} مگابایت می باشد.</small>
-                            </div>
-                            <button type="submit" class="btn profile_sub">ثبت آگهی</button>
-                        </form>
-                    </div>
+                                <div class="form-group mt-3">
+                                    <label for="ad_description">توضیحات آگهی</label>
+                                    <textarea type="text" class="form-control" id="ad_description" rows="5" name="summary_inp"></textarea>
+                                </div>
+                                <div class="row profile_wc">
+                                    <div class="col-12">
+                                        <div class="WC_dropdown">
+                                            <label for="maried_select">دسته بندی</label>
+                                            <div class="category_title WCD_title"><p>دسته بندی</p><i class="fas fa-angle-down"></i></div>
+                                            <div class="select_click" id="sex_select"></div>
+                                            <div class="WCD_optopn">
+                                                <div>
+                                                    {#g_category_list_new}
+                                                        <span value="{_id}">{title}</span>
+                                                    {/g_category_list_new}
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="category_inp" value="{g_category_list_new[0]._id}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="more_description">توضیحات تکمیلی</label>
+                                    <textarea type="text" class="form-control" id="more_description" rows="5" name="describe_inp"></textarea>
+                                </div>
+                                <label class="partner_type">نوع همکاری</label>
+                                <div class="PT_checkbox">
+                                    <input class="inp-cbx" id="remote" type="radio" checked="checked" name="type_inp" value="0" style="display: none"/>
+                                    <label class="cbx" for="remote">
+                                    <span>
+                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg>
+                                    </span>
+                                        <span>حضوری</span>
+                                    </label>
+                                    <input class="inp-cbx" id="FTF" type="radio" name="type_inp" value="1" style="display: none"/>
+                                    <label class="cbx" for="FTF">
+                                    <span>
+                                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg>
+                                    </span>
+                                        <span>دور کاری</span>
+                                    </label>
+                                </div>
+                                <div class="form-group position-relative">
+                                    <label for="tags_field">برچسب ها</label>
+                                    <input type="text" class="form-control main_form_design " id="tags_field">
+                                    <button type="button" class="btn add_tags">
+                                        <i class="far fa-check"></i>
+                                    </button>
+                                    <div class="tags_lable_field">
+
+                                    </div>
+                                </div>
+                                <div class="form-group position-relative">
+                                    <p class="chose_file_title">نمونه کار</p>
+                                    <i class="fal fa-times-circle"></i>
+                                    <label for="file_upload" class="chose_file_custom"><i class="fal fa-paperclip"></i> <span class="link_of_attach_file"></span></label>
+                                    <input type="file" class="d-none file_ajax" name="portfolio_inp" id="file_upload" accept=".docx,.doc,.pdf,.md,.pptx,.ppt,.txt">
+                                    <small class="small_inp_upload">* حداکثر حجم مجاز برای آپلود نمونه کار {portfolio_limited_size} مگابایت می باشد.</small>
+                                </div>
+                                <button type="submit" class="btn profile_sub">ثبت آگهی</button>
+                            </form>
+                        </div>
+                    {/ne}
                 </div>
             </div>
         </div>  

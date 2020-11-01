@@ -149,7 +149,7 @@
                         <p></p>
                         <i class="fal fa-times"></i>
                     </div>
-                    <form class="form_ajax" method="post" action="{app_url}api/v1/report/ad" autocomplete="off">
+                    <form class="form_ajax" method="post" action="{app_url}api/v1/report/user" autocomplete="off">
                         <div class="WC_dropdown" id="AB_select">
                             <div class="category_title WCD_title"><p>انتخاب موضوع تخلف</p><i class="fas fa-angle-down"></i></div>
                             <div class="select_click" id="category_select"></div>
@@ -165,7 +165,7 @@
                         <div class="form-group">
                           <textarea class="form-control" id="ads_report_description" rows="10" name="text_inp"></textarea>
                         </div>
-                        <input type="hidden" name="ad_id_inp" value="{ad_info.unique_id}">
+                        <input type="hidden" name="user_id_inp" value="{user_info.username}">
                         <button type="submit" class="btn bug_sub">گزارش تخلف</button>
                     </form>
                 </div>

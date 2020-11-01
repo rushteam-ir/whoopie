@@ -103,57 +103,37 @@ ad_schema.statics = {
 
     getBySearch : async(search_inp, filters)=>{
 
-        let category_filter_list = await ad_model.find(filters.category ? {category : filters.category} : null).populate('author').populate('category');
-        let city_filter_list = [];
-        let final_list = [];
-        let search_query = search_inp.split(' ');
-
-        for(let doc of category_filter_list){
-
-            if(filters.city != '0'){
-
-                if(doc.author.city === filters.city) {
-
-                    city_filter_list.push(doc);
-
-                }
-
-            }
-            else{
-
-                city_filter_list.push(doc);
-
-            }
-
+        let query_filter = {};
+        if(filters.category){
+            query_filter.category = filters.category
+        }
+        if(filters.city != '0'){
+            query_filter.city = filters.city
         }
 
-        for(let doc of city_filter_list){
+        let filter_list = await ad_model.find(query_filter).populate('author').populate('category');
+        let final_list = [];
+
+        for(let doc of filter_list){
 
             let index_for_search = `${doc.title} ${doc.describe} ${doc.summary}
                                 ${doc.author.first_name} ${doc.author.last_name} `;
 
             if(doc.tags){
 
-                index_for_search += doc.tags.toString;
+                index_for_search += doc.tags.toString();
 
             }
 
-            doc.index_for_search = index_for_search.toLowerCase();
+            doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase());
 
-            for(let query of search_query){
-
-                if(doc.index_for_search.includes(query.toLowerCase())){
-
-                    final_list.push(doc);
-                    break;
-
-                }
-
+            if(doc.rate >= 0.03){
+                final_list.push(doc)
             }
 
         }
 
-        return final_list.slice((filters.page - 1) * 3, filters.page * 3);
+        return final_list.sort((a, b)=>{return b.rate-a.rate}).slice((filters.page - 1) * 3, filters.page * 3);
 
     }
 

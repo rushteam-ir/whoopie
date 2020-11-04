@@ -6,11 +6,11 @@ router.get('/', async(req, res, next)=>{
 
         let {ad_id} = req.query;
 
-        let find_ad = await ad_model.getById({unique_id : ad_id});
+        let find_ad = await ad_model.getByQuery({unique_id : ad_id});
 
         if(find_ad){
 
-            if(find_ad.author._id == req.session.user_info._id) {
+            if(find_ad.author._id === req.session.user_info._id) {
 
                 let result = await ad_model.delete(ad_id);
 

@@ -10,7 +10,7 @@ main.use(Global_Info);
 
 // Main rout branches
 const Api = require('./api/api');
-const Index = require('./branches/index/main');
+const Index = require('./branches/index');
 const New = require('./branches/new/new');
 const Edit = require('./branches/edit/edit');
 const List = require('./branches/list/list');

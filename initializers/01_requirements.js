@@ -1,5 +1,6 @@
 // Importing npm or system modules
 express = require('express');
+path = require('path');
 adaro = require('adaro');
 mongoose = require('mongoose');
 session = require('express-session');

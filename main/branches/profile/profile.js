@@ -9,7 +9,7 @@ router.get('/@:username', async(req, res, next)=>{
 
         let data = {
             user_info : user_info,
-            ads_list : await ad_model.getByUserName({author : user_info._id})
+            ads_list : await ad_model.getByQuery({author : user_info._id})
         }
 
         return res.render('profile/profile', data);

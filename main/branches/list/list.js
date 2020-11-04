@@ -5,7 +5,7 @@ router.get('/', async(req, res, next)=>{
     try{
 
         let data = {
-            ad_list_info : await ad_model.getAll(req.session.user_info)
+            ad_list_info : await ad_model.getByQuery({author : req.session.user_info})
         }
 
         res.render('list/list', data);

@@ -120,7 +120,7 @@
                                         <p class="header_of_portfolio">
                                             نمونه کار های من :
                                         </p>
-                                        <a href="{app_url}media/portfolios/{ad_info.portfolio}" class="portfolio_link mr-2">
+                                        <a href="{app_url}api/v1/download/{ad_info.unique_id}/{ad_info.portfolio}" class="portfolio_link mr-2">
                                             <i class="fal fa-download"></i>
                                         </a>
                                     </div>

@@ -5,12 +5,7 @@ log = function (param){
 
 isUndefined = function (obj){
 
-    if(typeof obj == 'undefined'){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return typeof obj == 'undefined';
 
 };
 

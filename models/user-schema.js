@@ -2,24 +2,33 @@
 let user_schema = new mongoose.Schema({
     username : {
         type : String,
-        //unique : true,
+        unique : true,
+        set : function(username){
+            return username.toLowerCase();
+        }
     },
     email : {
         type : String,
-        //unique : true,
+        unique : true,
+        set : function(email){
+            return email.toLowerCase();
+        }
     },
     confirm_profile : {
         type : Boolean,
         default : false
     },
-    created_date : String,
+    created_date : {
+        type : String,
+        default : getCurrentDate()
+    },
     password : String,
     avatar : String,
     first_name : String,
     last_name : String,
     phone_number : {
         type : String,
-        //unique : true,
+        unique : true,
     },
     sex : String,
     rep : {
@@ -48,32 +57,16 @@ user_schema.statics = {
 
     register : async (data)=>{
 
-        data.username = data.username.toLowerCase();
-        data.email = data.email.toLowerCase();
+        let hash_result = await bcrypt.hash(data.password, 10);
 
-        let find_user1 = await user_model.findOne({username : data.username});
-        let find_user2 = await user_model.findOne({email : data.email});
+        try{
+            data.password = hash_result;
 
-        if(!find_user1 && !find_user2){
-
-            let hash_result = await bcrypt.hash(data.password, 10);
-
-            if(hash_result){
-                data.password = hash_result;
-                data.created_date = getCurrentDate();
-
-                let new_doc = new user_model(data);
-                return await new_doc.save();
-            }
-            else{
-                return null;
-            }
-
+            let new_doc = new user_model(data);
+            return await new_doc.save();
         }
-        else{
-
+        catch (error){
             return null;
-
         }
 
     },
@@ -82,17 +75,12 @@ user_schema.statics = {
 
         data.username_or_email = data.username_or_email.toLowerCase();
 
-        let find_user1 = await user_model.findOne({username : data.username_or_email});
-        let find_user2 = await user_model.findOne({email : data.username_or_email});
+        let find_user = await user_model.findOne({$or : [{email : data.username_or_email}, {username : data.username_or_email}]});
 
-        if(find_user1){
+        if(find_user) {
 
-            return await bcrypt.compare(data.password, find_user1.password) ? find_user1 : null;
+            return await bcrypt.compare(data.password, find_user.password) ? find_user : null;
 
-        }
-        else if(find_user2){
-
-            return await bcrypt.compare(data.password, find_user2.password) ? find_user2 : null;
         }
         else{
 

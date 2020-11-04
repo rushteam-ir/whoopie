@@ -48,7 +48,7 @@ router.post('/', async(req, res, next)=>{
 
                         ad_data.portfolio = file_name;
 
-                        let result = await ad_model.add(ad_data);
+                        let result = await ad_model.add(req.session.user_info, ad_data);
 
                         if(result){
 
@@ -61,7 +61,7 @@ router.post('/', async(req, res, next)=>{
                         }
                         else{
 
-                            return res.json('مشکل برقراری ارتباط با سرور');
+                            return res.json('شما حداکثر تعداد آگهی خود را ثبت کرده اید.');
 
                         }
 
@@ -79,7 +79,7 @@ router.post('/', async(req, res, next)=>{
         }
         else{
 
-            let result = await ad_model.add(ad_data);
+            let result = await ad_model.add(req.session.user_info, ad_data);
 
             if(result){
 
@@ -92,7 +92,7 @@ router.post('/', async(req, res, next)=>{
             }
             else{
 
-                return res.json('مشکل برقراری ارتباط با سرور');
+                return res.json('شما حداکثر تعداد آگهی خود را ثبت کرده اید.');
 
             }
 

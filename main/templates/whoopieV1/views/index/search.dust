@@ -84,7 +84,11 @@
                                             <p>
                                                 {#g_city_list}
                                                     {@eq key="{$idx}" value="{author.city}"}
-                                                        {.}
+                                                        {@eq key="{$idx}" value="0"}
+                                                            شهر ثبت نشده
+                                                        {:else}
+                                                            {.}
+                                                        {/eq}
                                                     {/eq}
                                                 {/g_city_list}
                                                 <span class="mx-1"> | </span>

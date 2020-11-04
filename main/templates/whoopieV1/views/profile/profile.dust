@@ -6,6 +6,7 @@
 
 {<js}
 <script src="js/profile/profile.js"></script>
+<script src="js/custom/copy.js"></script>
 {/js}
 
 {<nav}

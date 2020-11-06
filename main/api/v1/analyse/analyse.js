@@ -5,7 +5,14 @@ router.post('/', async(req, res, next)=>{
     try{
 
         let {token_inp} = req.body;
-        await analyse_model.add({token : token_inp});
+        let token_model = {
+            token : token_inp,
+            user_agent : req.headers['user-agent'],
+            remote_address : req.connection.remoteAddress,
+        }
+
+        await analyse_model.add(token_model);
+
         req.session.token = token_inp;
         res.end();
 
@@ -19,4 +26,3 @@ router.post('/', async(req, res, next)=>{
 });
 
 module.exports = router;
-

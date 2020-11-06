@@ -4,6 +4,8 @@ let analyse_schema = new mongoose.Schema({
         type : String,
         unique : true
     },
+    user_agent : String,
+    remote_address : String,
     created_date : {
         type : String,
         default : getCurrentDate()

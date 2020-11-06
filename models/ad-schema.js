@@ -89,6 +89,7 @@ ad_schema.statics = {
       if(find_ad){
 
           if(!find_ad.downloads.includes(token_id)){
+              await ad_model.findByIdAndUpdate(find_ad._id, {$push : {downloads : token_id}});
               await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 1}});
           }
 

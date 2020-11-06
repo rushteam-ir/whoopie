@@ -45,7 +45,7 @@ router.post('/', async(req, res, next)=>{
         if (req.files) {
 
             let portfolio = req.files.portfolio_inp;
-            let file_name = `${req.session.user_info.username}_${randomUUID()}.${portfolio.name.split(".").pop()}`;
+            let file_name = `${randomSha1String()}.${portfolio.name.split(".").pop()}`;
 
             if(portfolio.size/(1024*1024) <= portfolio_limited_size){
 

@@ -22,7 +22,11 @@ let ad_schema = new mongoose.Schema({
         ref: 'user'
     },
     type : String,
-    reports : [Object]
+    reports : [Object],
+    downloads : {
+        type : Array,
+        default : []
+    }
 });
 
 // Defining model statics
@@ -63,7 +67,7 @@ ad_schema.statics = {
 
     getByQuery : async (data)=>{
 
-        let find_ad = await ad_model.findOne(data).populate('category').populate('author');
+        let find_ad = await ad_model.find(data).populate('category').populate('author');
 
         if(find_ad){
 
@@ -78,11 +82,17 @@ ad_schema.statics = {
 
     },
 
-    addRepByDownload : async(data)=>{
+    addRepByDownload : async(ad_id, token_id)=>{
 
-      let find_ad = await ad_model.findOne({unique_id : data});
+      let find_ad = await ad_model.findOne({unique_id : ad_id});
 
-      return await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 1}});
+      if(find_ad){
+
+          if(!find_ad.downloads.includes(token_id)){
+              await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 1}});
+          }
+
+      }
 
     },
 

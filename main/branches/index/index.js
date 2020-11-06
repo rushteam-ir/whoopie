@@ -32,15 +32,14 @@ router.get('/', async(req, res, next)=>{
         else if(!isUndefined(w)){
 
             // Watch an Ad
-            let watch_data = {
+            let ad_info = await ad_model.getByQuery({
                 unique_id : req.query.w,
-            }
-            let ad_info = await ad_model.getById(watch_data);
+            });
 
             if(ad_info){
 
                 let data = {
-                    ad_info : ad_info
+                    ad_info : ad_info[0]
                 }
 
                 return res.render('index/watch', data);

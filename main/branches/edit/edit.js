@@ -13,7 +13,7 @@ router.get('/:id', async(req, res, next)=>{
         if(ad_info){
 
             let data = {
-                ad_info : ad_info
+                ad_info : ad_info[0]
             }
             req.session.ad_id = ad_id;
 

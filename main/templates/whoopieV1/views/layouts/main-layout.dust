@@ -283,6 +283,8 @@
     <script src="js/custom/error-handler.js"></script>
     <script src="js/custom/main-error.js"></script>
     <script src="js/custom/form-ajax.js"></script>
+    <script src="js/general/fingerprint.js"></script>
+    <script src="js/custom/fingerprint.js"></script>
     {+js/}
 </body>
 

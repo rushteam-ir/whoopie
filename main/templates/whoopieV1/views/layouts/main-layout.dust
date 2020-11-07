@@ -246,6 +246,7 @@
         </div>
     </nav>
 
+    <!-- bug modal -->
     <section id="bug_modal">
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -264,6 +265,80 @@
             </div>
         </div>
     </section>
+
+        <!-- login modal -->
+
+        <section class="modal_mode" id="login_modal">
+            <div class="outer_layout"></div>
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="MF">    
+                        <i class="fas fa-times close_modal"></i>
+                        <p class="modal_header">ورود به <span>ووپــــــــــــــای</span></p>
+                        <div class="error_info warning_error">
+                            <i class="fal fa-exclamation-circle"></i>
+                            <p></p>
+                            <i class="fal fa-times"></i>
+                        </div>
+                        <!-- modal content -->
+                        <form>
+                            <div class="form-group">
+                                <label for="email_inp">نام کاربری یا ایمیل</label>
+                                <input type="text" class="form-control" id="email_inp"> 
+                            </div>
+                            <div class="form-group">
+                                <label for="pass_inp">پسورد</label>
+                                <input type="password" class="form-control" id="pass_inp">
+                            </div>
+                            <button type="submit" class="btn">ورود</button>
+                            <button type="submit" class="btn google_log mt-3">ورود با گوگل <i class="fab fa-google"></i></button>
+                        </form>
+                        <!-- modal content -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+            <!-- register modal -->
+    
+            <section class="modal_mode" id="regsiter_modal">
+                <div class="outer_layout"></div>
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="MF">    
+                            <i class="fas fa-times close_modal"></i>
+                            <p class="modal_header">ثبت نام در <span>ووپــــــــــــــای</span></p>
+                            <div class="error_info warning_error">
+                                <i class="fal fa-exclamation-circle"></i>
+                                <p></p>
+                                <i class="fal fa-times"></i>
+                            </div>
+                            <!-- modal content -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="username_inp">نام کاربری</label>
+                                    <input type="text" class="form-control" id="username_inp"> 
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg_email_inp">ایمل</label>
+                                    <input type="text" class="form-control" id="reg_email_inp"> 
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg_pass_inp">پسورد</label>
+                                    <input type="password" class="form-control" id="reg_pass_inp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="re_pass_inp">تکرار پسورد</label>
+                                    <input type="password" class="form-control" id="re_pass_inp">
+                                </div>
+                                <button type="submit" class="btn">ثبت نام</button>
+                                <button type="submit" class="btn google_log mt-3">عضویت با گوگل <i class="fab fa-google"></i></button>
+                            </form>
+                            <!-- modal content -->
+                        </div>
+                    </div>
+                </div>
+            </section>
 
     {+body/}
 
@@ -285,6 +360,7 @@
     <script src="js/custom/form-ajax.js"></script>
     <script src="js/general/fingerprint.js"></script>
     <script src="js/custom/fingerprint.js"></script>
+    <script src="js/custom/modal.js"></script>
     {+js/}
 </body>
 

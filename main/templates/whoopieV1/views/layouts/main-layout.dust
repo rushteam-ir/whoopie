@@ -281,14 +281,14 @@
                             <i class="fal fa-times"></i>
                         </div>
                         <!-- modal content -->
-                        <form>
+                        <form class="form_ajax" method="post" action="{app_url}api/v1/auth/login">
                             <div class="form-group">
                                 <label for="email_inp">نام کاربری یا ایمیل</label>
-                                <input type="text" class="form-control" id="email_inp"> 
+                                <input type="text" class="form-control" id="email_inp" name="username_or_email_inp">
                             </div>
                             <div class="form-group">
                                 <label for="pass_inp">پسورد</label>
-                                <input type="password" class="form-control" id="pass_inp">
+                                <input type="password" class="form-control" id="pass_inp" name="password_inp">
                             </div>
                             <button type="submit" class="btn">ورود</button>
                             <button type="submit" class="btn google_log mt-3">ورود با گوگل <i class="fab fa-google"></i></button>
@@ -314,22 +314,22 @@
                                 <i class="fal fa-times"></i>
                             </div>
                             <!-- modal content -->
-                            <form>
+                            <form class="form_ajax" method="post" action="{app_url}api/v1/auth/register">
                                 <div class="form-group">
                                     <label for="username_inp">نام کاربری</label>
-                                    <input type="text" class="form-control" id="username_inp"> 
+                                    <input type="text" class="form-control" id="username_inp" name="username_inp">
                                 </div>
                                 <div class="form-group">
                                     <label for="reg_email_inp">ایمل</label>
-                                    <input type="text" class="form-control" id="reg_email_inp"> 
+                                    <input type="text" class="form-control" id="reg_email_inp" name="email_inp">
                                 </div>
                                 <div class="form-group">
                                     <label for="reg_pass_inp">پسورد</label>
-                                    <input type="password" class="form-control" id="reg_pass_inp">
+                                    <input type="password" class="form-control" id="reg_pass_inp" name="password_inp">
                                 </div>
                                 <div class="form-group">
                                     <label for="re_pass_inp">تکرار پسورد</label>
-                                    <input type="password" class="form-control" id="re_pass_inp">
+                                    <input type="password" class="form-control" id="re_pass_inp" name="confirm_password_inp">
                                 </div>
                                 <button type="submit" class="btn">ثبت نام</button>
                                 <button type="submit" class="btn google_log mt-3">عضویت با گوگل <i class="fab fa-google"></i></button>

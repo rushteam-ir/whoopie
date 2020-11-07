@@ -58,9 +58,8 @@ router.get('/', async(req, res, next)=>{
 
             // Default page
             let data = {
-                category_list : await category_model.getAll()
+                main_page : true
             }
-
             return res.render('index/main', data);
 
         }

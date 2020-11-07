@@ -9,12 +9,6 @@
 <script src="js/custom/copy.js"></script>
 {/js}
 
-{<nav}
-    <div class="right_field" id="nav_LR">
-        <a href="{app_url}">ورود به <span>ووپـــــــــــــــــــای</span></a>
-    </div>
-{/nav}
-
 {<title}
     پروفایل {user_info.username}
 {/title}

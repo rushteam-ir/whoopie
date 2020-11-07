@@ -146,9 +146,7 @@ ad_schema.statics = {
 
             }
 
-            doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase()).toFixed(3);
-
-            log(doc.rate)
+            doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase());
 
             if(doc.rate >= 0.03){
                 final_list.push(doc);

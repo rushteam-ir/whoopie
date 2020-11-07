@@ -23,61 +23,65 @@
     <nav>
         <div class="main_field_of_navbar">
             <div class="midle_field">
-                <div class="search_nav">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                {@ne key="{main_page}" value="true"}
+                    <div class="search_nav">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
                             <span class="input-group-text" id="search_AA00">
                                 <button class="btn search_button_1">
                                     <i class="fal fa-search"></i>
                                 </button>
                             </span>
-                        </div>
-                        <input type="text" class="search_input_1 form-control" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
-                    </div>
-                </div>
-                <div class="WC_dropdown">
-                    <div class="category_title WCD_title">
-                    <p></p>
-                    <i class="fas fa-angle-down"></i></div>
-                    <div class="select_click" id="category_select"></div>
-                    <div class="WCD_optopn">
-                        <div>
-                            {#g_category_list}
-                                {@eq key="{category_value}" value="{_id}"}
-                                    <span selected="selected" value="{_id}">{title}</span>
-                                {:else}
-                                    <span value="{_id}">{title}</span>
-                                {/eq}
-                            {/g_category_list}
+                            </div>
+                            <input type="text" class="search_input_1 form-control" placeholder="دنبال چی می گردی ؟" aria-label="Username" aria-describedby="search_AA00" value="{search_value}">
                         </div>
                     </div>
-                    <input class="search_category_input_1" type="hidden" name="search_category_inp" value="{category_value}">
-                </div>
-                <div class="WC_dropdown">
-                    <div class="category_title WCD_title">
-                    <p>
-                    </p>
-                    <i class="fas fa-angle-down"></i></div>
-                    <div class="select_click" id="city_select"></div>
-                    <div class="WCD_optopn">
-                        <div>
-                            {#g_city_list}
-                                {@eq key="{city_value}" value="{$idx}"}
-                                    <span selected="selected" value="{$idx}">{.}</span>
-                                {:else}
-                                    <span value="{$idx}">{.}</span>
-                                {/eq}
-                            {/g_city_list}
+                    <div class="WC_dropdown">
+                        <div class="category_title WCD_title">
+                            <p></p>
+                            <i class="fas fa-angle-down"></i></div>
+                        <div class="select_click" id="category_select"></div>
+                        <div class="WCD_optopn">
+                            <div>
+                                {#g_category_list}
+                                    {@eq key="{category_value}" value="{_id}"}
+                                        <span selected="selected" value="{_id}">{title}</span>
+                                    {:else}
+                                        <span value="{_id}">{title}</span>
+                                    {/eq}
+                                {/g_category_list}
+                            </div>
                         </div>
+                        <input class="search_category_input_1" type="hidden" name="search_category_inp" value="{category_value}">
                     </div>
-                    <input type="hidden" class="search_city_input_1" name="search_city_inp" value="{city_value}">
-                </div>
+                    <div class="WC_dropdown">
+                        <div class="category_title WCD_title">
+                            <p>
+                            </p>
+                            <i class="fas fa-angle-down"></i></div>
+                        <div class="select_click" id="city_select"></div>
+                        <div class="WCD_optopn">
+                            <div>
+                                {#g_city_list}
+                                    {@eq key="{city_value}" value="{$idx}"}
+                                        <span selected="selected" value="{$idx}">{.}</span>
+                                    {:else}
+                                        <span value="{$idx}">{.}</span>
+                                    {/eq}
+                                {/g_city_list}
+                            </div>
+                        </div>
+                        <input type="hidden" class="search_city_input_1" name="search_city_inp" value="{city_value}">
+                    </div>
+                {/ne}
             </div>
-            <div class="left_field_navbar">
-                <a href="{app_url}">
-                    <img src="img/logo.png" alt="">
-                </a>
-            </div>
+            {@ne key="{main_page}" value="true"}
+                <div class="left_field_navbar">
+                    <a href="{app_url}">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+            {/ne}
             {@ne key="{g_user_info}" value="{null}"}
                 <div class="right_field">
                     <div class="profile_field">
@@ -122,7 +126,14 @@
                     </div>
                 </div>
             {:else}
-                {+nav/}
+                <div class="right_field">
+                    <div id="OLM">
+                        ورود
+                    </div>
+                    <div id="ORM">
+                        عضویت
+                    </div>
+                </div>
             {/ne}
             <div class="sandwich_nav">
                 <i class="fas fa-bars"></i>
@@ -187,11 +198,6 @@
                         </div>
                         <button class="btn submit_SV search_button_2">جستجو</button>
                     </li>
-                    <li class="login_SN">
-                        <a href="{app_url}">
-                            ورود به <span>ووپـــــــــــــــــــای</span>
-                        </a>
-                    </li>
                     {@ne key="{g_user_info}" value="{null}"}
                         <li>
                             <a href="{app_url}">
@@ -238,6 +244,15 @@
                                 <i class="fas fa-sign-out-alt"></i>
                                 خروج
                             </a>
+                        </li>
+                    {:else}
+                        <li id="OLM">
+                            <i class="fas fa-bug"></i>
+                            ورود
+                        </li>
+                        <li id="ORM">
+                            <i class="fas fa-bug"></i>
+                            عضویت
                         </li>
                     {/ne}
                 </ul>

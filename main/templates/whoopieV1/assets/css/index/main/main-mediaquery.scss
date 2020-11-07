@@ -1,266 +1,39 @@
-@media only screen and (min-width: 1300px) {
-
-    #register_modal .row .main_field_of_RM {
-        width: 70%;
-        margin-left: 15%;
-        position: relative;
-    }
-
-    #login_modal .row .main_field_of_LM {
-        width: 65%;
-        margin-left: 17.5%;
-        position: relative;
-    }
-
-}
-
 @media only screen and (max-width: 1300px) {
 
-    #register_modal .row .main_field_of_RM {
-        width: 80%;
-        margin-left: 10%;
-        position: relative;
-    }
-
-    #login_modal .row .main_field_of_LM {
-        width: 80%;
-        margin-left: 10%;
-        position: relative;
-    }
-
-}
-
-@media only screen and (max-width: 1150px) {
-
-    #register_modal .row .main_field_of_RM {
+    .index_field .icon_field {
         width: 90%;
-        margin-left: 5%;
-    }
-
-}
-
-@media only screen and (max-width: 1020px) {
-
-    #register_modal .row .main_field_of_RM {
-        width: 100%;
-        margin-left: 0%;
+        margin-right: 5%;
     }
 
 }
 
 @media only screen and (max-width: 992px) {
 
-    .main_sec .header_AA00 h1 {
-        font-size: 2.2rem;
+    .index_field .icon_field {
+        width: 96%;
+        margin-right: 2%;
     }
-
-    .main_sec .header_AA00 h2 {
-        color: #353535;
-        font-size: 1.1rem;
-        margin-top: 14px;
-    }
-
-    .main_sec .start_btn .start_btn_field {
-        padding: 10px;
-        padding: 16px 40px;
-        font-size: 1.4rem;
-        margin-top: 100px;
-    }
-
-    .main_sec .start_btn .start_btn_field .rocket_img {
-        top: -50px;
-        right: -40px;
-        width: 130px;
-    }
-
-    .main_sec .start_btn .start_btn_field .dashed_curved_img {
-        top: -64px;
-        width: 340px;
-        right: -53px;
-    }
-
-    .main_sec .have_accont p {
-        margin-top: 85px;
-        font-size: 1.1rem;
-    }
-
-    #register_modal .row .main_field_of_RM {
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    .main_sec .login_option a {
-        padding: 17px 20px;
-        font-size: 1.1rem;
-        margin-right: 10px;
-
-    }
-
-}
-
-@media only screen and (max-width: 880px) {
-
-    #register_modal .row .main_field_of_RM {
-        width: 90%;
-        margin-left: 5%;
-        
+    .index_field .icon_field div p {
+        width: 200px;
+        line-height: 30px;
     }
 
 }
 
 @media only screen and (max-width: 768px) {
 
-    .main_sec .header_AA00 h1 {
-        font-size: 2rem;
+    .index_field .icon_field {
+        width: 96%;
+        margin-right: 2%;
     }
-
-    .main_sec .header_AA00 h2 {
-        font-size: 1rem;
-    }
-
-    .main_sec .category_pill .pill_field p {
-        font-size: 0.9rem;
-    }
-
-    #register_modal .row .main_field_of_RM {
-        width: 80%;
-        margin-left: 10%;
-    }
-
-}
-
-@media only screen and (max-width: 700px) {
-
-    .main_sec .login_option a {
-        display: block;
-        width: 250px;
-        margin-bottom: 10px;
-    }
-
-}
-
-@media only screen and (max-width: 660px) {
-
-    #register_modal .row .main_field_of_RM {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-
-    #register_modal .row .main_field_of_RM {
-        width: 100%;
-        margin-left: 0%;
-    }
-
-}
-
-@media only screen and (max-width: 560px) {
-
-    .main_sec .header_AA00 h1 {
-        font-size: 1.9rem;
-    }
-
-    .main_sec .header_AA00 h2 {
-        font-size: 0.9rem;
-    }
-
-    .main_sec .start_btn .start_btn_field {
-        padding: 10px 40px;
-        font-size: 1.1rem;
-        margin-top: 100px;
-    }
-
-    .main_sec .start_btn .start_btn_field .rocket_img {
-        top: -40px;
-        right: -30px;
-        width: 110px;
-    }
-
-    .main_sec .start_btn .start_btn_field .dashed_curved_img {
-        top: -48px;
-        width: 270px;
-        right: -38px;
-    }
-
-    .main_sec .category_pill .pill_field div {
-        width: 30px;
-        padding: 10px;
-        height: 30px;
-        font-size: 1.1rem;
-        line-height: 8px;
-    }
-
-    .main_sec .category_pill .pill_field div span {
-        display: block;
-        position: relative;
-        top: 3.2px;
-        right: 0.1px;
-    }
-
-}
-
-@media only screen and (max-width: 500px) {
-
-    .main_sec .login_option a {
-        font-size: 0.9rem;
-        margin-right: 0px;
+    .index_field .icon_field div p {
         width: 200px;
-        padding: 15px 20px;
     }
 
-}
-
-@media only screen and (max-width: 432px) {
-
-    #login_modal .row .main_field_of_LM .header_of_log {
-        font-size: 1.8rem;
-    }
-
-}
-
-@media only screen and (max-width: 430px) {
-
-    #login_modal .row .main_field_of_LM {
-        width: 100%;
-        margin-left: 0%;
-        position: relative;
-    }
-
-    #register_modal .row .header_of_reg {
-        font-size: 1.8rem;
-    }
-
-    #register_modal .row .small_of_reg_header {
-        font-size: 0.9rem;
-    }
-
-    #register_modal .row .main_field_of_RM {
-        padding: 40px;
-    }
-
-    #register_modal .row .main_field_of_RM #close_rm {
-        right: 10px;
-    }
-
-    #register_modal .row .main_field_of_RM .rm_sub {
+    .index_field .RL_field button {
         font-size: 1.2rem;
-        height: 50px;
     }
 
 }
 
-@media only screen and (max-width: 390px) {
 
-    #login_modal .row .main_field_of_LM {
-        padding: 40px;
-    }
-
-    #login_modal .row .main_field_of_LM .LM_sub {
-        font-size: 1.2rem;
-        height: 50px;
-    }
-
-}

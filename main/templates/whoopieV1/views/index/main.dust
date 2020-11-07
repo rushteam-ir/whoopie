@@ -14,143 +14,28 @@
 {/title}
 
 {<body}
-    <section class="main_sec">
-        <div class="container-md">
-            <div class="row">
-                <div class="header_AA00">
-                    <h1>فرد مورد نظرت رو پیدا کن !</h1>
-                    <h2>مهارتی که دنبالشی رو انتخاب کن ، ما کمکت میکنیم بهترین فرد رو پیدا کنی . </h2>
-                </div>
-                <div class="category_pill">
-                    {#category_list}
-                        <a href="{app_url}?s=&c={_id}" class="pill_field">
-                            <div><span>#</span></div>
-                            <p>{title}</p>
-                        </a>
-                    {/category_list}
-                </div>
-                {@eq key="{g_user_info}" value="{null}"}
-                    <div class="start_btn">
-                        <button id="openRM"  class="btn start_btn_field">
-                            شروع کار با ووپـــــای !
-                            <img class="rocket_img" src="img/AR01.png" alt="">
-                            <img class="dashed_curved_img" src="img/AC02.png" alt="">
-                        </button>
-                    </div>
-                    <div Class="have_accont">
-                        <p>از قبل حساب کاربری داری ؟ از <button class="btn" href="" id="openLM">اینجا</button> وارد شوید !</p>
-                    </div>
-                {:else}
-
-                    <div class="username_and_image_field">
-                        <div class="user_image">
-                            <span></span>
-                            {@eq key="{g_user_info.avatar}" value="{null}"}
-                                <img src="img/AP03.png" alt="">
-                            {:else}
-                                <img src="media/avatars/{g_user_info.avatar}" alt="">
-                            {/eq}
-                            <span></span>
-                        </div>
-                        <div class="username_field">
-                            <span></span>   
-                            <p>{g_user_info.username} <i class="welcom_text">، خوش آمدید !</i></p>
-                            <span></span>   
-                        </div>
-                    </div>
-
-                    <div class="login_option">
-                        <a href="{app_url}new">
-                            ثبت آگهی جدید 
-                            <i class="fas fa-plus"></i>
-                        </a>
-                        <a href="{app_url}list">
-                            لیست آگهی های من
-                            <i class="fas fa-list"></i>
-                        </a>
-                        <a href="{app_url}@{g_user_info.username}">
-                            اطلاعات کاربری من
-                            <i class="fas fa-user-crown"></i>
-                        </a>
-                    </div>
-
-                {/eq}
-
-            </div>
+    <section class="index_field">
+        <h1>نیاز به دیده شدن داری ؟ چرا تو ووپای ؟ </h1>
+        <div class="h1BB"></div>
+        <div class="RL_field">
+            <button class="btn">وارد شو</button>
+            <button class="btn">ثبت نام کن</button>
         </div>
-    </section>
-
-    <!-- register -->
-    <section id="register_modal">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 ">
-                    <div class='main_field_of_RM'>
-                        <p class="header_of_reg">ثبت نام در <span>ووپــــــــای</span></p>
-                        <p class="small_of_reg_header">در کم تر از 1 دقیقه ثبت نام کن ! </p>
-                        <div class="error_info warning_error">
-                            <i class="fal fa-exclamation-circle"></i>
-                            <p></p>
-                            <i class="fal fa-times"></i>
-                        </div>
-                        <form class="form_ajax" action="{app_url}api/v1/auth/register" method="post" autocomplete="off">
-                            <div class="form-group">
-                              <label for="reg_username">نام کاربری</label>
-                              <input type="text" class="form-control" id="reg_username" name="username_inp">
-                            </div>
-                            <div class="form-group">
-                              <label for="reg_email">پست الکترونیکی</label>
-                              <input type="text" class="form-control" id="reg_email" name="email_inp">
-                            </div>
-                            <div class="form-group">
-                              <label for="reg_pass">رمز عبور</label>
-                              <input type="password" class="form-control" id="reg_pass" name="password_inp">
-                            </div>
-                            <div class="form-group">
-                              <label for="reg_repass">تکرار رمز عبور</label>
-                              <input type="password" class="form-control" id="reg_repass" name="confirm_password_inp">
-                            </div>
-                            <button type="submit" class="btn rm_sub">ثبت نام</button>
-                            <button type="submit" class="btn rm_sub google_login">ثبت نام با گوگل <i class="fab fa-google"></i></button>
-                        </form>
-                        <button class="btn" id="close_rm">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </div>
+        <p class="full_description">
+            میتونی هر مهارتی که داری رو تو یه سیستم جامع مهارت یابی به اشتراک بزاری فرقی نمیکنه برنامه نویسی ، خوب ساز میزنی ،آشپز نمونه ای هستی و یا حتی تو  نوشتن مشق های ریاضی مهارت داریمیتونی هر مهارتی که داری رو تو یه سیستم جامع مهارت یابی به اشتراک بزاری فرقی نمیکنه برنامه نویسی ، خوب ساز میزنی ،آشپز نمونه ای هستی و یا حتی تو  نوشتن مشق های ریاضی مهارت داری
+        </p>
+        <div class="icon_field">
+            <div>
+                <img src="img/AI00.png" alt="">
+                <p>میتونی بدون  پرداخت پول از تمام امکانات ووپـــــــــای استفاده کنی بدون اینکه محدود شده باشی</p>
             </div>
-        </div>
-    </section>
-
-    <!-- login -->
-    <section id="login_modal">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                    <div class="main_field_of_LM">
-                        <p class="header_of_log">وررود به  <span>ووپــــــــای</span></p>
-                        <div class="error_info warning_error">
-                            <i class="fal fa-exclamation-circle"></i>
-                            <p></p>
-                            <i class="fal fa-times"></i>
-                        </div>
-                        <form class="form_ajax" action="{app_url}api/v1/auth/login" method="post" autocomplete="off">
-                            <div class="form-group">
-                              <label for="reg_username">نام کاربری یا پست الکترونیکی</label>
-                              <input type="text" class="form-control" id="reg_username" name="username_or_email_inp">
-                            </div>
-                            <div class="form-group">
-                              <label for="log_password">رمز عبور</label>
-                              <input type="password" class="form-control" id="log_password" name="password_inp">
-                            </div>
-                            <button type="submit" class="btn LM_sub">وررود</button>
-                            <button type="submit" class="btn LM_sub google_login"> وررود با گوگل <i class="fab fa-google"></i></button>
-                        </form>
-                        <button class="btn" id="close_Lm">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </div>
+            <div>
+                <img src="img/AI01.png" alt="">
+                <p>میتونی بدون  پرداخت پول از تمام امکانات ووپـــــــــای استفاده کنی بدون اینکه محدود شده باشی</p>
+            </div>
+            <div>
+                <img src="img/AI02.png" alt="">
+                <p>میتونی بدون  پرداخت پول از تمام امکانات ووپـــــــــای استفاده کنی بدون اینکه محدود شده باشی</p>
             </div>
         </div>
     </section>

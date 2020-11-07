@@ -15,7 +15,6 @@ analyse_schema.statics = {
             return await new_doc.save();
         }
         catch (error){
-            log(error)
             return null;
         }
 

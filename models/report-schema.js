@@ -2,31 +2,37 @@
 let report_schema = new mongoose.Schema({
     type : String,
     text : String,
-    created_date : Date,
+    created_date : {
+        type : String,
+        default : getCurrentDate()
+    },
+    token : {
+        type : 'String',
+        ref : 'analyse'
+    },
+    model_id : String,
     url : String,
-    who : Object,
-    user_agent : String,
-    remote_address : String,
 });
 
 // Defining model statics
 report_schema.statics = {
 
-    addGeneral : async (data)=>{
+    add : async (data)=>{
 
-        data.created_date = new Date();
+        try{
 
-        let new_doc = new report_model(data);
-        return await new_doc.save();
+            let new_doc = new report_model(data);
+            return await new_doc.save();
+
+        }
+        catch(err){
+
+            log(err)
+            return null;
+
+        }
 
     },
-
-    addAd : async (ad_inp, data)=>{
-
-        data.created_date = new Date();
-        return await ad_model.findOneAndUpdate({unique_id: ad_inp}, {$push: {reports: data}});
-
-    }
 
 };
 

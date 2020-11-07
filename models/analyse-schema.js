@@ -1,15 +1,8 @@
 // Defining schema model
 let analyse_schema = new mongoose.Schema({
-    token : {
-        type : String,
-        unique : true
-    },
+    _id : String,
     user_agent : String,
     remote_address : String,
-    created_date : {
-        type : String,
-        default : getCurrentDate()
-    }
 });
 
 // Defining model statics

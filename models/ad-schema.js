@@ -22,8 +22,11 @@ let ad_schema = new mongoose.Schema({
         ref: 'user'
     },
     type : String,
-    reports : [Object],
     downloads : {
+        type : Array,
+        default : []
+    },
+    watched : {
         type : Array,
         default : []
     }
@@ -82,18 +85,40 @@ ad_schema.statics = {
 
     },
 
-    addRepByDownload : async(ad_id, token_id)=>{
+    addRepByDownload : async(ad_id, file_name, token_id)=>{
 
-      let find_ad = await ad_model.findOne({unique_id : ad_id});
+      let find_ad = await ad_model.findOne({unique_id : ad_id, portfolio : file_name});
 
       if(find_ad){
 
           if(!find_ad.downloads.includes(token_id)){
               await ad_model.findByIdAndUpdate(find_ad._id, {$push : {downloads : token_id}});
-              await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 1}});
+              await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 2}});
           }
 
+          return find_ad;
+
       }
+      else{
+
+          return null;
+
+      }
+
+    },
+
+    addRepByWatch : async(ad_id, token_id)=>{
+
+        let find_ad = await ad_model.findOne({unique_id : ad_id});
+
+        if(find_ad){
+
+            if(!find_ad.watched.includes(token_id)){
+                await ad_model.findByIdAndUpdate(find_ad._id, {$push : {watched : token_id}});
+                await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 1}});
+            }
+
+        }
 
     },
 
@@ -121,7 +146,9 @@ ad_schema.statics = {
 
             }
 
-            doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase());
+            doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase()).toFixed(3);
+
+            log(doc.rate)
 
             if(doc.rate >= 0.03){
                 final_list.push(doc);
@@ -132,7 +159,19 @@ ad_schema.statics = {
 
         }
 
-        return final_list.sort((a, b)=>{return b.rate-a.rate}).slice((filters.page - 1) * 3, filters.page * 3);
+        return final_list.sort((a, b)=>{
+
+            let rate_a = a.rate;
+            let rate_b = b.rate;
+            let rep_a = a.author.rep;
+            let rep_b = b.author.rep;
+
+            if(rep_a > rep_b) return 1;
+            if(rep_a < rep_b) return -1;
+            if(rate_a > rate_b) return 1;
+            if(rate_a < rate_b) return -1;
+
+        }).slice((filters.page - 1) * 3, filters.page * 3);
 
     }
 

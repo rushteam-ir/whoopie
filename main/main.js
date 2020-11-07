@@ -31,16 +31,16 @@ main.use(async (req, res, next)=>{
 // Handle main rout 500 error
 main.use(async (error, req, res, next)=>{
 
+    let full_url = req.protocol + '://' + req.get('host') + req.originalUrl;
     let report_data = {
         type : '500',
         text : error,
-        url : req._parsedOriginalUrl.path,
-        who : req.session.user_info,
-        user_agent : req.headers['user-agent'],
-        remote_address : req.connection.remoteAddress,
+        model_id : null,
+        token : req.session.token,
+        url : full_url
     }
 
-    await report_model.addGeneral(report_data);
+    await report_model.add(report_data);
 
     res.status(500).render('errors/500', {error});
 

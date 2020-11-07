@@ -26,7 +26,7 @@
                           </button>
                       </span>
                     </div>
-                    <input type="text" class="form-control search_index_inp" placeholder="دنبال چه مهارتی میگردی ؟" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control search_index_inp search_input_1" placeholder="دنبال چه مهارتی میگردی ؟" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
             <div class="WC_dropdown">

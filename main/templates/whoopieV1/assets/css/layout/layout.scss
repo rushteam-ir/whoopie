@@ -7,13 +7,10 @@
 $inpBorderRad: 15px;
 
 body {
-    background-image: url(../../img/AB00.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
     margin-bottom: 50px;
     overflow-x: hidden;
+    background-color: rgb(240, 240, 240);
+    position: relative;
 }
 
 // footer

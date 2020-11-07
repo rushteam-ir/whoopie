@@ -15,16 +15,73 @@
 
 {<body}
     <section class="index_field">
+        <img class="index_logo" src="img/logo.png" alt="">
+        <div class="index_search">
+            <div class="search_nav">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text search_index_button" id="basic-addon1">
+                          <button class="search_button_1 btn">
+                            <i class="fal fa-search"></i>
+                          </button>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control search_index_inp" placeholder="دنبال چه مهارتی میگردی ؟" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="WC_dropdown">
+                <div class="category_title WCD_title">
+                <p></p>
+                <i class="fas fa-angle-down"></i></div>
+                <div class="select_click" id="category_select_index"></div>
+                <div class="WCD_optopn">
+                    <div>
+                        {#g_category_list}
+                            {@eq key="{category_value}" value="{_id}"}
+                                <span selected="selected" value="{_id}">{title}</span>
+                            {:else}
+                                <span value="{_id}">{title}</span>
+                            {/eq}
+                        {/g_category_list}
+                    </div>
+                </div>
+                <input class="search_category_input_1" type="hidden" name="search_category_inp" value="{category_value}">
+            </div>
+            <div class="WC_dropdown">
+                <div class="category_title WCD_title">
+                <p>
+                </p>
+                <i class="fas fa-angle-down"></i></div>
+                <div class="select_click" id="city_select_index"></div>
+                <div class="WCD_optopn">
+                    <div>
+                        {#g_city_list}
+                            {@eq key="{city_value}" value="{$idx}"}
+                                <span selected="selected" value="{$idx}">{.}</span>
+                            {:else}
+                                <span value="{$idx}">{.}</span>
+                            {/eq}
+                        {/g_city_list}
+                    </div>
+                </div>
+                <input type="hidden" class="search_city_input_1" name="search_city_inp" value="{city_value}">
+            </div>
+        </div>
+
         <h1>نیاز به دیده شدن داری ؟ چرا تو ووپای ؟ </h1>
         <div class="h1BB"></div>
-        <div class="RL_field">
-            <button class="btn">وارد شو</button>
-            <button class="btn">ثبت نام کن</button>
-        </div>
         <p class="full_description">
             میتونی هر مهارتی که داری رو تو یه سیستم جامع مهارت یابی به اشتراک بزاری فرقی نمیکنه برنامه نویسی ، خوب ساز میزنی ،آشپز نمونه ای هستی و یا حتی تو  نوشتن مشق های ریاضی مهارت داریمیتونی هر مهارتی که داری رو تو یه سیستم جامع مهارت یابی به اشتراک بزاری فرقی نمیکنه برنامه نویسی ، خوب ساز میزنی ،آشپز نمونه ای هستی و یا حتی تو  نوشتن مشق های ریاضی مهارت داری
         </p>
+        <div class="RL_field">
+            <button class="btn" id="OLM">وارد شو</button>
+            <button class="btn" id="ORM">ثبت نام کن</button>
+        </div>
         <div class="icon_field">
+            <div>
+                <img src="img/AI02.png" alt="">
+                <p>میتونی بدون  پرداخت پول از تمام امکانات ووپـــــــــای استفاده کنی بدون اینکه محدود شده باشی</p>
+            </div>
             <div>
                 <img src="img/AI00.png" alt="">
                 <p>میتونی بدون  پرداخت پول از تمام امکانات ووپـــــــــای استفاده کنی بدون اینکه محدود شده باشی</p>
@@ -33,10 +90,7 @@
                 <img src="img/AI01.png" alt="">
                 <p>میتونی بدون  پرداخت پول از تمام امکانات ووپـــــــــای استفاده کنی بدون اینکه محدود شده باشی</p>
             </div>
-            <div>
-                <img src="img/AI02.png" alt="">
-                <p>میتونی بدون  پرداخت پول از تمام امکانات ووپـــــــــای استفاده کنی بدون اینکه محدود شده باشی</p>
-            </div>
         </div>
     </section>
+
 {/body}

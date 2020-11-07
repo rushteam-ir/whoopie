@@ -125,6 +125,10 @@
                         </a>
                     </div>
                 </div>
+                <div class="rep_field">
+                    <span>20</span>
+                    <i class="fal fa-smile-beam"></i>
+                </div>
             {:else}
                 <div class="right_field">
                     <button class="LRB btn OLM">

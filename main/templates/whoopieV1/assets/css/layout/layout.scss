@@ -173,6 +173,28 @@ nav {
         }
     }
 
+    .rep_field {
+        position: absolute;
+        right: 180px;
+        top: 6px;
+        font-size: 1.4rem;
+        color: $main_color;
+
+        span {
+            font-size: 0.9rem;
+            font-weight: bold;
+            position: relative;
+            top: -3px;
+            right: 7px;
+            border-bottom: 1px dashed $main_color;
+            cursor: help;
+
+            &:hover{
+                color: $hover_mc;
+            }
+        }
+    }
+
     .left_field_navbar {
         position: absolute;
         left: 20px;
@@ -462,6 +484,7 @@ nav {
 
 
 
-.OLM , .ORM{
+.OLM,
+.ORM {
     cursor: pointer;
 }

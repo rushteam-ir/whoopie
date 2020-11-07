@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="rep_field">
-                    <span>20</span>
+                    <span>{g_user_info.rep}</span>
                     <i class="fal fa-smile-beam"></i>
                 </div>
             {:else}

@@ -136,37 +136,37 @@
                         <hr>
                         <div class="contact_ways">
                             {@eq key="{ad_info.author.contact_phone}" value="true"}
-                                <a href="tel:{ad_info.author.phone_number}">
+                                <a target="_blank" href="tel:{ad_info.author.phone_number}">
                                     <i class="far fa-phone"></i>
                                     {ad_info.author.phone_number}
                                 </a>
                             {/eq}
                             {@eq key="{ad_info.author.contact_email}" value="true"}
-                                <a href="mailto:{ad_info.author.email}">
+                                <a target="_blank" href="mailto:{ad_info.author.email}">
                                     <i class="far fa-at"></i>
                                     {ad_info.author.email}
                                 </a>
                             {/eq}
                             {@eq key="{ad_info.author.contact_whatsapp}" value="true"}
-                                <a href="https://wa.me/+98{ad_info.author.phone_number}">
+                                <a target="_blank" href="https://wa.me/+98{ad_info.author.phone_number}">
                                     <i class="fab fa-whatsapp"></i>
                                     {ad_info.author.phone_number}
                                 </a>
                             {/eq}
                             {@eq key="{ad_info.author.contact_instagram}" value="true"}
-                                <a href="https://www.instagram.com/{ad_info.author.contact_instagram_id}">
+                                <a target="_blank" href="https://www.instagram.com/{ad_info.author.contact_instagram_id}">
                                     <i class="fab fa-instagram"></i>
                                     {ad_info.author.contact_instagram_id}
                                 </a>
                             {/eq}
                             {@eq key="{ad_info.author.contact_telegram}" value="true"}
                                 {@eq key="{ad_info.author.contact_telegram_type}" value="0"}
-                                <a>
+                                <a target="_blank">
                                     <i class="fab fa-telegram-plane"></i>
                                     {ad_info.author.phone_number}
                                 </a>
                                 {:else}
-                                <a href="https://t.me/{ad_info.author.contact_telegram_id}">
+                                <a target="_blank" href="https://t.me/{ad_info.author.contact_telegram_id}">
                                     <i class="fab fa-telegram-plane"></i>
                                     {ad_info.author.contact_telegram_id}
                                 </a>

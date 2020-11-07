@@ -50,8 +50,9 @@
                             </div>
                             <input type="hidden" name="delete_avatar_inp">
                             <div class="form-group mt-3">
-                                <label for="name">نام</label>
+                                <label for="name">نام<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="name" name="first_name_inp" value="{user_info.first_name}">
+                                <small>نام باید فارسی باشد .</small>
                             </div>
                             <div class="form-group">
                                 <label for="family">نام خانوادگی</label>

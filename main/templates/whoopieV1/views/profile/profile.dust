@@ -6,7 +6,6 @@
 
 {<js}
 <script src="js/profile/profile.js"></script>
-<script src="js/custom/copy.js"></script>
 {/js}
 
 {<title}
@@ -39,6 +38,11 @@
                         </button>
                         <button class="btn">
                             <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="btn">
+                            <a href="{app_url}@{g_user_info.username}/edit">
+                                <i class="fas fa-pencil"></i>
+                            </a>
                         </button>
                     </div>
                     <div class="about_me">

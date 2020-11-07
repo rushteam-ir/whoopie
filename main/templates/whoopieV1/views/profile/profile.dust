@@ -33,17 +33,21 @@
                         </div>
                     </div>
                     <div class="prodile_option">
-                        <button class="btn" id="ads_bug_open">
-                            <i class="fas fa-exclamation-circle"></i>
-                        </button>
+                        {@ne key="{g_user_info._id}" value="{user_info._id}"}
+                            <button class="btn" id="ads_bug_open">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </button>
+                        {/ne}
                         <button class="btn">
                             <i class="fas fa-share-alt"></i>
                         </button>
-                        <button class="btn">
-                            <a href="{app_url}@{g_user_info.username}/edit">
-                                <i class="fas fa-pencil"></i>
-                            </a>
-                        </button>
+                        {@eq key="{g_user_info._id}" value="{user_info._id}"}
+                            <button class="btn">
+                                <a href="{app_url}@{g_user_info.username}/edit">
+                                    <i class="fas fa-pencil"></i>
+                                </a>
+                            </button>
+                        {/eq}
                     </div>
                     <div class="about_me">
                         <p><span>درباره من :</span>{user_info.biography}</p>

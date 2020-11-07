@@ -38,6 +38,8 @@ router.get('/', async(req, res, next)=>{
 
             if(ad_info){
 
+                await ad_model.addRepByWatch(req.query.w, req.session.token);
+
                 let data = {
                     ad_info : ad_info[0]
                 }

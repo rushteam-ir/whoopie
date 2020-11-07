@@ -22,8 +22,11 @@ let ad_schema = new mongoose.Schema({
         ref: 'user'
     },
     type : String,
-    reports : [Object],
     downloads : {
+        type : Array,
+        default : []
+    },
+    watched : {
         type : Array,
         default : []
     }
@@ -82,18 +85,40 @@ ad_schema.statics = {
 
     },
 
-    addRepByDownload : async(ad_id, token_id)=>{
+    addRepByDownload : async(ad_id, file_name, token_id)=>{
 
-      let find_ad = await ad_model.findOne({unique_id : ad_id});
+      let find_ad = await ad_model.findOne({unique_id : ad_id, portfolio : file_name});
 
       if(find_ad){
 
           if(!find_ad.downloads.includes(token_id)){
               await ad_model.findByIdAndUpdate(find_ad._id, {$push : {downloads : token_id}});
-              await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 1}});
+              await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 2}});
           }
 
+          return find_ad;
+
       }
+      else{
+
+          return null;
+
+      }
+
+    },
+
+    addRepByWatch : async(ad_id, token_id)=>{
+
+        let find_ad = await ad_model.findOne({unique_id : ad_id});
+
+        if(find_ad){
+
+            if(!find_ad.watched.includes(token_id)){
+                await ad_model.findByIdAndUpdate(find_ad._id, {$push : {watched : token_id}});
+                await user_model.findByIdAndUpdate(find_ad.author, {$inc : {rep : 1}});
+            }
+
+        }
 
     },
 

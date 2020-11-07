@@ -1,12 +1,7 @@
 const router = express.Router();
 
-// Initiating all Auth sub routes
-const general = require('./general');
-const ad = require('./ad');
-const user = require('./user');
+const send = require('./send');
 
-router.use('/general', general);
-router.use('/ad', ad);
-router.use('/user', user);
+router.use('/user', send);
 
 module.exports = router;

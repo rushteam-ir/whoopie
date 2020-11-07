@@ -127,12 +127,12 @@
                 </div>
             {:else}
                 <div class="right_field">
-                    <div id="OLM">
+                    <button class="LRB btn OLM">
                         ورود
-                    </div>
-                    <div id="ORM">
+                    </button>
+                    <button class="LRB btn ORM">
                         عضویت
-                    </div>
+                    </button>
                 </div>
             {/ne}
             <div class="sandwich_nav">
@@ -151,7 +151,7 @@
                     </div>
                 {/ne}
                 <ul class="SN_option">
-                    <li id="SV_S">
+                    <li id="SV_S" class="mt-5">
                         <p>
                             <i class="fal fa-search"></i>
                             جستجو
@@ -246,12 +246,12 @@
                             </a>
                         </li>
                     {:else}
-                        <li id="OLM">
-                            <i class="fas fa-bug"></i>
+                        <li class="OLM">
+                            <i class="fas fa-sign-in-alt"></i>
                             ورود
                         </li>
-                        <li id="ORM">
-                            <i class="fas fa-bug"></i>
+                        <li class="ORM">
+                            <i class="far fa-address-card"></i>
                             عضویت
                         </li>
                     {/ne}

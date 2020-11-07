@@ -8,7 +8,7 @@ $('.close_modal').click(function () {
 });
 
 // open login modal
-$('#OLM').click(function () {
+$('.OLM').click(function () {
 
     $('#login_modal').fadeIn();
     $('body').css('overflow', 'hidden');
@@ -16,7 +16,7 @@ $('#OLM').click(function () {
 });
 
 // open login modal
-$('#ORM').click(function () {
+$('.ORM').click(function () {
 
     $('#regsiter_modal').fadeIn();
     $('body').css('overflow', 'hidden');

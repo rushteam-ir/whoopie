@@ -142,6 +142,7 @@ nav {
                 position: relative;
                 top: 20px;
                 overflow: hidden;
+                box-shadow: 0px 0px 10px -1px #00000026;
 
                 a {
                     display: block;
@@ -159,6 +160,14 @@ nav {
                         color: $main_color;
                         font-size: 01rem;
                     }
+                }
+            }
+
+            .LRB {
+                margin-top: 7px;
+
+                &:hover {
+                    color: $main_color;
                 }
             }
         }
@@ -437,15 +446,22 @@ nav {
     opacity: 0.3;
 }
 
-.change_background{
+.change_background {
     background-color: #3A3A3A;
 }
 
-.login_SN{
+.login_SN {
     cursor: pointer;
 
-    span{
+    span {
         color: $main_color;
         font-weight: bold;
     }
+}
+
+
+
+
+.OLM , .ORM{
+    cursor: pointer;
 }

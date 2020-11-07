@@ -13,6 +13,7 @@
         width: 96%;
         margin-right: 2%;
     }
+
     .index_field .icon_field div p {
         width: 200px;
         line-height: 30px;
@@ -26,6 +27,7 @@
         width: 96%;
         margin-right: 2%;
     }
+
     .index_field .icon_field div p {
         width: 200px;
     }
@@ -34,6 +36,85 @@
         font-size: 1.2rem;
     }
 
+    .index_field .index_search {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .index_field .index_search .search_index_inp {
+        width: 450px;
+    }
+
+    .WC_dropdown {
+        width: 35%;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .WC_dropdown .WCD_optopn {
+        width: 100%;
+    }
+
+    .WC_dropdown .WCD_title {
+        width: 100%;
+    }
+
+    .search_nav {
+        width: 70%;
+    }
+
+
 }
 
+@media only screen and (max-width: 680px) {
 
+    .index_field .icon_field div p {
+        width: 170px;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .index_field .icon_field {
+        flex-wrap: wrap;
+    }
+
+    .index_field .icon_field div {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .index_field .icon_field div img {
+        width: 60px;
+    }
+
+    .index_field .icon_field div p {
+        width: 350px;
+        font-size: 1.1rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .index_field h1 {
+        font-size: 1.4rem;
+    }
+    .index_field .full_description {
+        margin-right: 15%;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 470px) {
+
+    .index_field .icon_field div p {
+        width: 170px;
+        font-size: 0.9rem;
+    }
+
+}

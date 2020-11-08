@@ -36,7 +36,7 @@ router.get('/', async(req, res, next)=>{
                 unique_id : req.query.w,
             });
 
-            if(ad_info){
+            if(ad_info.length !== 0){
 
                 await ad_model.addRepByWatch(req.query.w, req.session.token);
 

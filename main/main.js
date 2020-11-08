@@ -14,12 +14,14 @@ const Index = require('./branches/index');
 const New = require('./branches/new/new');
 const Edit = require('./branches/edit/edit');
 const List = require('./branches/list/list');
+const Docs = require('./branches/docs/docs');
 
 main.use('/api', Api);
 main.use('/', Index);
 main.use('/new', New);
 main.use('/edit', Edit);
 main.use('/list', List);
+main.use('/docs', Docs);
 
 // Handle main rout 404 error
 main.use(async (req, res, next)=>{

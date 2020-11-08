@@ -119,6 +119,10 @@
                             <i class="fas fa-bug"></i>
                             گزارش باگ
                         </a>
+                        <a href="{app_url}docs">
+                            <i class="far fa-file-alt"></i>
+                            مستندات
+                        </a>
                         <a href="{app_url}api/v1/auth/logout">
                             <i class="fas fa-sign-out-alt"></i>
                             خروج
@@ -137,6 +141,9 @@
                     <button class="LRB btn ORM">
                         عضویت
                     </button>
+                    <a href="{app_url}docs" class="LRB btn">
+                        مستندات
+                    </a>
                 </div>
             {/ne}
             <div class="sandwich_nav">
@@ -204,12 +211,6 @@
                     </li>
                     {@ne key="{g_user_info}" value="{null}"}
                         <li>
-                            <a href="{app_url}">
-                                <i class="fas fa-home"></i>
-                                خانه
-                            </a>
-                        </li>
-                        <li>
                             <a href="{app_url}new">
                                 <i class="fas fa-plus"></i>
                                 ثبت آگهی جدید
@@ -244,6 +245,12 @@
                             گزارش باگ
                         </li>
                         <li>
+                            <a href="{app_url}docs">
+                                <i class="far fa-file-alt"></i>
+                                مستندات
+                            </a>
+                        </li>
+                        <li>
                             <a href="{app_url}api/v1/auth/logout">
                                 <i class="fas fa-sign-out-alt"></i>
                                 خروج
@@ -257,6 +264,12 @@
                         <li class="ORM">
                             <i class="far fa-address-card"></i>
                             عضویت
+                        </li>
+                        <li>
+                            <a href="{app_url}docs">
+                                <i class="far fa-file-alt"></i>
+                                مستندات
+                            </a>
                         </li>
                     {/ne}
                 </ul>

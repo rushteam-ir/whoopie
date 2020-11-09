@@ -96,6 +96,17 @@
         font-size: 1.1rem;
     }
 
+    .search_nav {
+        width: 90%;
+    }
+
+    .WC_dropdown {
+        width: 45%;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -103,9 +114,16 @@
     .index_field h1 {
         font-size: 1.4rem;
     }
+
     .index_field .full_description {
         margin-right: 15%;
         font-size: 0.9rem;
+    }
+
+    .index_field .full_description {
+        margin-right: 15%;
+        font-size: 1rem;
+        line-height: 32px;
     }
 
 }
@@ -113,8 +131,18 @@
 @media only screen and (max-width: 470px) {
 
     .index_field .icon_field div p {
-        width: 170px;
-        font-size: 0.9rem;
+        width: 300px;
+        font-size: 1rem;
     }
+
+    .index_field .icon_field {
+        width: 90%;
+        margin-right: 5%;
+    }
+
+    .index_field .icon_field div img {
+        width: 70px;
+    }
+    
 
 }

@@ -21,9 +21,9 @@
         text-align: right;
         z-index: 900;
 
-        p{
+        .modal_header{
             text-align: center;
-            color: rgb(66, 66, 66)(82, 82, 82);
+            color: rgb(66, 66, 66);
             font-size: 1.7rem;
             margin-bottom: 30px;
 
@@ -34,7 +34,7 @@
             }
         }
 
-        .fa-times{
+        .close_modal{
             position: absolute;
             top: 20px;
             right: 34px;

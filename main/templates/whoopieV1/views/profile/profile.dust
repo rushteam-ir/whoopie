@@ -38,15 +38,13 @@
                                 <i class="fas fa-exclamation-circle"></i>
                             </button>
                         {/ne}
-                        <button class="btn">
+                        <button class="btn share_profile">
                             <i class="fas fa-share-alt"></i>
                         </button>
                         {@eq key="{g_user_info._id}" value="{user_info._id}"}
-                            <button class="btn">
-                                <a href="{app_url}@{g_user_info.username}/edit">
-                                    <i class="fas fa-pencil"></i>
-                                </a>
-                            </button>
+                        <a href="{app_url}@{g_user_info.username}/edit">
+                            <i class="fas fa-pencil"></i>
+                        </a>
                         {/eq}
                     </div>
                     <div class="about_me">

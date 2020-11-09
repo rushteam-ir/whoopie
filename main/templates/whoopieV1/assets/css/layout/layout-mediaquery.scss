@@ -42,6 +42,10 @@
 
 @media only screen and (max-width: 1000px) {
 
+    .main_field_of_SN .SN_user_image img {
+        height: 90px;
+    }
+
     nav .main_field_of_navbar .right_field {
         display: none;
     }
@@ -56,6 +60,34 @@
 
     .main_field_of_SN {
         display: block;
+    }
+
+    nav {
+        height: 60px;
+    }
+
+    .sandwich_nav {
+        position: absolute;
+        right: 30px;
+        top: -5px;
+    }
+
+    nav .rep_field {
+        position: absolute;
+        right: 80px;
+        top: -6px;
+        font-size: 1.4rem;
+        color: #73C5F9;
+    }
+
+    nav .left_field_navbar img {
+        position: relative;
+        top: -3px;
+        width: 40%;
+    }
+
+    .WC_dropdown .WCD_optopn span {
+        padding: 0px 0px;
     }
 
 }

@@ -16,9 +16,9 @@ body {
 
 // footer
 footer {
-    position: absolute;
-    bottom: -20px;
     width: 100%;
+    margin-top: 30px;
+    padding: 0px 20px;
 }
 
 .footer_info {
@@ -143,6 +143,7 @@ nav {
                 top: 20px;
                 overflow: hidden;
                 box-shadow: 0px 0px 10px -1px #00000026;
+                z-index: 100;
 
                 a {
                     display: block;
@@ -175,7 +176,7 @@ nav {
 
     .rep_field {
         position: absolute;
-        right: 180px;
+        right: 155px;
         top: 6px;
         font-size: 1.4rem;
         color: $main_color;

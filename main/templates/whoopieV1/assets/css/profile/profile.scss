@@ -130,36 +130,36 @@
     left: 20px;
     top: 20px;
 
-    button {
+    .share_profile {
+        color: #73c6f96e;
+        margin-left: 10px;
         font-size: 1.3rem;
         padding: 0;
 
-        &:nth-child(3) {
-            a{
-                color: #73c6f96e;
-
-                &:hover {
-                    color: #73C5F9;
-                }
-            }
+        &:hover {
+            color: #73C5F9;
         }
+    }
 
-        &:nth-child(2) {
-            color: #73c6f96e;
-            margin-left: 12px;
+    #ads_bug_open {
+        color: #ff71716c;
+        margin-left: 12px;
+        font-size: 1.3rem;
+        padding: 0;
 
-            &:hover {
-                color: #73C5F9;
-            }
+        &:hover {
+            color: #ff7171;
         }
+    }
 
-        &:nth-child(1) {
-            color: #ff71716c;
-            margin-left: 12px;
+    a {
+        font-size: 1.3rem;
+        padding: 0;
+        color: #73c6f96e;
+        margin-left: 12px;
 
-            &:hover {
-                color: #ff7171;
-            }
+        &:hover {
+            color: #73C5F9;
         }
     }
 }

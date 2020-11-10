@@ -52,23 +52,27 @@
                             <div class="form-group mt-3">
                                 <label for="name">نام<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="name" name="first_name_inp" value="{user_info.first_name}">
-                                <small>نام باید فارسی باشد .</small>
+                                <small>نام باید فارسی باشد.</small>
                             </div>
                             <div class="form-group">
-                                <label for="family">نام خانوادگی</label>
+                                <label for="family">نام خانوادگی<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="family" name="last_name_inp" value="{user_info.last_name}">
+                                <small>نام خانوادگی باید فارسی باشد.</small>
                             </div>
                             <div class="form-group">
-                                <label for="username">نام کاربری</label>
+                                <label for="username">نام کاربری<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="username" name="username_inp" value="{user_info.username}">
+                                <small>نام کاربری باید از حروف انگلیسی ، اعداد ، - ، _ و . تشکیل شده باشد.</small>
                             </div>
                             <div class="form-group">
-                                <label for="email">ایمیل</label>
+                                <label for="email">ایمیل<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="email" name="email_inp" value="{user_info.email}">
+                                <small>ایمیل شما باید معتبر باشد.</small>
                             </div>
                             <div class="form-group">
-                                <label for="phone_number">شماره تلفن</label>
+                                <label for="phone_number">شماره تلفن همراه<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="phone_number" name="phone_number_inp"  value="{user_info.phone_number}">
+                                <small>شماره شما باید معتبر باشد.</small>
                             </div>
                             <div class="row profile_wc">
                                 <div class="col-12 ">
@@ -157,7 +161,7 @@
                                 <input type="number" class="form-control" id="year" name="year_inp" value="{user_info.birth_year}">
                             </div>
                             <div class="form-group social_checked">
-                                <label class="lable_of_social_media">دوست داری چجوری باهات در ارتباط باشن ؟</label>
+                                <label class="lable_of_social_media">دوست داری مراجعه کننده ها از چه طریقی باهات در تماس باشن ؟<span class="important_field">*</span></label>
                                 {@eq key="{user_info.contact_phone}" value="true"}
                                     <input class="inp-cbx" id="PNC" type="checkbox" checked="checked" name="c_contact_phone_number_inp" style="display: none"/>
                                 {:else}
@@ -182,7 +186,7 @@
                                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                         </svg>
                                     </span>
-                                    <span>پست الکترونیکی</span>
+                                    <span>ایمیل</span>
                                 </label>
                                 {@eq key="{user_info.contact_whatsapp}" value="true"}
                                     <input class="inp-cbx" id="WAC" type="checkbox" checked="checked" name="c_contact_whatsapp_inp" style="display: none"/>
@@ -225,7 +229,7 @@
                                 </label>
                             </div>
                             <div class="form-group telegram_checked">
-                                <label class="lable_of_social_media">برای تلگرام ، شماره تماس باشه یا آی دیت ؟</label>
+                                <label class="lable_of_social_media">برای تلگرام ، شماره تماست باشه یا آی دیت ؟<span class="important_field">*</span></label>
                                 {@eq key="{user_info.contact_telegram_type}" value="0"}
                                     <input class="inp-cbx" id="phone_TAC" type="radio" checked="checked" name="c_telegram_type_inp" style="display: none" value="0"/>
                                 {:else}
@@ -254,11 +258,11 @@
                                 </label>
                             </div>
                             <div class="form-group T_id">
-                                <label for="telegram_id">آی دی تلگرام</label>
+                                <label for="telegram_id">آی دی تلگرام<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="telegram_id" name="contact_telegram_inp" value="{user_info.contact_telegram_id}">
                             </div>
                             <div class="form-group I_id">
-                                <label for="instagram_id">آی دی اینستا گرام</label>
+                                <label for="instagram_id">آی دی اینستاگرام<span class="important_field">*</span></label>
                                 <input type="text" class="form-control" id="instagram_id" name="contact_instagram_inp" value="{user_info.contact_instagram_id}">
                             </div>
                             <button type="submit" class="btn profile_sub scroll_top">ثبت تغییرات</button>

@@ -11,7 +11,7 @@ router.get('/:ad_id', async(req, res, next)=>{
 
             await ad_model.addRepByWatch(ad_id, req.session.token);
 
-            let city_list = main_city_list
+            let city_list = main_city_list;
             let ad_info = {
                 id : find_ad[0].unique_id,
                 title : find_ad[0].title,

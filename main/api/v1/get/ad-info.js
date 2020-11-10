@@ -11,7 +11,7 @@ router.get('/:ad_id', async(req, res, next)=>{
 
             await ad_model.addRepByWatch(ad_id, req.session.token);
 
-            let city_list = main_city_list.unshift('-');
+            let city_list = main_city_list
             let ad_info = {
                 id : find_ad[0].unique_id,
                 title : find_ad[0].title,
@@ -30,10 +30,10 @@ router.get('/:ad_id', async(req, res, next)=>{
                     birth_day : find_ad[0].author.birth_day,
                     birth_month : find_ad[0].author.birth_month,
                     birth_year : find_ad[0].author.birth_year,
-                    city : city_list[parseInt(find_ad[0].author.city)],
-                    marital_status: main_marital_list[parseInt(find_ad[0].author.marital_status)],
-                    military_status: main_military_list[parseInt(find_ad[0].author.military_status)],
-                    sex: main_sex_list[parseInt(find_ad[0].author.sex)],
+                    city : find_ad[0].author.city == '0' ? null : city_list[parseInt(find_ad[0].author.city)],
+                    marital_status: find_ad[0].author.marital_status == '0' ? null : main_marital_list[parseInt(find_ad[0].author.marital_status)],
+                    military_status: find_ad[0].author.sex == '0' ? null : (find_ad[0].author.military_status == '0' ? null : main_military_list[parseInt(find_ad[0].author.military_status)]),
+                    sex: find_ad[0].author.sex == '0' ? null : main_sex_list[parseInt(find_ad[0].author.sex)],
                     contact : {
                         email: find_ad[0].author.contact_email ? find_ad[0].author.email : null,
                         instagram: find_ad[0].author.contact_instagram ? find_ad[0].author.contact_instagram_id : null,
@@ -50,7 +50,8 @@ router.get('/:ad_id', async(req, res, next)=>{
         else{
 
             await res.json({
-                "error" : "ad not found."
+                id : ad_id,
+                error : "ad not found."
             })
 
         }

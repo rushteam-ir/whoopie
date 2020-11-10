@@ -95,7 +95,7 @@
                                     {/eq}
                                 </p>
                                 <p><span>  بازدید : </span>
-                                    156
+                                    {watched.length}
                                 </p>
                                 <a href="{app_url}?w={unique_id}" class="btn">مشاهده</a>
                             </div>

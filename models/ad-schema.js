@@ -135,7 +135,7 @@ ad_schema.statics = {
 
         for(let doc of filter_list){
 
-            if(doc.author.city === filters.city || doc.author.city === '0'){
+            if(doc.author.city === filters.city || doc.author.city === '0' || filters.city === '0'){
 
                 let index_for_search = `${doc.title} ${doc.describe} ${doc.summary}
                                 ${doc.author.first_name} ${doc.author.last_name} `;

@@ -4,8 +4,6 @@ router.post('/', async(req, res, next)=>{
 
     try{
 
-        log(req.body)
-        log('aaassdfsdf')
         let {report_type_inp, text_inp, model_id_inp} = req.body;
         let back_url = req.header('Referer') || '/';
         let full_url = req.protocol + '://' + req.get('host') + req.originalUrl;

@@ -286,10 +286,12 @@
                     <div class="main_field_of_debug_modal">
                         <i class="fas fa-times" id="close_BM"></i>
                         <h3>باگی رو که پیدا کردی به تیم <span>ووپـــــــــای</span> گزارش بده تا به روند بهبود سایت کمک کرده باشی !</h3>
-                        <form method="post" action="{app_url}api/v1/report/general" autocomplete="off">
+                        <form class="form_ajax" method="post" action="{app_url}api/v1/report/send" autocomplete="off">
+                            <input type="hidden" name="report_type_inp" value="General">
                             <div class="form-group">
                               <textarea class="form-control" id="bug_description" rows="10" name="text_inp"></textarea>
                             </div>
+                            <input type="hidden" name="model_id_inp" value="{null}">
                             <button type="submit" class="btn bug_sub">گزارش باگ</button>
                         </form>
                     </div>

@@ -124,36 +124,38 @@ ad_schema.statics = {
 
     getBySearch : async(search_inp, filters)=>{
 
-        let query_filter = {};
+        let category_filter = {}
         if(filters.category){
-            query_filter.category = filters.category
-        }
-        if(filters.city !== '0'){
-            query_filter.city = filters.city
+            category_filter.category = filters.category
         }
 
-        let filter_list = await ad_model.find(query_filter).populate('author').populate('category');
+        let filter_list = await ad_model.find(category_filter).populate('author').populate('category');
+
         let final_list = [];
 
         for(let doc of filter_list){
 
-            let index_for_search = `${doc.title} ${doc.describe} ${doc.summary}
+            if(doc.author.city === filters.city || doc.author.city === '0'){
+
+                let index_for_search = `${doc.title} ${doc.describe} ${doc.summary}
                                 ${doc.author.first_name} ${doc.author.last_name} `;
 
-            if(doc.tags){
+                if(doc.tags){
 
-                index_for_search += doc.tags.toString();
+                    index_for_search += doc.tags.toString();
 
-            }
+                }
 
-            doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase());
+                doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase());
 
-            if(doc.rate >= 0.03){
-                doc.rate += doc.author.rep
-                final_list.push(doc);
-            }
-            if(search_inp === ""){
-                final_list.push(doc);
+                if(doc.rate >= 0.03){
+                    doc.rate += doc.author.rep
+                    final_list.push(doc);
+                }
+                if(search_inp === ""){
+                    final_list.push(doc);
+                }
+
             }
 
         }

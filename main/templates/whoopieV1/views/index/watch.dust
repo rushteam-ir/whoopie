@@ -112,7 +112,7 @@
                                 {@ne key="{ad_info.portfolio}" value=""}
                                     <div class="col-12 col-sm-6">
                                         <p class="header_of_portfolio">
-                                            نمونه کار های من :
+                                            نمونه کار/رزومه من :
                                         </p>
                                         <a href="{app_url}api/v1/download/{ad_info.unique_id}/{ad_info.portfolio}" class="portfolio_link mr-2">
                                             <i class="fal fa-download"></i>

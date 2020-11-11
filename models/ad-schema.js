@@ -149,10 +149,11 @@ ad_schema.statics = {
                 doc.rate = string_similarity.compareTwoStrings(search_inp.toLowerCase(), index_for_search.toLowerCase());
 
                 if(doc.rate >= 0.03){
-                    doc.rate += doc.author.rep
+                    doc.rate += doc.author.rep;
                     final_list.push(doc);
                 }
                 if(search_inp === ""){
+                    doc.rate = doc.author.rep;
                     final_list.push(doc);
                 }
 
@@ -160,7 +161,7 @@ ad_schema.statics = {
 
         }
 
-        return final_list.sort((a, b)=>{return b - a}).slice((filters.page - 1) * 3, filters.page * 3);
+        return final_list.sort((a, b)=>{return b.rate - a.rate}).slice((filters.page - 1) * 3, filters.page * 3);
 
     }
 

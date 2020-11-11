@@ -14,3 +14,4 @@ rsuid = require('rsuid');
 helmet = require('helmet');
 compression = require('compression');
 string_similarity = require('string-similarity');
+useragent = require('useragent');

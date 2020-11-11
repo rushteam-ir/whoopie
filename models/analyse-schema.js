@@ -3,6 +3,8 @@ let analyse_schema = new mongoose.Schema({
     _id : String,
     user_agent : String,
     remote_address : String,
+    os : String,
+    browser : String,
 });
 
 // Defining model statics

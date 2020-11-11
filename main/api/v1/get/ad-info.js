@@ -50,6 +50,7 @@ router.get('/:ad_id', async(req, res, next)=>{
 
             await res.json({
                 id : ad_id,
+                code : 101,
                 error : "ad not found."
             })
 

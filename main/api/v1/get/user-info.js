@@ -9,6 +9,16 @@ router.get('/:username', async(req, res, next)=>{
 
         if(find_user){
 
+            if(!find_user.confirm_profile){
+
+                return await res.json({
+                    username : username,
+                    code : 201,
+                    error : "user not completed profile yet."
+                })
+
+            }
+
             let city_list = main_city_list;
             let find_ads = await ad_model.getByQuery({author : find_user._id});
             let user_ads = [];
@@ -40,13 +50,14 @@ router.get('/:username', async(req, res, next)=>{
                 }
             }
 
-            await res.json(user_info)
+            await res.json(user_info);
 
         }
         else{
 
             await res.json({
                 username : username,
+                code : 202,
                 error : "user not found."
             })
 

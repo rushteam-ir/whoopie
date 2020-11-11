@@ -28,17 +28,19 @@
                         </div>
                         <form class="form_ajax" action="{app_url}edit/edit-advertising" method="post" enctype="multipart/form-data">
                             <div class="form-group mt-3">
-                                <label for="ad_title">تیتر آگهی</label>
+                                <label for="ad_title">تیتر آگهی<span class="important_field">*</span></label>
                                 <input id="test" type="text" class="form-control" id="ad_title" name="title_inp" value="{ad_info.title}">
+                                <small>تیتر آگهی باید گویای عنوان کاری شما به صورت مختصر باشد ، مانند : PHP ، Wordpress ، مکانیک سیالات ، تایپ و ...</small>
                             </div>
                             <div class="form-group mt-3">
-                                <label for="ad_description">توضیحات آگهی</label>
+                                <label for="ad_description">توضیحات آگهی<span class="important_field">*</span></label>
                                 <textarea type="text" class="form-control" id="ad_description" rows="5" name="summary_inp">{ad_info.summary}</textarea>
+                                <small>توضیحات مختصر آگهی در صفحه جستجو کنار بقیه آگهی ها نمایش داده می شود ، پس باید مختصر و شامل توضیح کلی از کار شما باشد ، مانند : طراحی وبسایت فروشگاهی با Wordpress.</small>
                             </div>
                             <div class="row profile_wc">
                                 <div class="col-12">
                                     <div class="WC_dropdown">
-                                        <label for="maried_select">دسته بندی</label>
+                                        <label for="maried_select">دسته بندی<span class="important_field">*</span></label>
                                         <div class="category_title WCD_title"><p>دسته بندی</p><i class="fas fa-angle-down"></i></div>
                                         <div class="select_click" id="sex_select"></div>
                                         <div class="WCD_optopn">
@@ -57,10 +59,11 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <label for="more_description">توضیحات تکمیلی</label>
+                                <label for="more_description">توضیحات تکمیلی<span class="important_field">*</span></label>
                                 <textarea type="text" class="form-control" id="more_description" rows="5" name="describe_inp">{ad_info.describe}</textarea>
+                                <small>روند کار ، نیاز های کار خود و کلا هر توضیحی که برای آگهی لازم است اینجا بنویسید ، هر چه توضیحات کامل تر باشد در جذب بیننده مفید تر است !</small>
                             </div>
-                            <label class="partner_type">نوع همکاری</label>
+                            <label class="partner_type">نوع همکاری<span class="important_field">*</span></label>
                             <div class="PT_checkbox">
                                 {@eq key="{ad_info.type}" value="0"}
                                     <input class="inp-cbx" id="remote" type="radio" checked="checked" name="type_inp" value="0" style="display: none"/>
@@ -92,6 +95,7 @@
                             <div class="form-group position-relative">
                                 <label for="tags_field">برچسب ها</label>
                                 <input type="text" class="form-control main_form_design " id="tags_field">
+                                <small>برچسب ها کلیدواژه هایی هستند که در پیدا شدن آگهی شما در جستجو ها کمک زیادی میکنه پس با دقت انتخابشون کن ، مثلا : وب ، طراحی سایت ، سایت</small>
                                 <button type="button" class="btn add_tags">
                                     <i class="far fa-check"></i>
                                 </button>
@@ -110,7 +114,7 @@
                                 <i class="fal fa-times-circle"></i>
                                 <label for="file_upload" class="chose_file_custom"><i class="fal fa-paperclip"></i> <span class="link_of_attach_file">{ad_info.portfolio}</span></label>
                                 <input type="file" class="d-none file_ajax" name="portfolio_inp" id="file_upload" accept=".docx,.doc,.pdf,.md,.pptx,.ppt,.txt,image/*">
-                                <small class="small_inp_upload">* حداکثر حجم مجاز برای آپلود نمونه کار {portfolio_limited_size} مگابایت می باشد.</small>
+                                <small> حداکثر حجم مجاز برای آپلود نمونه کار/رزومه {portfolio_limited_size} مگابایت می باشد.</small>
                             </div>
                             <input type="hidden" name="delete_portfolio_inp"  id="delete_portfolio_inp">
                             <button type="submit" class="btn profile_sub">ویرایش آگهی</button>

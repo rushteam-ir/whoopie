@@ -1,4 +1,5 @@
 // report bug modal
+
 $(document).on('click', '.ads_bug_open', function() {
 
     $("input[name=ad_id_inp]").attr('value', $(this).attr('name'))
@@ -16,7 +17,13 @@ $(document).on('click', '.ads_bug_open', function() {
 });
 
 $(window).scroll(function() {
-    if($(window).scrollTop() >= $(document).height() - $(window).height()) {
+
+    console.log({
+        top : $(window).scrollTop(),
+        menha : $(document).height() - $(window).height(),
+    })
+
+    if($(window).scrollTop() + 2 >= $(document).height() - $(window).height()) {
 
         page_query = (parseInt(page_query) + 1).toString();
 
